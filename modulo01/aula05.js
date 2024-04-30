@@ -1,6 +1,6 @@
 //método 'log' do objeto 'console', utilizado para imprimir algo no console do navegador ou servidor, extremamente útil para debugar o código e por padrão a console.log quebra a linha
 
-/*
+/*a
     A diferença entre os dois primeiros exemplos é que, por exemplo, não seria possível adicionar aspas duplas no meu texto com aspas duplas 
     mas aspas simples sim, e vice versa, pois o interpretador entende que se está fechando o primeiro grupo. 
     
