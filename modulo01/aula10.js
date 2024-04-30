@@ -81,7 +81,7 @@ for (let genero in contagemGeneros) {
 
 /*Atividade de processo seletivo*/
 
-/*Pesquisa Binária*/
+/*Pesquisa Binária - Isso é um teste*/
 
 const binarySearch = (list, item) => {
     let low = 0;
