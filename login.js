@@ -1,8 +1,6 @@
 function checkPassword(password){
-    if(password === '2341'){
-        console.log("senha incorreta")
-    } else {
-        console.log('senha correta')
+    for(let i =0; i < 10; i++){
+        console.log(i)
     }
 }
 function validateWebService(){}
