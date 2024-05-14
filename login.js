@@ -1,5 +1,5 @@
 function checkPassword(password){
-    if(password === '2341'){
-        console.log("senha incorreta")
+    for(let i =0; i < 10; i++){
+        console.log(i)
     }
 }
