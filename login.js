@@ -3,3 +3,4 @@ function checkPassword(password){
         console.log("senha correta")
     }
 }
+function validateWebService(){}
