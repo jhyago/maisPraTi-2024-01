@@ -1,0 +1,175 @@
+<!--todo documento de nome "index" é a página principal do site, assim que os servidores interpretam.-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--Área de cabeçalho e informações sobre o documento dizem como o site vai ser configurado, normalmente não aparecem pro usuário-->
+
+	<title>Página principal</title>
+	<!--Título do site/página (aparece na aba do navegador) -->
+
+	<html lang="pt-br">
+	<!--O atributo lang indica a linguagem em que o documento vai estar e em qual local de origem, ajudando em mecanismos de busca-->
+
+	<meta charset="utf-8">
+	<!--TAG meta (sem fechamento ou com fechamento no final da tag />) define os metadados e o chartset (conjunto de caracteres) e define qual conjunto de caracteres será usado no trecho ou código completo, no caso o latino UTF 8-->
+
+</head>
+
+<body>
+
+	<a href="contato.html">Link interno</a> <br>
+	<a href="https://gremio.net/">Link externo</a>
+	<!--Links "a" do Inglês anchor = âncora, href = hyperlink reference, serve tanto para criar links internos quanto externos. Caso o link não seja definido a página será recarregada-->
+
+	<hr>
+
+	<h1>Página principal</h1>
+	<!--Cabeçalho ou título 1, no máximo até o 6 -->
+
+	<p>
+		O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto
+		padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar
+		um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica,
+		mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de
+		Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o
+		Aldus PageMaker que incluem versões do Lorem Ipsum.
+	</p>
+	<!--Parágrafo, uma das vantagens é poder agrupar textos-->
+
+	<hr>
+	<!--Horizontal row-->
+
+	Esse é um texto <strong>negrito</strong>
+
+	<br>
+	<!--Break Row-->
+	
+	Esse é um texto <em>itálico</em><br>
+	Esse é um texto <u>underline</u><br>
+	Esse é um texto <strike>errado</strike> <br>
+
+	<hr>
+
+	<h3>Mapa do site</h3>
+
+	<!--Lista não ordenada - UL = Unordered List  e LI = Item da lista (List Item); o atributo type ajuda a escolher o tipo de marcador.-->
+	<ul type="circle">
+		<li>Home</li>
+		<li>Quem somos</li>
+		<li>Contato</li>
+	</ul>
+
+	<h2>Perguntas</h2>
+
+	<!--Lista ordenada; Listas ordenadas (com contagens de itens) possuem o marcador de numeração, o tipo define como a lista será ordenada -->
+	<ol type="A">
+		<li>Comida favorita?</li>
+		<li>Carro favorito?</li>
+		<li>Série favorita?</li>
+	</ol>
+
+	<hr>
+
+	<!--Imagens, src = source que define o nome da imagem e local do arquivo, width = largura, height = altura-->
+	<img src="Imagens/Subaru.jpg" width="350" height="350">
+
+	<hr>
+
+	<h2>Produtos</h2>
+
+	<!--Criação de tabelas; table = cria a tabela; tr = table row (linha da tabela); td = table data (dados da linha da tabela, cada td forma uma coluna); th = table header, usa-se para diferenciar o cabeçalho da tabela, o texto fica centralizado e destacado; dentro da tabela pode-se definir atributos como a borda em pixels, a largura em pixels ou porcentagem (100% da página)-->
+	<table border="2" width="100%">
+		<tr>
+			<th>Código</th>
+			<th>Produto</th>
+			<th>Preço</th>
+		</tr>
+
+		<tr>
+			<td>10</td>
+			<td>Notebook</td>
+			<td>R$ 3.000,00</td>
+		</tr>
+
+		<tr>
+			<td>100</td>
+			<td><img src="imagens/Subaru.jpg" width="200"></td>
+			<td>R$ 100.000,00</td>
+		</tr>
+
+		<tr>
+			<td rowspan="2">Desconto</td>
+			<td colspan="2">cupom10 - R$ 10</td>
+			<!-- colspan = extensão da coluna, faz com que você agrupe duas colunas, vai ocupar uma ou mais colunas; e rowspan define o tamanho da linha-->
+		</tr>
+
+		<tr>
+			<td colspan="2">cupom12 - R$ 12</td>
+		</tr>
+
+		<tr>
+			<td>Total:</td>
+			<td colspan="2">R$ 102.978,00</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<h2>Login</h2>
+
+	<!--Criação de formulário. Form = define um formulário; 'type' define o tipo do componente e o nome define uma forma de recuperar os dados utilizando uma linguagem de programação; value define o texto para o botão-->
+
+	<form>
+		Login: <input type="text" name="login"><br> <br>
+		Senha: <input type="password" name="senha"> <br> <br>
+
+		<input type="submit" value="Logar">
+	</form>
+
+	<br>
+	<hr>
+
+	<form>
+
+		<h2>Cadastre-se</h2>
+
+		Login:<input type="text" name="login"><br><br>
+		sexo:<input type="radio" name="sexo" value="M">Masculino<br>
+
+		<input type="radio" name="sexo" value="F">Feminino<br>
+		<!--Radiobutton = botão de rádio, para que eles não fiquem marcados permanentemente o nome precisa ser o mesmo para ambos. value é usado para definir qual sexo foi escolhido, devido ambos terem o mesmo name-->
+
+		Interesses<br>
+		<input type="checkbox" name="Interesses">Futebol<br>
+		<input type="checkbox" name="Interesses">Séries<br>
+		<input type="checkbox" name="Interesses">Desenhos<br><br>
+
+		Estado<br>
+		<select name="Estado">
+			<!--Select é indicado para quando se tem uma lista muito grande-->
+			<option value="sp">SP</option>
+			<option value="rj">RJ</option>
+			<option value="am">AM</option>
+		</select><br><br>
+
+		Observações: <br>
+		<textarea></textarea><br>
+		<!--Caixa de texto que se expande-->
+
+		<input type="submit" value="Cadastrar">
+	</form>
+
+	<hr>
+
+	<h2>Caracteres Epeciais</h2>
+	<!--Entidades HTML são utilizadas para carcteres especiais-->
+
+	&lt;-&gt;
+
+	Home &nbsp;- Quem somos - Contato
+
+
+</body>
+
+</html>
