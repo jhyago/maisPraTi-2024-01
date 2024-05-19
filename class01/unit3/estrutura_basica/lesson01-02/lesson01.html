@@ -14,6 +14,18 @@
 	<meta charset="utf-8">
 	<!--TAG meta (sem fechamento ou com fechamento no final da tag />) define os metadados e o chartset (conjunto de caracteres) e define qual conjunto de caracteres será usado no trecho ou código completo, no caso o latino UTF 8-->
 
+	<link rel="stylesheet" href="EstruturaBasica.css" />
+	<!-- Há dois tipos de links no HTML: a tag <a>, que são os links que levam o usuário para outros documentos e a tag LINK, que são links para fontes externas que serão usadas no documento.
+	  Nesse exemplo a tag link importa o CSS para a página. O atributo rel ="stylesheet" indica que aquele link é relativo a importação de um arquivo referente folha de etilo. O href faz a referência ao nome do arquivo em que o CSS está contido, especifica a localização do recurso através do seu URI. Em HTML 5 existem links como rel = "archives" que indica referência sobre o material histórico da página.-->
+
+	<meta name="keywords" content="Curso de programação WEB, HTML, CSS, JS" />
+	<!--São as palavras chaves, que visam indexar os documentos em relação ao título e body, devendo as frases serem  separadas por vírgula-->
+
+	<meta name="Batman" content="HTML, CSS" />
+	<!--Contém o nome do autor da página-->
+
+	<meta name="description" content="WEB programming" />
+	<!--Descrição sobre o conteúdo da página-->
 </head>
 
 <body>
@@ -37,14 +49,37 @@
 	</p>
 	<!--Parágrafo, uma das vantagens é poder agrupar textos-->
 
+	<p>Primeiro parágrafo TAG, do conteúdo de estrutura básica de HTML e CSS. <span id="identificado">TAG span, sendo
+			usada para personalizar uma palavra ou trecho dentro do parágrafo.</span></p>
+	<!--Define parágrafo-->
+	<!-- TAG span define uma seção em um "documento" conteúdo genérico em linha e pode ser usada pra formatar apenas esse trecho-->
+
+	<p>TAG sub<sub>2</sub></p>
+	<!--define um texto subescrito-->
+
+	<p>TAG sup<sup>2</sup></p>
+	<!--define um texto sobrescrito-->
+
 	<hr>
 	<!--Horizontal row-->
+
+	<p>A <abbr title="Universidade Federal do Rio Grande"> FURG</abbr> Foi fundada em 1955.</p>
+	<!-- TAG abbr indica uma acrônimo ou abreviação-->
+
+	<blockquote cite="https://pt.wikipedia.org/"> Notícia do site wikipedia</blockquote>
+	<!--Texto de uma citação, sendo o blockquote usado para longas citações e possuindo recuo, ele cria parágrafo (em certa medida funciona como um <div> com função mais específica), por isso ele não é exatamente igual ao <q>. Ele deve ser usado para um destaque isolado da citação e possivelmente, mas não necessariamente, decorado com CSS de forma diferente -->
+
+	<p><cite>O grito</cite> de Edward Munch. Pintado em 1893.</p>
+	<!--fonte da citação, geralmente usada em referências de trabalhos artísticos. é para definir uma referência e não para colocar a citação, o texto em si, embora possa usar também. Principalmente para indicar quem disse, é mais para colocar um URL com o texto do autor ou material citado, ou seja, indica a fonte. Pode facilitar a formatação e buscas de ferramentas diversas. Pode ser usado dentro do <blockquote>-->
+
+	<q> TAG q </q>
+	<!--você faz um citação inline, ou seja, no meio de um texto. Minha experiência é que serve mais para um destaque, ainda que deveria ser só usado como uma citação real de alguma coisa dita anteriormente.-->
 
 	Esse é um texto <strong>negrito</strong>
 
 	<br>
 	<!--Break Row-->
-	
+
 	Esse é um texto <em>itálico</em><br>
 	Esse é um texto <u>underline</u><br>
 	Esse é um texto <strike>errado</strike> <br>
