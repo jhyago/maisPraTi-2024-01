@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fontes, cores, tamanhos e estilos de texto</title>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+
+			.formatacao{
+
+				/*Cores podem ser padrões, mas também podem ser definidas de maneira mais específica através de códigos hexadecimais e RGB.*/
+				color: #C1400D;
+				background: #0E03EA;
+
+				/*
+				px -> tamanho fixo
+				% -> tamanho relativo ao tamanho padrão do broswer
+				em -> tamanho relativo ao container pai
+				*/
+				font-size: 30px;
+
+				/*O navegador vai ir testando qual fonte o usuário tem no seu navegador, caso não tenham nem a times new roman nem a times, ele tentará uma da categoria genérica serif*/
+				font-family: "Times New Roman", Times, serif;
+
+			}
+			.negrito{
+				font-weight: bold;
+				text-decoration: underline; 
+			}
+			.italico{
+				/*define o peso(normal, bold ou de 100 até 900), tamanho e familia na mesma linha*/
+				font: bold 40px "Lucida Sans Unicode", sans-serif;
+				font-style: italic;
+				text-decoration: overline; 
+				text-decoration: line-through;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1 class="formatacao"> Cabeçalho</h1>
+
+		<p class="formatacao">Hyago</p>
+		<p class="negrito">negrito</p>
+		<p class="italico">italico</p>
+
+	</body>
+</html>

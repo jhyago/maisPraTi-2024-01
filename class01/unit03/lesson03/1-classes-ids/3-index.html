@@ -1,0 +1,33 @@
+<!-- maneiras de importar o CSS, Uma folha de estilo é dita externa, quando as regras CSS estão 
+     declaradas em um documento a parte do documento HTML. A folha de estilo é um arquivo separado do arquivo html. 
+     O arquivo de folha de estilo deve ser gravado com a extensão .css-->
+     <!DOCTYPE html>
+     <html lang = "pt-br">
+     
+     <head>
+         <meta charset = "UTF-8">
+     
+         <title> Maneiras de importar o CSS</title>
+         <style>
+             @import url("estilo.css");
+         </style>
+         <!--maneira 1-->
+         
+         <link hel ="stylesheet" href = "estilo.css"/>
+         <!-- segunda maneira-->
+     
+         <!-- maneiras incorporadas: Uma folha de estilo é dita incorporada ou interna, quando as regras CSS estão declaradas no próprio documento HTML. Uma folha de estilo incorporada ou interna, é ideal para ser aplicada a uma única página. 
+         Com uma folha de estilo incorporada ou interna, você pode mudar a aparência de somente um documento, aquele onde a 
+         folha de estilo está incorporada.-->
+     
+         <style>
+             h1{
+                 color: red;
+             }
+         </style>
+     
+         <h2 style="color: pink;">teste</h2>
+         
+     </head>
+     </html>
+     

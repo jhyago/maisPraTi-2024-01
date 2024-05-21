@@ -1,0 +1,51 @@
+/* Definindo o titulo*/ 
+caption{ 
+    background-color:red; 
+    text-align:center; 
+    font-size:12px; 
+} 
+/* Definindo o cabeçalho e o rodapé*/
+ thead, tfoot{ 
+     background-color: black; 
+     color:white; 
+     text-align:center;
+ }
+ /*colocando bordas*/
+ td, table{
+     border-style: solid;
+     border-width: thin;
+     border-color: black;
+ }
+ .primeiro{
+     color: red;
+ }
+table#tabela{
+    border: 1px solid black;
+    width: 30%;
+    height: 30%;
+    border-spacing: 0px;/*tamanho da borda*/
+    margin-left: auto; /*seta as margens*/
+    margin-right: auto;
+ }
+ table#tabela td{
+    padding: 5px;
+    text-align: left;
+    vertical-align: middle;
+ }
+ table#tabela td.ColunaEsquerda {
+    background-color: black;
+    color: yellow;
+    vertical-align: top;
+    font-weight: bold;
+ }
+ table#tabela td.ColunaDireita {
+    background-color: grey;
+    color:black;
+    font-weight: bold;
+ }
+ caption#legenda{
+     background-color: blueviolet;
+     color: black;
+     font-weight: bolder;
+     font-size: 18px;
+ }

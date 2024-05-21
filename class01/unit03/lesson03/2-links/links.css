@@ -1,0 +1,18 @@
+a:link{ /*todos links a*/
+    text-decoration: none;
+    color:black;
+}
+a:visited{/*links q já foram acessadods*/
+    color:purple; 
+    text-transform:uppercase; 
+    cursor:crosshair; 
+}
+a:hover{/*ao passar o mouse por cima*/
+    color:blue;
+    cursor: crosshair;
+}
+a:active{/*estilizar links qnd eles são clicados*/
+    color:purple; 
+    text-transform:uppercase; 
+    cursor:crosshair; 
+}   

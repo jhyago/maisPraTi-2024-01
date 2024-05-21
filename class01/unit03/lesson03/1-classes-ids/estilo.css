@@ -1,0 +1,38 @@
+h1 {
+    background-color: green; 
+    color : blue;
+    /*define cores, background define a cor de fundo*/
+}
+h2{
+    text-align: center; /*alinhamento do texto*/
+}
+h3{
+    letter-spacing: 10px; /*espaço das letras*/
+    text-align: justify;
+    font-size: 36px; /*Define o tamano da fonte*/
+}
+h4{
+    font-weight: bold; 
+    font-family: 'Courier New', Courier, monospace;
+    /*Define o tipo de fonte*/
+}
+p{
+    background-color: black;
+    color: white;
+    letter-spacing: normal; /*espaçamento entre as letras*/
+    word-spacing: 10px; /*espaçamento entre as palavras*/
+    text-transform: uppercase;
+}
+span#identificado{
+    background-color: yellow;
+    color: black;
+}
+.familia_unida{ /* "ponto ." faz referência a uma classe*/
+    color: black;
+    background-color: grey;
+}
+
+#thewitcher{ /*Hashtag faz referência a um ID*/
+    font-size: 20px;
+    color: greenyellow;
+}

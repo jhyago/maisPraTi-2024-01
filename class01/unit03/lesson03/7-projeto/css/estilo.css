@@ -1,0 +1,45 @@
+body {
+	/*Se por algum motivo a imagem não carregar, 
+	a cor já está atribuida. Background normalmente se repete*/
+	background: #d2d2c1 url('imagens/fundo.png');
+	font: 16px Arial, Helvetica, sans-serif;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#principal{
+	width: 900px;
+}
+
+#menu {
+	background: #c5c5b2;
+	/*Espaçamento interno*/
+	padding: 18px;
+}
+
+#conteudo {
+	background: #e8e8d9;
+	padding: 10px;
+}
+
+#rodape {
+	text-align: center;
+}
+
+.img-campanha {
+	border: 10px solid #c3c3ae;
+}
+
+a {
+	color: #4b566a;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 5px;
+}
+
+h1 {
+	color: #828271;
+	font-size: 1.2em;
+}
+
+
