@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estático, relativo, absoluto e fixo</title>
+    <!-- h1.teste{lorem}*5 -->
+    <style type="text/css">
+        h1 {
+            position: static;
+        }
+
+        p {
+            width: 400px;
+        }
+
+        #container {
+            background-color: #fff;
+            width: 800px;
+            margin: auto 100px;
+            padding: 10px;
+            position: absolute;
+            border: 3px solid black;
+        }
+
+        .relative {
+            border: 3px solid red;
+            position: relative;
+            left: 100px;
+        }
+
+        .absolute {
+           border: 3px solid green;
+           background-color: #f2f2f2;
+           position: absolute;
+           left: 100px;
+        }
+
+        .fixed {
+            border: 3px solid brown;
+            background-color: #f2f2f2;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Posicionamentos</h1>
+
+        <p class="relative">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur veniam delectus voluptate rem, iure aut nostrum totam esse autem et! Voluptatibus perferendis id ut aspernatur corrupti aperiam, deleniti itaque in tempora pariatur temporibus unde, nihil optio accusantium veniam odio placeat omnis? Fugit odit quibusdam possimus nisi excepturi animi! Exercitationem quas eveniet doloribus corporis molestias vitae minus. Eius quaerat eveniet itaque autem dolores magni minus reiciendis ducimus at repudiandae consectetur fugiat voluptates molestiae non nobis, possimus ea, perferendis exercitationem pariatur enim ullam vero. Perspiciatis totam alias impedit id similique, adipisci nisi ipsam rerum facilis nihil quisquam accusantium quaerat, tempora facere nulla.</p>
+
+        <p class="absolute">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quas et neque earum, porro perferendis aliquam itaque voluptatibus consequatur velit mollitia necessitatibus quia molestias nisi ipsam in, saepe voluptatum dignissimos obcaecati iusto suscipit! Aspernatur sapiente ea ipsa repudiandae? Nesciunt, reprehenderit. Obcaecati quis hic ratione, voluptatum repellat dolorum, laboriosam consequuntur aperiam tempore nobis ullam mollitia consequatur quaerat. Possimus reprehenderit velit magni ducimus quos libero nam illum, placeat ipsum ipsam culpa voluptatibus ad ratione, ea alias enim. Praesentium facere optio modi molestiae dignissimos magnam quo eius architecto quibusdam, animi minus iusto vitae laboriosam. Alias neque quos sequi cupiditate error dignissimos quo autem.</p>
+
+        <p class="fixed">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi obcaecati possimus voluptates nemo, a sequi eius. Corrupti repudiandae odio inventore consectetur voluptatibus repellat qui voluptatem quis, voluptates saepe porro in ea eaque voluptatum assumenda dolor debitis sunt tenetur nostrum commodi! Repudiandae velit alias similique soluta nihil itaque quia qui in quis laborum, tempora eius, hic aliquid rerum dolore doloribus sint tempore ducimus neque perspiciatis? Ad odio nulla officiis temporibus corrupti fugit eaque expedita id itaque inventore placeat quae cumque magni dolorum aut, ducimus similique facilis a magnam accusamus incidunt numquam facere fugiat! Odio quia dolorem nobis saepe nostrum voluptatibus ullam.</p>
+    </div>    
+</body>
+</html>

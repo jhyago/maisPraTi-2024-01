@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overlapping Elements</title>
+    <style type="text/css">
+        .conteudo1 {
+            border: 3px solid black;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: brown;
+            z-index: 1;
+        }
+
+        .conteudo2 {
+            border: 3px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: #0B96CC;
+            position: absolute;
+            top: 80px;
+            left: 80px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteudo1">
+        content 1
+    </div>
+
+    <div class="conteudo2">
+        content 2
+    </div>
+</body>
+</html>
