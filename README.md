@@ -1,1 +1,1 @@
-# Repositório do curso +praTi
+# Repositório da formação fullstack junior +praTi
