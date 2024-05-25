@@ -1,0 +1,29 @@
+* {
+    color: blue;
+}
+
+h1 {
+    color: red !important;
+    font-size: 30px;
+}
+
+h1#textoPrincipal {
+    color: yellow;
+    font-size: 10px;
+}
+
+#textoPrincipal {
+    color: green;
+}
+
+
+/* 
+    Seletores Universais
+    Tipo de Seletores
+    Classes seletoras
+    Atributos Seletores
+    Pseudo-classes
+    Seletores ID
+    Estilo Inline
+*/
+

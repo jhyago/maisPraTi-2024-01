@@ -1,0 +1,31 @@
+/* * {
+    border: 3px solid;
+} */
+
+h2 {
+    color: red 
+}
+
+.classe01 {
+    border: 2px solid ;
+}
+
+p.classe01 {
+    background-color: orange;
+}
+
+#conteudo {
+    border: 2px solid green;
+}
+
+li > a {
+    text-decoration: none;
+}
+
+div a {
+    text-decoration: none;
+}
+
+h2+p {
+    background-color: orange;
+}
