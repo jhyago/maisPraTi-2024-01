@@ -1,0 +1,29 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 900px;
+    background: #159cb0 url(images/fundo-horizontal.png) repeat-x;
+    float: left;
+}
+
+ul li {
+    float: left;
+    display: block;
+}
+
+ul a {
+    padding: 0 2em;
+    line-height: 2em;
+    text-decoration: none;
+    color: aliceblue;
+    background: url(images/divisor.png) repeat-y;
+}
+
+ul .primeiroLink a {
+    background: none;
+}
+
+ul a:hover {
+    color: blueviolet;
+}
