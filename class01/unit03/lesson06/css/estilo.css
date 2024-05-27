@@ -1,0 +1,62 @@
+/* Estrutura padrão do site */
+body {
+    background: #f4f2ec url(../img/fundo.png) repeat-x;
+    font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, Sans-serif;
+}
+
+#container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+a:link, a:active, a:visited {
+    color: #af670a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #226115;
+}
+
+/*Logo */
+
+
+#logo h1 {
+    float: left;
+}
+
+#logo a {
+    width: 248px;
+    height: 21px;
+    text-indent: -9999px;
+    display: block;
+    background: url(../img/logo.png)
+}
+
+/* Barra de Navegação */
+
+header {
+    padding: 15px 0;
+    height: 55px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 20px;
+    float: right;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a:link {
+    display: block;
+    margin-right: 25px;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid #535858
+}
