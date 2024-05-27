@@ -60,3 +60,35 @@ nav ul li a:link {
 nav ul li a:hover {
     border-bottom: 1px solid #535858
 }
+
+/* Principal */
+
+#conteudo {
+    width: 710px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+article#video {
+    float: left;
+    width: 310px;
+    margin-left: 20px;
+}
+
+article#mapa {
+    float: left;
+    width: 310px;
+    margin-left: 35px;
+}
+
+article#exposicoes {
+    float: left;
+    width: 310px;
+    margin: 15px 0 0 25px;
+}
+
+article#historia {
+    float: left;
+    width: 310px;
+    margin: 15px 0 0 20px;
+}
