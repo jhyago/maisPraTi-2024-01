@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <form name="formulario">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" maxlength="15" class="resultado" name="tela" readonly></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="C" class="botao" onclick="limparTela()"></td>
+                <td><input type="button" value="del" class="botao" onclick="deletar()"></td>
+                <td><input type="button" value="-" class="botao" onclick="inserir('-')"></td>
+                <td><input type="button" value="+" class="botao" onclick="inserir('+')"></td>
+            </tr>
+            
+            <tr>
+                <td><input type="button" value="1" class="botao" onclick="inserir(1)"></td>
+                <td><input type="button" value="2" class="botao" onclick="inserir(2)"></td>
+                <td><input type="button" value="3" class="botao" onclick="inserir(3)"></td>
+                <td><input type="button" value="/" class="botao" onclick="inserir('/')"></td>
+            </tr>
+            
+            <tr>
+                <td><input type="button" value="4" class="botao" onclick="inserir(4)"></td>
+                <td><input type="button" value="5" class="botao" onclick="inserir(5)"></td>
+                <td><input type="button" value="6" class="botao" onclick="inserir(6)"></td>
+                <td><input type="button" value="*" class="botao" onclick="inserir('*')"></td>
+            </tr>
+            
+            <tr>
+                <td><input type="button" value="7" class="botao" onclick="inserir(7)"></td>
+                <td><input type="button" value="8" class="botao" onclick="inserir(8)"></td>
+                <td><input type="button" value="9" class="botao" onclick="inserir(9)"></td>
+                <td><input type="button" value="=" class="botao" onclick="calcularTotal()"></td>
+            </tr>
+            
+            <tr>
+                <td><input type="button" value="." class="botao" onclick="inserir('.')"></td>
+                <td><input type="button" value="0" class="botao" onclick="inserir(0)"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
