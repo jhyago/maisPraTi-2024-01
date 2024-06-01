@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript aplicando CSS</title>
+
+    <style>
+        .estilo {
+            background-color: #000;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+
+    <script>
+        function trocarEstilizacao() {
+            document.getElementById('quadrado').className = 'estilo'
+        }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="trocarEstilizacao()">Trocar Estilização</button>
+
+    <hr>
+    <div style="border: solid 1px #000; width: 100px; height: 100px;" id="quadrado">
+        <h1>Teste</h1>
+    </div>
+</body>
+</html>
