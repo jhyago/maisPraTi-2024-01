@@ -27,6 +27,24 @@ class Database {
         }
     }
 
+    getTasks() {
+        const tasks = Array()
+        
+        const id = localStorage.getItem('id')
+
+        for(let i = 1; i <= id; i++){
+            const task = JSON.parse(localStorage.getItem(i))
+
+            if(task === null){
+                continue
+            }
+
+            task.id = i
+            tasks.push(task)
+        }
+        return tasks
+    }
+
     createTask(task) {
         const id = getNextId()
         localStorage.setItem(id, JSON.stringify(task))
@@ -54,3 +72,21 @@ function registerTask() {
         database.createTask(task)
     }
 }
+
+function loadTasks() {
+    const tasks = database.getTasks()
+
+    const listTasks = document.getElementById('listTasks')
+
+    tasks.forEach((t) => {
+        const row = listTasks.insertRow()
+
+        row.insertCell(0).innerHTML = `${t.day}/${t.month}/${t.year}`
+    })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if(document.body.contains(document.getElementById('listTasks'))){
+        loadTasks()
+    }
+})
