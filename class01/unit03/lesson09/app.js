@@ -17,6 +17,30 @@ class Task {
     }
 }
 
+class Database {
+
+    constructor(){
+        const id = localStorage.getItem('id')
+
+        if(id === null){
+            localStorage.setItem('id', 0)
+        }
+    }
+
+    createTask(task) {
+        const id = getNextId()
+        localStorage.setItem(id, JSON.stringify(task))
+        localStorage.setItem('id', id)
+    }
+}
+
+const database = new Database()
+
+function getNextId() {
+    const nextId = localStorage.getItem('id')
+    return parseInt(nextId) + 1;
+}
+
 function registerTask() {
     const year        = document.getElementById('year').value
     const month       = document.getElementById('month').value
@@ -27,12 +51,6 @@ function registerTask() {
     const task = new Task(year, month, day, type, description)
 
     if(task.validateData()){
-        Database.createTask(task)
-    }
-}
-
-class Database {
-    createTask(task) {
-        localStorage.setItem(id, JSON.stringify(task))
+        database.createTask(task)
     }
 }
