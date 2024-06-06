@@ -27,7 +27,7 @@ class Database {
         }
     }
 
-    getTasks() {
+    loadTasks() {
         const tasks = Array()
         
         const id = localStorage.getItem('id')
@@ -54,6 +54,34 @@ class Database {
     removeTask(id) {
         localStorage.removeItem(id)
     }
+
+    searchTasks(task) {
+        let filteredTasks = Array()
+
+        filteredTasks = this.loadTasks()
+
+        if(task.year !== '') {
+            filteredTasks = filteredTasks.filter(t => t.year === task.year)
+        }
+
+        if(task.month !== '') {
+            filteredTasks = filteredTasks.filter(t => t.month === task.month)
+        }
+
+        if(task.day !== '') {
+            filteredTasks = filteredTasks.filter(t => t.day === task.day)
+        }
+
+        if(task.type !== '') {
+            filteredTasks = filteredTasks.filter(t => t.type === task.type)
+        }
+
+        if(task.description !== '') {
+            filteredTasks = filteredTasks.filter(t => t.description === task.description)
+        }
+
+        return filteredTasks
+    }
 }
 
 const database = new Database()
@@ -77,10 +105,14 @@ function registerTask() {
     }
 }
 
-function loadTasks() {
-    const tasks = database.getTasks()
+function loadTasks(tasks = Array()) {
+
+    if(tasks.length === 0){
+        tasks = database.loadTasks()
+    }
 
     const listTasks = document.getElementById('listTasks')
+    listTasks.innerHTML = ''
 
     tasks.forEach((t) => {
         const row = listTasks.insertRow()
@@ -116,6 +148,20 @@ function loadTasks() {
 
         row.insertCell(3).append(btn)
     })
+}
+
+function searchTasks() {
+    const year        = document.getElementById('year').value
+    const month       = document.getElementById('month').value
+    const day         = document.getElementById('day').value
+    const type        = document.getElementById('type').value
+    const description = document.getElementById('description').value
+
+    const task = new Task(year, month, day, type, description)
+
+    const tasks = database.searchTasks(task)
+
+    loadTasks(tasks)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
