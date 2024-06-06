@@ -50,6 +50,10 @@ class Database {
         localStorage.setItem(id, JSON.stringify(task))
         localStorage.setItem('id', id)
     }
+
+    removeTask(id) {
+        localStorage.removeItem(id)
+    }
 }
 
 const database = new Database()
@@ -82,6 +86,35 @@ function loadTasks() {
         const row = listTasks.insertRow()
 
         row.insertCell(0).innerHTML = `${t.day}/${t.month}/${t.year}`
+
+        switch(t.type) {
+            case '1': t.type = 'Studies'
+                break
+            case '2': t.type = 'Work'
+                break
+            case '3': t.type = 'Home'
+                break
+            case '4': t.type = 'Health'
+                break
+            case '5': t.type = 'Family'
+                break
+        }
+
+        row.insertCell(1).innerHTML  = t.type
+        row.insertCell(2).innerHTML = t.description
+
+        const btn = document.createElement('button')
+
+        btn.className = 'btn btn-danger'
+        btn.id = t.id
+        btn.innerHTML = 'Delete'
+        btn.onclick = () => {
+            const id = t.id
+            database.removeTask(id)
+            window.location.reload()
+        }
+
+        row.insertCell(3).append(btn)
     })
 }
 
