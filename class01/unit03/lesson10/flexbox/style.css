@@ -1,0 +1,29 @@
+#content {
+    background-color: gray;
+    height: 250px;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* flex-wrap: nowrap; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: cadetblue;
+    border: 3px solid blue;
+    flex-grow: 1;
+}
+
+.item1 {
+    flex-shrink: 1;
+}
+
+
+.item2 {
+    flex-shrink: 2;
+    flex-basis: 300px;
+    flex-grow: 3;
+}
