@@ -1,0 +1,12 @@
+#box {
+    width: 200px;
+    height: 200px;
+    background: #b9c941;
+    margin: 10px;
+    border-radius: 10px 50px;
+    box-sizing: border-box;
+}
+
+.border {
+    border-radius: 150px 50px;
+}

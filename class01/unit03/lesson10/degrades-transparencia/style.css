@@ -1,0 +1,10 @@
+#box {
+    width: 400px;
+    height: 400px;
+    background: repeating-conic-gradient(
+        red 0%,
+        yellow 15%,
+        red 33%
+      );
+}
+
