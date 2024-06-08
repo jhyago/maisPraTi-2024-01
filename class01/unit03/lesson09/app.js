@@ -105,10 +105,10 @@ function registerTask() {
     }
 }
 
-function loadTasks(tasks = Array()) {
+function loadTasks(tasks) {
 
-    if(tasks.length === 0){
-        tasks = database.loadTasks()
+    if(tasks.length === undefined){
+        return tasks
     }
 
     const listTasks = document.getElementById('listTasks')
