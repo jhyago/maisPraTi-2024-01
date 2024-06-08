@@ -107,8 +107,8 @@ function registerTask() {
 
 function loadTasks(tasks) {
 
-    if(tasks.length === undefined){
-        return tasks
+    if(tasks === undefined){
+        tasks = database.loadTasks()
     }
 
     const listTasks = document.getElementById('listTasks')
