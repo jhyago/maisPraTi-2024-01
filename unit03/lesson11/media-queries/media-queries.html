@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambúrguer de Siri</title>
+
+    <style>
+        body {
+            font-family: arial;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            display: none;
+        }
+
+        nav {
+            display: none;
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            padding: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .menu-toggle {
+                display: none;
+            }
+
+            nav {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            body {
+                background-color: #e0e0e0;
+            }
+
+            header {
+                text-align: left;
+                padding: 20px;
+            }
+
+            nav {
+                text-align: left;
+                padding: 20px;
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 599px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle')
+            const nav = document.querySelector('nav')
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active')
+            })
+        })
+    </script>
+</head>
+<body>
+    <header>
+        Meu menu Hambúrguer
+        <button class="menu-toggle">&#9776</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Bob Esponja Calça Quadrada</h2>
+            <p>Estão prontos, capitão?</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy Todos os direitos reservados ao Senhor Sirigueijo</p>
+    </footer>
+</body>
+</html>

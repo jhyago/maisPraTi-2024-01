@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    border: 2px solid cadetblue;
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 1em;
+    color: brown;
+}
+
+.box > div {
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
