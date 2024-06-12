@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filmes>
+    <filme id="1">
+        <titulo>Kill Bill</titulo>
+        <resumo>
+            A ex-assassina conhecida apenas como Noiva acorda de um coma de quatro anos decidida a se vingar de Bill, seu ex-amante e chefe, que tentou matá-la no dia do casamento. Ela está motivada a acertar as contas com cada uma das pessoas envolvidas com a perda da filha, da festa de casamento e dos quatro anos de sua vida. Na jornada, a Noiva é submetida a dores físicas agonizantes ao enfrentar a inescrupulosa gangue de Bill, o Esquadrão Assassino de Víboras Mortais.
+        </resumo>
+        <genero>Ação</genero>
+        <genero>Aventura</genero>
+        <elenco>
+            <ator>Wagner Moura</ator>
+            <ator>Rodrigo Santoro</ator>
+            <ator>Lázaro Ramos</ator>
+        </elenco>
+    </filme>
+
+    <filme id="2">
+        <titulo>A Viagem de Chihiro</titulo>
+        <resumo>
+            A ex-assassina conhecida apenas como Noiva acorda de um coma de quatro anos decidida a se vingar de Bill, seu ex-amante e chefe, que tentou matá-la no dia do casamento. Ela está motivada a acertar as contas com cada uma das pessoas envolvidas com a perda da filha, da festa de casamento e dos quatro anos de sua vida. Na jornada, a Noiva é submetida a dores físicas agonizantes ao enfrentar a inescrupulosa gangue de Bill, o Esquadrão Assassino de Víboras Mortais.
+        </resumo>
+        <genero>Drama</genero>
+        <genero>Investigação</genero>
+        <elenco>
+            <ator>Anne Hathaway</ator>
+            <ator>Emma Watson</ator>
+            <ator>Tom Cruise</ator>
+        </elenco>
+    </filme>
+
+    <filme id="3">
+        <titulo>Vingadores: Guerra Infinita</titulo>
+        <resumo>
+            A ex-assassina conhecida apenas como Noiva acorda de um coma de quatro anos decidida a se vingar de Bill, seu ex-amante e chefe, que tentou matá-la no dia do casamento. Ela está motivada a acertar as contas com cada uma das pessoas envolvidas com a perda da filha, da festa de casamento e dos quatro anos de sua vida. Na jornada, a Noiva é submetida a dores físicas agonizantes ao enfrentar a inescrupulosa gangue de Bill, o Esquadrão Assassino de Víboras Mortais.
+        </resumo>
+        <genero>Animação</genero>
+        <genero>Comédia Romântica</genero>
+        <elenco>
+            <ator>Bruna Marquezine</ator>
+            <ator>Thais Araújo</ator>
+            <ator>Zendaya</ator>
+        </elenco>
+    </filme>
+</filmes>
