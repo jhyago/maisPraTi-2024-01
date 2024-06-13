@@ -4,27 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <title>Filmes XML</title>
+    <title>Filmes JSON</title>
 
-    <script src="xmlToJson.js"></script>
     <script>
         function getMovies() {
             const xmlHttp = new XMLHttpRequest()
 
-            xmlHttp.open('GET', 'filmes.xml')
+            xmlHttp.open('GET', './filmes.json')
 
             xmlHttp.onreadystatechange = () => {
-                if(xmlHttp.readyState === 4 && xmlHttp.status === 200){
-                    const XMLMovies = xmlHttp.responseText
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                    const JSONMovies = xmlHttp.responseText
 
-                    const parser = new DOMParser()
+                    const objJSONMovies = JSON.parse(JSONMovies)
 
-                    const DOMMovies = parser.parseFromString(XMLMovies, 'text/xml')
-
-                    const JSONMovies = xmlToJson(DOMMovies)
-
-                    for(let i in JSONMovies['filmes']['filme']){
-                        let item = JSONMovies['filmes']['filme'][i]
+                    for(let i in objJSONMovies.filmes){
+                        let item = objJSONMovies.filmes[i]
 
                         let divRow = document.createElement('div')
                         divRow.className = 'row'
@@ -32,7 +27,7 @@
                         divCol.className = 'col'
 
                         let p1 = document.createElement('p')
-                        p1.innerHTML = '<strong>Título: </strong>' + item['titulo']['#text']
+                        p1.innerHTML = '<strong>Título: </strong>' + item.titulo
 
                         divRow.appendChild(divCol)
                         divCol.appendChild(p1)
@@ -54,7 +49,7 @@
     <nav class="navbar navbar-light bg-light mb-5">
         <div class="container">
             <div class="navbar-brand mb-0">
-                <h1>Catálogo de Filmes XML</h1>
+                <h1>Catálogo de Filmes JSON</h1>
             </div>
         </div>
     </nav>

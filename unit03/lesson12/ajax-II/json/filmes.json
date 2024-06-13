@@ -1,0 +1,42 @@
+{
+    "filmes": [
+        {
+            "titulo": "Tropa De Elite",
+            "resumo": "Neto morre e Mathias substitui o capitão Nascimento",
+            "generos": [
+                { "genero": "Policial" },
+                { "genero": "Ação" },
+                { "genero": "Investigação" }
+            ],
+            "elenco": [
+                { "ator": "Wagner Moura" }
+            ]
+        },
+        {
+            "titulo": "Viagem de Chihiro",
+            "resumo": "Chihiro e seus pais estão se mudando para uma cidade diferente. A caminho da nova casa, o pai decide pegar um atalho. Eles se deparam com uma mesa repleta de comida, embora ninguém esteja por perto. Chihiro sente o perigo, mas seus pais começam a comer. Quando anoitece, eles se transformam em porcos. Agora, apenas Chihiro pode salvá-los.",
+            "generos": [
+                { "genero": "Animação" },
+                { "genero": "Aventura" }
+            ],
+            "elenco": [
+                { "ator": "Haku" },
+                { "ator": "Chihiro" }
+            ]
+        },
+        {
+            "titulo": "Estelar",
+            "resumo": "Não sabemos pq n vimos",
+            "generos": [
+                { "genero": "Galático" },
+                { "genero": "Espacial" },
+                { "genero": "Sci-fi" }
+            ],
+            "elenco": [
+                { "ator": "Matt Damon" },
+                { "ator": "Anne Hathway" },
+                { "ator": "Matthew MacCounaghey" }
+            ]
+        }
+    ]
+}
