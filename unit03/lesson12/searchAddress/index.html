@@ -11,12 +11,14 @@
             const xmlHttp = new XMLHttpRequest()
 
             xmlHttp.open('GET', url)
-
-            let data = JSON.parse(xmlHttp.responseText)
-            console.log(data)
-            document.getElementById('endereco').value = data.logradouro
-            document.getElementById('bairro').value = data.bairro
-
+            
+            xmlHttp.onreadystatechange = () => {
+                let data = JSON.parse(xmlHttp.responseText)
+                console.log(data)
+                document.getElementById('endereco').value = data.logradouro
+                document.getElementById('bairro').value = data.bairro
+                document.getElementById('cidade').value = data.localidade
+            }            
 
             xmlHttp.send()
         }
