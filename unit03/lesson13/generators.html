@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+
+    <script>
+      function* chat(){
+        let opcao = yield 'Olá, tudo bem?'
+
+        if(opcao === 'Sim') {
+            yield 'Ótimo'
+
+            opcao = yield 'Como eu posso te ajudar? Quer uma piada?'
+
+            if(opcao === 'Sim'){
+                fetch('./piadas.json').then(resposta => respostas.json()).then(piadas => {
+                    let piada = piadas[]
+                })
+            }
+        }
+      }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
