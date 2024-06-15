@@ -15,15 +15,30 @@
             opcao = yield 'Como eu posso te ajudar? Quer uma piada?'
 
             if(opcao === 'Sim'){
-                fetch('./piadas.json').then(resposta => respostas.json()).then(piadas => {
-                    let piada = piadas[]
+                fetch('./piadas.json').then(resposta => resposta.json()).then(piadas => {
+                    let piada = piadas[Math.floor((Math.random() * 10))]
+                    console.log(piadas.piada)
                 })
+
+                setTimeout(() => {
+                    console.log(piada.resposta)
+                    console.log('Muito boa a piada! Ri muito mesmo, acredite.')
+                }, 4000)
             }
         }
+      }
+
+      let chat1 = chat()
+
+      function iniciarChat() {
+        let resposta = document.getElementById('resposta').value 
+        let iteracao = chat1.next(resposta)
+        console.log(iteracao)
       }
     </script>
 </head>
 <body>
-    
+    <button type="button" onclick="iniciarChat()">Avançar</button>
+    Resposta: <input type="text" id="resposta">
 </body>
 </html>
