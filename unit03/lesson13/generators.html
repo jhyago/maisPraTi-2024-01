@@ -15,15 +15,16 @@
             opcao = yield 'Como eu posso te ajudar? Quer uma piada?'
 
             if(opcao === 'Sim'){
+                let piada
                 fetch('./piadas.json').then(resposta => resposta.json()).then(piadas => {
-                    let piada = piadas[Math.floor((Math.random() * 10))]
-                    console.log(piadas.piada)
+                    piada = piadas[Math.floor((Math.random() * 10))]
+                    console.log(piada.piada)
                 })
 
                 setTimeout(() => {
                     console.log(piada.resposta)
                     console.log('Muito boa a piada! Ri muito mesmo, acredite.')
-                }, 4000)
+                }, 2000)
             }
         }
       }
