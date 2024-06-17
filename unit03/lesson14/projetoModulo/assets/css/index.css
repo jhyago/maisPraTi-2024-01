@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variáveis CSS */
+:root {
+    --normal-font: 400;
+    --bold-font: 600;
+    --bolder-font: 900;
+    --line-height: 1.5rem;
+    --primary-color: #0652dd;
+    --secondary-color: #ea2027;
+}
+
+/* Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.4s ease-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Nav */
+
+nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 2px #261e1c;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: var(--bold-font);
+}
+
+a:hover {
+    cursor: pointer;
+    color: #261e1c;
+    transition: 0.5s;
+}
+
+/* Theme Switcher */
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+label {
+    width: 50px;
+    height: 30px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 6px;
+    position: relative;
+}
+
+.moon {
+    color: #ffa502;
+}
+
+.sun {
+    color: #ff4757;
+}
+
+.switcher {
+    background-color: #fff;
+    position: absolute;
+    top: 5px;
+    left:  2px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.checkbox:checked + .label .switcher {
+    transform: translateX(23px)
+}
+
+/* End Theme Switcher */
+
