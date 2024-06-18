@@ -110,3 +110,129 @@ label {
 
 /* End Theme Switcher */
 
+/* End Nav */
+
+/* Section - 1 */
+
+.firstSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin: 2rem auto -6rem;
+    max-width: 1100px;
+}
+
+.intro-text span {
+    font-size: 3rem;
+}
+
+.intro-text p {
+    line-height: var(--line-height);
+}
+
+.btn {
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 0.5rem;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.red {
+    background-color: var(--secondary-color);
+    margin-right: 1.5rem;
+}
+
+.blue {
+    background-color: var(--primary-color);
+}
+
+.red:hover {
+    background-color: #f1262d;
+    color: #fff;
+}
+
+.blue:hover {
+    background-color: #095cf7;
+    color: #fff;
+}
+
+/* Iframe */
+
+iframe {
+    max-width: 30rem;
+    border-top: 40px groove var(--primary-color);
+    border-bottom: 40px groove var(--primary-color);
+    border-right: 23px solid var(--secondary-color);
+    border-left: 23px solid var(--secondary-color);
+
+    .stand-1 {
+        height: 90px;
+        width: 5px;
+        background-color: var(--primary-color);
+        transform: rotate(40deg);
+        position: relative;
+        top: -15px;
+        left: 200px;
+    }
+
+    .stand-2 {
+        height: 90px;
+        width: 5px;
+        background-color: var(--secondary-color);
+        transform: rotate(40deg);
+        position: relative;
+        top: -105px;
+        left: 250px;
+    }
+}
+
+/* End Section - 1 */
+
+/* Section - 2 */
+
+.grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+.grid-heading {
+    margin: 1rem;
+}
+
+.grid-description {
+    padding-bottom: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    counter-reset: grid-counter;
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
+}
