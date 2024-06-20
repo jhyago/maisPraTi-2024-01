@@ -67,6 +67,19 @@ a:hover {
     transition: 0.5s;
 }
 
+.hamburger {
+    display: none;
+}
+
+.bar {
+    background-color: #020202;
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 6px auto;
+}
+
+
 /* Theme Switcher */
 
 .checkbox {
@@ -98,13 +111,13 @@ label {
     background-color: #fff;
     position: absolute;
     top: 5px;
-    left:  2px;
+    left: 2px;
     height: 20px;
     width: 20px;
     border-radius: 50%;
 }
 
-.checkbox:checked + .label .switcher {
+.checkbox:checked+.label .switcher {
     transform: translateX(23px)
 }
 
@@ -195,44 +208,163 @@ iframe {
 
 /* Section - 2 */
 
-.grid-one-content {
+.carousel {
     display: flex;
-    flex-flow: column wrap;
+    justify-content: space-around;
+    padding: 70px;
+}
+
+img {
+    width: 400px;
+}
+
+.faixa {
+    display: flex;
     justify-content: center;
-    min-height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    align-items: center;
 }
 
-.grid-heading {
-    margin: 1rem;
+.flecha {
+    width: 70px;
+    cursor: pointer;
 }
 
-.grid-description {
-    padding-bottom: 5rem;
+/* Dark theme starts*/
+
+body.dark {
+    background-color: #1e272e;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem;
-    counter-reset: grid-counter;
+body.dark .bar {
+    background-color: #fff;
 }
 
-.grid h3 {
-    font-size: 3rem;
-    position: relative;
-    padding-left: 5rem;
-    padding-bottom: 2rem;
+body.dark p {
+    color: #fff;
 }
 
-.grid h3::before {
-    counter-increment: grid-counter;
-    content: counter(grid-counter);
-    position: absolute;
-    font-size: 8rem;
-    font-style: italic;
-    top: -4rem;
-    left: -2rem;
-    transform: rotate(5deg);
+body.dark h3 {
+    color: #fff;
+}
+
+body.dark nav {
+    background-color: #1e272e;
+    box-shadow: 2px 3px 2px #111010;
+}
+
+body.dark ul {
+    background-color: #1e272e;
+}
+
+body.dark .name {
+    color: var(--primary-color);
+}
+
+body.dark .role {
+    color: var(--secondary-color);
+}
+
+body.dark footer {
+    color: #fff;
+    border-top: 1px solid #111010;
+    box-shadow: 0px -2px 3px #111010;
+}
+
+/* Dark theme ends */
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    ul {
+        background-color: #fff;
+        flex-direction: column;
+        position: fixed;
+        left: 100%;
+        top: 5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    ul.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2rem 0;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .intro-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .btn {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    iframe {
+        max-width: 26rem;
+    }
+
+    .stand-1 {
+        left: 170px;
+    }
+
+    .stand-2 {
+        left: 225px;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    .persons {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .firstSection {
+        max-width: 330px;
+    }
+
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+
+    iframe {
+        max-width: 330px;
+    }
+
+    .stand-1 {
+        left: 140px;
+    }
+
+    .stand-2 {
+        left: 195px;
+    }
 }

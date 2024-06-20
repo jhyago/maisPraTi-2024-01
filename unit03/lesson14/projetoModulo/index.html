@@ -31,6 +31,12 @@
                     <div class="switcher"></div>
                 </label>
             </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
@@ -55,24 +61,18 @@
             </div>
         </section>
 
-        <section class="secondSection grid-one">
-            <div class="grid-one-content">
-                <h2 class="grid-heading">My GRID</h2>
-                <p class="grid-description">Descrição</p>
-
-                <div class="grid">
-                    <article>
-                        <h3>Título 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptas reiciendis aperiam facilis possimus eaque nemo animi rem odit ut, nisi saepe dolorem, nihil ipsa et vero repellendus omnis corrupti!</p>
-                    </article>
-                    <article>
-                        <h3>Título 2</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptas reiciendis aperiam facilis possimus eaque nemo animi rem odit ut, nisi saepe dolorem, nihil ipsa et vero repellendus omnis corrupti!</p>
-                    </article>
-                    <article>
-                        <h3>Título 3</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptas reiciendis aperiam facilis possimus eaque nemo animi rem odit ut, nisi saepe dolorem, nihil ipsa et vero repellendus omnis corrupti!</p>
-                    </article>
+        <section class="secondSection">
+            <div class="carousel">
+                <div class="faixa">
+                    <button class="flecha" onclick="back()"> &lt; </button>
+                </div>
+                <div class="corousel-images">
+                    <img id="carousel-slot1" src="./assets/images/img1.png" alt="">
+                    <img id="carousel-slot2" src="./assets/images/img2.png" alt="">
+                    <img id="carousel-slot3" src="./assets/images/img3.png" alt="">
+                </div>
+                <div class="faixa">
+                    <button class="flecha" onclick="next()"> &gt; </button>
                 </div>
             </div>
         </section>
@@ -83,5 +83,7 @@
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
+
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
