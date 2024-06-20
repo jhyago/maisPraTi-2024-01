@@ -64,7 +64,7 @@
         <section class="secondSection">
             <div class="carousel">
                 <div class="faixa">
-                    <button class="flecha" onclick="back()"> &lt; </button>
+                    <button class="flecha" onclick="handleSlideChange(-1)"> &lt; </button>
                 </div>
                 <div class="corousel-images">
                     <img id="carousel-slot1" src="./assets/images/img1.png" alt="">
@@ -72,7 +72,7 @@
                     <img id="carousel-slot3" src="./assets/images/img3.png" alt="">
                 </div>
                 <div class="faixa">
-                    <button class="flecha" onclick="next()"> &gt; </button>
+                    <button class="flecha" onclick="handleSlideChange(1)"> &gt; </button>
                 </div>
             </div>
         </section>
