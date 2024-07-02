@@ -26,7 +26,7 @@ checkbox.addEventListener("change", () => {
 
 const images = document.querySelectorAll('.corousel-images img')
 
-let slideIndex = 1
+let slideIndex = 0
 
 function next() {
 
