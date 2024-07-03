@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+
+    <script>
+      function* chat() {
+        let option = yield 'Hello, how are you?'
+
+        if(option === 'Yes') {
+            yield 'Great'
+
+            option = yield 'How can I help you? Want a joke?'
+
+            if(option === 'Yes') {
+                let joke
+                fetch('./jokes.json').then(response => response.json()).then(jokes => {
+                    joke = jokes[Math.floor((Math.random() * 10))]
+                    console.log(joke.joke)
+                })
+
+                setTimeout(() => {
+                    console.log(joke.answer)
+                    console.log('Great joke! I laughed a lot, believe me.')
+                }, 2000)
+            }
+        }
+      }
+
+      let chat1 = chat()
+
+      function startChat() {
+        let answer = document.getElementById('answer').value 
+        let iteration = chat1.next(answer)
+        console.log(iteration)
+      }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="startChat()">Next</button>
+    Answer: <input type="text" id="answer">
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!--Div são divisões usadas para estruturar o site, são elementos do tipo bloco, ou seja, elementos que ocupam o espaço da tela e um bloco embaixo do outro. Span funciona como uma div, entretanto, é conhecido como elemento inline, significa que ele agrupa os elementos linha a linha e uma ao lado da outra, e suas propriedades tem a margem limitadas, diferentemente da div q é 100% da tela. Recomendado para formatações específicas no texto-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Div and Spans</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#header {
+			background: blue;
+		}
+
+		#content {
+			background: red;
+		}
+
+		#footer {
+			background: green;
+		}
+
+		#signature {
+			background: orange;
+		}
+
+		.products {
+			background: gray;
+			margin: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<img src="Images/amazon.png" width="200">
+		<ul>
+			<li>Home</li>
+			<li>Products</li>
+			<li>Contact</li>
+		</ul>
+	</div>
+
+	<div id="content">
+		<div class="products">
+			Product 1
+		</div>
+
+		<div class="products">
+			Product 2
+		</div>
+
+		<div>
+			Product 3
+		</div>
+	</div>
+
+	<div id="footer">
+		All rights reserved
+	</div>
+
+	<span id="signature">
+		Hyago
+	</span>
+</body>
+
+</html>

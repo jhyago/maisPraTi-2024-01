@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript applying CSS</title>
+
+    <style>
+        .style {
+            background-color: #000;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+
+    <script>
+        function changeStyle() {
+            document.getElementById('square').className = 'style'
+        }
+    </script>
+
+</head>
+
+<body>
+    <button type="button" onclick="changeStyle()">Change Style</button>
+
+    <hr>
+    <div style="border: solid 1px #000; width: 100px; height: 100px;" id="square">
+        <h1>Test</h1>
+    </div>
+</body>
+
+</html>

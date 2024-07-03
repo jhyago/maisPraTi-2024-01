@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lists.css" />
+</head>
+
+<body>
+    <p>There are some devices commonly used in various company structures, which are:</p>
+    <!--Definition lists: DL defines the start of the list, DT the term, and DD defines the description-->
+    <dl>
+        <dt>Switch</dt>
+        <dd> Device used in computer networks to forward frames between different nodes, with each port corresponding to
+            a different collision domain.</dd>
+
+        <dt>HUB</dt>
+        <dd> Device used in computer networks to forward frames between different nodes, with all ports corresponding to
+            the same collision domain.</dd>
+
+        <dt>Router</dt>
+        <dd> Device responsible for forwarding communication packets to their recipients within a network or between
+            networks, selecting the most efficient route available at the time.</dd>
+    </dl>
+
+    <!-- Unordered lists, where: UL defines the start, LI defines the item through CSS it is possible to change the circle that represents each <li> element -->
+
+    <ul class="unordered">
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+    </ul>
+
+    <!-- Ordered lists, where ol defines the start, li the item -->
+
+    <ol type="A" start="1">
+        <li>first item</li>
+        <ul>
+            <li>unordered list inside an ordered list</li>
+        </ul>
+        <li>second item</li>
+    </ol>
+
+    <nav id="menu"> <!-- semantic tag for navigation -->
+        <h1>Main Menu</h1>
+
+        <ul type="disc">
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+            <li>Menu 4</li>
+            <li>Menu 5</li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

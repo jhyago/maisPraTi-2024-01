@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Error Handling</title>
+
+    <script>
+        let video = Array()
+
+        video[1] = Array()
+        video[1]['Name'] = 'Fullmetal Alchemist'
+        video[1]['Category'] = 'Anime'
+
+        console.log(video)
+
+        function getVideo(video) {
+            try {
+                console.log(video[0]['Name'])
+                console.log('The application did not crash')
+            } catch (error) {
+                handleError(error)
+                console.log('There was an external problem.')
+
+            } finally {
+                console.log('This always runs')
+            }
+        }
+
+        function handleError(error) {
+            console.log('The error is: ' + error)
+        }
+
+        getVideo(video)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
