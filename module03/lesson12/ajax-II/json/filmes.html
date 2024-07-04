@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Filmes JSON</title>
+
+    <script>
+        // Função para buscar filmes de um arquivo JSON
+        function getMovies() {
+            // Criação de uma nova instância de XMLHttpRequest
+            const xmlHttp = new XMLHttpRequest()
+
+            // Configura a requisição para o método GET e a URL do arquivo JSON
+            xmlHttp.open('GET', './filmes.json')
+
+            // Define o que deve ser feito quando o estado da requisição mudar
+            xmlHttp.onreadystatechange = () => {
+                // Verifica se a requisição foi concluída com sucesso
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    // Pega a resposta da requisição e converte de texto JSON para objeto JavaScript
+                    const JSONMovies = xmlHttp.responseText
+                    const objJSONMovies = JSON.parse(JSONMovies)
+
+                    // Itera sobre a lista de filmes
+                    for (let i in objJSONMovies.filmes) {
+                        let item = objJSONMovies.filmes[i]
+
+                        // Criação dos elementos HTML para exibir os filmes
+                        let divRow = document.createElement('div')
+                        divRow.className = 'row'
+                        let divCol = document.createElement('div')
+                        divCol.className = 'col'
+
+                        let p1 = document.createElement('p')
+                        p1.innerHTML = '<strong>Título: </strong>' + item.titulo
+
+                        // Adiciona os elementos criados ao documento
+                        divRow.appendChild(divCol)
+                        divCol.appendChild(p1)
+                        document.getElementById('list').appendChild(divRow)
+                    }
+                }
+
+                // Tratamento de erro caso o arquivo JSON não seja encontrado
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 404) {
+                    console.log('Ferrou, chama o dev')
+                }
+            }
+
+            // Envia a requisição
+            xmlHttp.send()
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-light bg-light mb-5">
+        <div class="container">
+            <div class="navbar-brand mb-0">
+                <h1>Catálogo de Filmes JSON</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container principal -->
+    <div class="container" id="list">
+        <div class="row">
+            <div class="col">
+                <!-- Botão para listar filmes -->
+                <button type="button" class="btn btn-primary" onclick="getMovies()">Listar Filmes</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

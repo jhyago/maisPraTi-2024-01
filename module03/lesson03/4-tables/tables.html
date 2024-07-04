@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+</html>
+
+<head>
+    <link rel="stylesheet" href="tables.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!--table: Define o início e o fim da tabela. tr: Representa o inicio e fim de 
+    uma linha. td: Representa o inicio e fim de uma coluna-->
+    <table>
+        <tr>
+            <td>linha 1, coluna 1</td>
+            <td>linha 1, coluna 2</td>
+            <td>linha 1, coluna 3</td>
+        </tr>
+
+        <tr>
+            <td>linha 2, coluna 1</td>
+            <td>linha 2, coluna 2</td>
+            <td>linha 2, coluna 3</td>
+        </tr>
+
+        <tr>
+            <td>linha 3, coluna 1</td>
+            <td>linha 3, coluna 2</td>
+            <td>linha 3, coluna 3</td>
+        </tr>
+    </table>
+    </br>
+    <!-- table Inicio e fim da tabela
+tr: Linha
+td: Coluna
+caption: Legenda
+thead: cabeçalho
+tbody: Corpo da Tabela
+tfoot: Rodapé
+td colspan="Numero": Mescla colunas
+td rowspan="Numero": Mescla Linha
+tr title="Barcelona" td title="Grêmio">
+Titulo da linha ou coluna ( aparece quando passa o mouse) -->
+    <table>
+        <caption> Melhores do Mundo</caption>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Clube</th>
+                <th>Cidade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="primeiro">
+                <td>1</td>
+                <td>Grêmio</td>
+                <td>Porto Alegre</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Barcelona</td>
+                <td>Barcelona</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3"> Fonte: FIFA 2013</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    </br>
+
+    <table id="tabela">
+        <caption id="legenda">Tabela modelo 3</caption>
+
+        <tr>
+            <td class="ColunaEsquerda">Memória RAM</td>
+            <td class="ColunaDireita">16GB</td>
+        </tr>
+        <tr>
+            <td class="ColunaEsquerda">Processador</td>
+            <td class="ColunaDireita">I7</td>
+        </tr>
+        <tr>
+            <td class="ColunaEsquerda">Placa de vídeo</td>
+            <td class="ColunaDireita">RX580 8GB</td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="ColunaEsquerda">Armazenamento</td>
+            <td class="ColunaDireita">HD</td>
+        </tr>
+        <tr>
+            <td class="ColunaDireita">SSD</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

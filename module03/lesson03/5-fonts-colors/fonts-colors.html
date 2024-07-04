@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Fonts, Colors, Sizes, and Text Styles</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		.formatting {
+
+			/*Colors can be standard, but they can also be defined more specifically through hexadecimal and RGB codes.*/
+			color: #C1400D;
+			background: #0E03EA;
+
+			/*
+            px -> fixed size
+            % -> size relative to the browser's default size
+            em -> size relative to the parent container
+            */
+			font-size: 30px;
+
+			/*The browser will test which font the user has on their browser, if they do not have Times New Roman or Times, it will try a generic serif font.*/
+			font-family: "Times New Roman", Times, serif;
+
+		}
+
+		.bold {
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
+		.italic {
+			/*Defines weight (normal, bold, or from 100 to 900), size, and family in the same line*/
+			font: bold 40px "Lucida Sans Unicode", sans-serif;
+			font-style: italic;
+			text-decoration: overline;
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1 class="formatting"> Header</h1>
+
+	<p class="formatting">Hyago</p>
+	<p class="bold">bold</p>
+	<p class="italic">italic</p>
+
+</body>
+
+</html>

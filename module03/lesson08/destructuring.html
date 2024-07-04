@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring</title>
+
+    <script>
+        // let filmes = ['The Godfather', 'The Lord of the Rings', 'Harry Potter']
+
+        // // let var1 = filmes[0]
+        // // let var2 = filmes[1]
+        // // let var3 = filmes[2]
+
+        // let [a, b, , c, d = 'Fight Club'] = filmes 
+
+        // console.log(filmes)
+
+        // console.log(a, b, c, d)
+
+        // let coisas = [['Pineapple', 'Apple', 'Mint'], ['Computer', 'Mouse', 'Chair']]
+
+        // let [ , [, x]] = coisas 
+
+        // console.log(coisas)
+        // console.log(x)
+
+
+        // let produto = {
+        //     nome: 'Bicycle',
+        //     preco: 1000,
+        //     detalhes: {
+        //         fabricante: 'Caloi',
+        //         modelo: 10
+        //     }
+        // }
+
+        // let {nome, preco} = produto
+        // console.log(nome, preco)
+
+        // let {preco: p, nome: a} = produto
+        // console.log(a, p)
+
+        // let {nome: c, preco: d, desconto = 5} = produto 
+        // console.log(c, d, desconto)
+
+        // let {detalhes: {fabricante, modelo}} = produto
+        // console.log(fabricante, modelo)
+
+        // let arr = [10, 20, 30, 40, 50]
+
+
+        // function teste([a, b, ,c, d]){
+        //     console.log(a, b, c, d)
+        // }
+
+        // teste(arr)
+
+        // let obj = {
+        //     a: 10,
+        //     b: 20,
+        //     c: 30,
+        //     d: 40,
+        //     e: 50
+        // }
+
+        // function teste1 ({a, b, c, d, e}) {
+        //     console.log(e)
+        // }
+
+        // teste1(obj)
+
+        let arr = [10, 20, 30, 40, 50]
+
+        let [a, ...rest] = arr
+
+        console.log(a, rest)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
