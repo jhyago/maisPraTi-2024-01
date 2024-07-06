@@ -2,7 +2,7 @@
 import classes from './HelloWorld.module.css'
 
 // Define um array com uma lista de livros
-const books = ['O Hobbit', 'Harry Potter', 'Nárnia']
+const books = ['O Hobbit', 'Harry Potter']
 
 // Define um componente funcional chamado HelloWorld
 function HelloWorld(){
