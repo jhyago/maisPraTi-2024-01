@@ -42,13 +42,12 @@ function NavegacaoAbas() {
 
             <div id="conteudo">
                 <ul>
-                    {conteudos[estadoAtual].map((item) => (
-                        <li key={item}>{item}</li>
+                    {conteudos[estadoAtual].map((value, index) => (
+                        <li key={index}>{value}</li>
                     ))}
                 </ul>
             </div>
         </>
-        
     )    
 }
 
