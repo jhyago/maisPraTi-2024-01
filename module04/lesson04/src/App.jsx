@@ -1,7 +1,5 @@
-import './App.css'
 // import NavegacaoAbas from './componentes/NavegacaoAbas'
-// import MyComponent from '../../classComponent/ClassComponent'
-import TimerComponent from '../../classComponent/TimerComponent'
+import TimerComponent from '.componentes/TimerComponent'
 
 function App() {
 

@@ -1,16 +1,25 @@
-import { useState } from 'react'
+import { useState } from "react"; // Importa o hook useState da biblioteca React
 
+// Define um componente funcional chamado MirrorText
 function MirrorText() {
-    const [text, setText] = useState('')
+  // Declara uma variável de estado chamada 'text' e uma função 'setText' para atualizá-la
+  // useState('') inicializa 'text' com uma string vazia
+  const [text, setText] = useState("");
 
-    return (
-        <div>
-            <input type="text" value={text} 
-                onChange={(e) => setText(e.target.value)}
-            />
-            <p>Você digitou: {text}</p>
-        </div>
-    )
+  // Retorna o JSX que define a interface do componente
+  return (
+    <div>
+      {" "}
+      {/* Define um contêiner div para agrupar os elementos */}
+      <input
+        type="text" // Define o tipo do input como texto
+        value={text} // Define o valor do input como a variável de estado 'text'
+        onChange={(e) => setText(e.target.value)} // Atualiza 'text' conforme o usuário digita
+      />
+      <p>Você digitou: {text}</p> {/* Exibe o texto digitado pelo usuário */}
+    </div>
+  );
 }
 
-export default MirrorText
+// Exporta o componente MirrorText como o export padrão deste módulo
+export default MirrorText;
