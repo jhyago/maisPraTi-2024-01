@@ -61,25 +61,25 @@ const RegistrationForm = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Nome:</label>
-                    <input type="text" name='name' value={formData.name} onChange={handleChange}/>p
+                    <input type="text" name='name' value={formData.name} onChange={handleChange}/>
                     {errors.name && <p>{errors.name}</p>}
                 </div>
 
                 <div>
                     <label>E-mail:</label>
-                    <input type="text" name='name' value={formData.name} onChange={handleChange}/>p
+                    <input type="text" name='email' value={formData.email} onChange={handleChange}/>
                     {errors.email && <p>{errors.email}</p>}
                 </div>
 
                 <div>
                     <label>Senha:</label>
-                    <input type="text" name='name' value={formData.name} onChange={handleChange}/>p
+                    <input type="password" name='password' value={formData.password} onChange={handleChange}/>
                     {errors.password && <p>{errors.password}</p>}
                 </div>
 
                 <div>
                     <label>Repita sua senha:</label>
-                    <input type="text" name='name' value={formData.name} onChange={handleChange}/>p
+                    <input type="password" name='confirmPassword' value={formData.confirmPassword} onChange={handleChange}/>
                     {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
                 </div>
                 <button type='submit'>Registrar</button>
