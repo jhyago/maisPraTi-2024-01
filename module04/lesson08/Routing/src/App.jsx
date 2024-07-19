@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -11,9 +11,13 @@ function App() {
       <Router>
         <Navigation />   
         <Routes>
+          {/* <Route path='/' Component={Home} />
+          <Route path='/about' Component={About} />
+          <Route path='/contact' Component={Contact} /> */}
+
           <Route path='/' Component={Home} />
           <Route path='/about' Component={About} />
-          <Route path='/contact' Component={Contact} />
+          <Route path='/contact' element={<Navigate to="/"/>} /> 
         </Routes>
       </Router>
     </>
