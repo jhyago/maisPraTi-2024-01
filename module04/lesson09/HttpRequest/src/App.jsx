@@ -1,10 +1,11 @@
-import UserForm from './components/UserForm'
+import GetUser from './components/GetUser'
+// import UserForm from './components/UserForm'
 
 function App() {
   
   return (
     <>
-     <UserForm/>
+     <GetUser/>
     </>
   )
 }
