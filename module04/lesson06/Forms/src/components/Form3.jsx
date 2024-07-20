@@ -49,6 +49,7 @@ const RegistrationForm = () => {
 
         if(Object.keys(validationErrors).length === 0){
             setSubmitted(true)
+            setErrors('')
         } else {
             setErrors(validationErrors)
         }
