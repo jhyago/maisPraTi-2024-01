@@ -1,11 +1,13 @@
-import GetUser from './components/GetUser'
+// import GetUser from './components/GetUser'
 // import UserForm from './components/UserForm'
+import DeleteUser from './components/DeleteUser'
+// import UpdateUser from './components/PutUser'
 
 function App() {
   
   return (
     <>
-     <GetUser/>
+     <DeleteUser/>
     </>
   )
 }
