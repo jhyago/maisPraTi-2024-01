@@ -82,7 +82,7 @@ const LanguageTranslator = () => {
 
             <button onClick={translateText}>Translate</button>
 
-            {translatedText && <TranslatedText>{translateText}</TranslatedText>}
+            {translatedText && <TranslatedText>{translatedText}</TranslatedText>}
         </Container>
     )
 }
