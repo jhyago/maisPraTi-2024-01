@@ -31,7 +31,7 @@ const ButtonMenu = styled.button`
   }
 
   @media (max-width: 768px) {
-    margin-bottom: ${({ isOpen }) => (isOpen ? '0px' : '40px')};
+    margin-bottom: ${({ isOpen }) => (isOpen ? '0px' : '41px')};
   }
 `
 
