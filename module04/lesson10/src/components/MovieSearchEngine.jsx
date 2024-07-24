@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
+const movie_token = import.meta.env.VITE_MOVIE_TOKEN;
 
 // Define o estilo do container principal
 const Container = styled.div`
@@ -78,6 +79,7 @@ const MovieCard = styled.div`
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #c4c0c9
   }
 
   img {
@@ -98,19 +100,48 @@ const MovieCard = styled.div`
   }
 `
 
+const CustomError = styled.p`
+    color: red;
+`
+
 const MovieSearchEngine = () => {
+
   const [query, setQuery] = useState('')
   const [movies, setMovies] = useState([])
+  const [error, setError] = useState('')
+  const [isEmpty, setIsEmpty] = useState(false)
 
-  const searchMovies = async () => {
-    try {
-      const response = await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=403abbfe`)
-      setMovies(response.data.Search)
-    } catch (error) {
-      console.error("Error fetching movie data:", error)
+  const validate = (e) => {
+    e.preventDefault();
+
+    if(!query){
+      setMovies([]);
+      setError("Input Vazio.");
+    }else{
+      searchMovies();
+      setError('');
     }
   }
 
+  const searchMovies = async () => {
+    try {
+      const response = await axios.get(`https://api.themoviedb.org/3/search/movie?query=${query}&language=pt-BR`,{
+        headers: {
+          'Authorization': `Bearer ${movie_token}`,
+          'Accept': 'application/json'
+        }
+      })
+      
+      setMovies(response.data.results);
+      setError('');
+      response.data.results.length > 0 ? setIsEmpty(false) : setIsEmpty(true);
+
+    } catch (err) {
+      console.error("Error fetching movie data:", err)
+      setError(err.message);
+    }
+  }
+  
   return (
     <Container>
       <Title>Movie Search Engine</Title>
@@ -120,15 +151,18 @@ const MovieSearchEngine = () => {
         onChange={(e) => setQuery(e.target.value)} 
         placeholder="Search for a movie" 
       />
-      <Button onClick={searchMovies}>Search</Button> 
+      <Button onClick={validate}>Search</Button>
+      {error && <CustomError>{error}</CustomError>}
       <MoviesContainer>
         {movies && movies.map((movie) => ( 
-          <MovieCard key={movie.imdbID}>
-            <img src={movie.Poster} alt={`${movie.Title} Poster`} /> 
-            <h3>{movie.Title}</h3> 
-            <p>{movie.Year}</p> 
+          <MovieCard key={movie.id}>
+            <img src={`https://image.tmdb.org/t/p/w500`+movie.poster_path} title={`${movie.title}`} alt={`${movie.title} Poster`} /> 
+            <h3>{movie.title}</h3> 
+            <p>{movie.release_date.split("-").reverse().join("/")}</p>
+            <p>{movie.overview.slice(0,100)+"..."}</p>
           </MovieCard>
         ))}
+        {isEmpty && <span>Movie not found</span>}
       </MoviesContainer>
     </Container>
   )
