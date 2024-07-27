@@ -16,7 +16,7 @@ const QRCodeGenerator = () => {
         />
         {text && (
           <QRCodeContainer>
-            <QRCode value={text} size={256} /> 
+            <QRCode value={text} size={256}/> 
           </QRCodeContainer>
         )}
       </Container>
