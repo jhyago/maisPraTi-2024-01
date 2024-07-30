@@ -1,6 +1,8 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
+import { AuthContext } from '../context/AuthContext';
+import { Navigate } from 'react-router-dom';
 const movie_token = import.meta.env.VITE_MOVIE_TOKEN;
 
 // Define o estilo do container principal
@@ -105,6 +107,7 @@ const CustomError = styled.p`
 `
 
 const MovieSearchEngine = () => {
+  const { isAuthenticated } = useContext(AuthContext);
 
   const [query, setQuery] = useState('')
   const [movies, setMovies] = useState([])
@@ -141,7 +144,11 @@ const MovieSearchEngine = () => {
       setError(err.message);
     }
   }
-  
+
+  if(!isAuthenticated){
+    return <Navigate replace to="/Login" />; 
+}else{
+
   return (
     <Container>
       <Title>Movie Search Engine</Title>
@@ -166,6 +173,9 @@ const MovieSearchEngine = () => {
       </MoviesContainer>
     </Container>
   )
+
+}
+
 }
 
 export default MovieSearchEngine

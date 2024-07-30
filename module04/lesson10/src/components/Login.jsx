@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from 'react-router-dom'
+import { AuthContext } from "../context/AuthContext";
 
 // Define o estilo do container principal
 const Container = styled.div`
@@ -87,10 +89,25 @@ const Formulario = styled.form`
     }
 `
 
+const Error = styled.p`
+  color: red;
+  font-size: 16px;
+  text-align: center;
+`
+
+const Sucess = styled.p`
+  color: #04AA6D;
+  font-size: 16px;
+  text-align: center;
+`
+
 const Login = () => {
+    const { isAuthenticated, toggleAuth, setUserEmail } = useContext(AuthContext);
+
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [autenticado, setAutenticado] = useState(false);
+    // const [autenticado, setAutenticado] = useState(false);
     const [error, setError] = useState('');
 
 
@@ -98,13 +115,18 @@ const Login = () => {
         e.preventDefault();
         
         if(email === "paivaseven@gmail.com" && password === "12345678"){
-          setAutenticado(true);
+          toggleAuth();
+
           setEmail('');
           setPassword('');
           setError('');
+
+          setUserEmail(email);
+          
+          setTimeout(()=>{ navigate("/") }, 5000);
+          
         }else{
-          setAutenticado(false);
-          setError("Usuário não registrado.")
+          setError("Email e/ou senha inválidos.")
           setEmail('');
           setPassword('');
         }
@@ -150,8 +172,8 @@ const Login = () => {
                     Entrar
                 </Button>
             </Formulario>
-            {autenticado && <p>Usuário autenticado</p>}
-            {error && <p>{error}</p>}
+            {isAuthenticated && <span><Sucess>Usuário autenticado.</Sucess>Redirecionando para home...</span>}
+            {error && <Error>{error}</Error>}
         </Container>
     );
 }

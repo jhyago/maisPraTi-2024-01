@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import styled from 'styled-components'
+import { AuthContext } from "../context/AuthContext";
+import { Navigate } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -39,6 +41,8 @@ const Input = styled.input`
   }
 `
 const QRCodeGenerator = () => {
+  const { isAuthenticated } = useContext(AuthContext);
+
   const [url, setUrl] = useState("");
 
   const qrcode = (
@@ -48,6 +52,10 @@ const QRCodeGenerator = () => {
       size={256}
     />
   );
+
+  if(!isAuthenticated){
+    return <Navigate replace to="/Login" />; 
+}else{
 
   return (
     <Container>
@@ -61,6 +69,9 @@ const QRCodeGenerator = () => {
         <div>{url && qrcode}</div>
     </Container>
   );
+  
+}
+
 };
 
 export default QRCodeGenerator;

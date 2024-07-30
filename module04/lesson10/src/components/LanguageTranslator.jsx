@@ -1,6 +1,8 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
+import { AuthContext } from '../context/AuthContext'
+import { Navigate } from 'react-router-dom'
 
 const Container = styled.div`
     display: flex;
@@ -26,6 +28,8 @@ const TranslatedText = styled.p`
 
 const LanguageTranslator = () => {
 
+    const { isAuthenticated } = useContext(AuthContext);
+
     const [text, setText] = useState('')
     const [translatedText, setTranslatedText] = useState('')
     const [sourceLang, setSourceLang] = useState('en')
@@ -46,45 +50,51 @@ const LanguageTranslator = () => {
         }
     }
 
-    return(
-        <Container>
-            <Title>Language Translator</Title>
-            <div>
-                <Label>Source Language:</Label>
-                <select value={sourceLang} onChange={(event) => setSourceLang(event.target.value)}>
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
-                    <option value="fr">French</option>
-                    <option value="de">German</option>
-                    <option value="it">Italiano</option>
-                    <option value="pt">Portuguese</option>
-                </select>
-            </div>
+    if(!isAuthenticated){
+        return <Navigate replace to="/Login" />; 
+    }else{
+        return(
+            <Container>
+                <Title>Language Translator</Title>
+                <div>
+                    <Label>Source Language:</Label>
+                    <select value={sourceLang} onChange={(event) => setSourceLang(event.target.value)}>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italiano</option>
+                        <option value="pt">Portuguese</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <Label>Target Language:</Label>
+                    <select value={targetLang} onChange={(event) => setTargetLang(event.target.value)}>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italiano</option>
+                        <option value="pt">Portuguese</option>
+                    </select>
+                </div>
+    
+                <input
+                    type="text"
+                    value={text}
+                    onChange={(event) => setText(event.target.value)}
+                    placeholder='Informe o texto que quer traduzir'
+                />
+    
+                <button onClick={translateText}>Translate</button>
+    
+                {translatedText && <TranslatedText>{translatedText}</TranslatedText>}
+            </Container>
+        )
 
-            <div>
-                <Label>Target Language:</Label>
-                <select value={targetLang} onChange={(event) => setTargetLang(event.target.value)}>
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
-                    <option value="fr">French</option>
-                    <option value="de">German</option>
-                    <option value="it">Italiano</option>
-                    <option value="pt">Portuguese</option>
-                </select>
-            </div>
+    }
 
-            <input
-                type="text"
-                value={text}
-                onChange={(event) => setText(event.target.value)}
-                placeholder='Informe o texto que quer traduzir'
-            />
-
-            <button onClick={translateText}>Translate</button>
-
-            {translatedText && <TranslatedText>{translatedText}</TranslatedText>}
-        </Container>
-    )
 }
 
 export default LanguageTranslator
