@@ -1,44 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Links</title>
     <meta charset="utf-8">
-    <style type="text/css">
+    <title>Links Example</title>
+    <style>
+        /* 
+            Estilo básico para todos os links. 
+            Define o preenchimento (padding) e remove o sublinhado padrão dos links.
+        */
         a {
             padding: 5px 10px;
             text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza a transição de cores */
         }
-        
-        /* Unvisited links -> */
+
+        /* 
+            Links não visitados.
+            Define a cor dos links que o usuário ainda não clicou.
+        */
         a:link {
-            color: #b9c941;
+            color: #b9c941; /* Verde claro */
         }
 
-        /* Visited links */
+        /* 
+            Links visitados.
+            Define a cor dos links que o usuário já clicou.
+        */
         a:visited {
-            color: #c0c0c0;
+            color: #c0c0c0; /* Cinza */
         }
 
-        /* Link hover, when the cursor is over the link */
+        /* 
+            Efeito hover.
+            Estilos aplicados quando o cursor está sobre o link.
+        */
         a:hover {
-            color: #FFF;
-            background: #6d790f;				
+            color: #FFF; /* Branco */
+            background-color: #6d790f; /* Verde escuro */
         }
 
-        /* Active links, when clicked */
+        /* 
+            Links ativos.
+            Estilos aplicados enquanto o link está sendo clicado.
+        */
         a:active {
-            color: #e4f371;
+            color: #e4f371; /* Amarelo claro */
         }
-
     </style>
 </head>
+
 <body>
-
-    <a href="https://www.google.com">Google</a>
+    <h1>Links with CSS Styling</h1>
+    <p>
+        Explore the following websites:
+    </p>
+    <!-- Exemplo de links para sites populares -->
+    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
     <br>
-    <a href="https://www.tecmundo.com.br">Tec Mundo</a>
+    <a href="https://www.tecmundo.com.br" target="_blank" rel="noopener noreferrer">Tec Mundo</a>
     <br>
-    <a href="https://www.youtube.com">YouTube</a>
-
+    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <!-- 
+        O atributo target="_blank" abre o link em uma nova aba.
+        O atributo rel="noopener noreferrer" é uma boa prática para segurança, evitando que a nova página tenha acesso ao objeto window.opener.
+    -->
 </body>
+
 </html>

@@ -1,65 +1,137 @@
-<!--Div são divisões usadas para estruturar o site, são elementos do tipo bloco, ou seja, elementos que ocupam o espaço da tela e um bloco embaixo do outro. Span funciona como uma div, entretanto, é conhecido como elemento inline, significa que ele agrupa os elementos linha a linha e uma ao lado da outra, e suas propriedades tem a margem limitadas, diferentemente da div q é 100% da tela. Recomendado para formatações específicas no texto-->
+<!--
+    <div> é um elemento de bloco usado para estruturar seções maiores em uma página web. 
+    Ele ocupa todo o espaço horizontal disponível, empilhando elementos verticalmente.
+    <span> é um elemento inline usado para aplicar estilos a partes específicas de texto ou conteúdo. 
+    Ele não quebra a linha e permite a formatação de texto dentro de linhas de conteúdo.
+-->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Div and Spans</title>
-	<meta charset="utf-8">
-	<style type="text/css">
-		#header {
-			background: blue;
-		}
+    <meta charset="utf-8">
+    <title>Understanding Divs and Spans</title>
+    <style>
+        /* Estiliza o cabeçalho com uma cor de fundo azul */
+        #header {
+            background-color: #2196F3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-		#content {
-			background: red;
-		}
+        /* Estiliza o conteúdo principal com uma cor de fundo cinza claro */
+        #content {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
 
-		#footer {
-			background: green;
-		}
+        /* Estiliza o rodapé com uma cor de fundo verde */
+        #footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
 
-		#signature {
-			background: orange;
-		}
+        /* Aplica estilo específico a um elemento span para assinatura */
+        #signature {
+            display: block;
+            background-color: #FF9800;
+            color: white;
+            margin-top: 20px;
+            padding: 5px;
+            text-align: right;
+        }
 
-		.products {
-			background: gray;
-			margin: 10px;
-		}
-	</style>
+        /* Estiliza produtos dentro da página com uma cor de fundo branca e borda */
+        .product {
+            background-color: white;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo adicional para links de navegação */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Responsividade para pequenos ajustes */
+        @media (max-width: 600px) {
+            #header, #footer {
+                text-align: left;
+                padding: 10px;
+            }
+
+            nav li {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-	<div id="header">
-		<img src="Images/amazon.png" width="200">
-		<ul>
-			<li>Home</li>
-			<li>Products</li>
-			<li>Contact</li>
-		</ul>
-	</div>
+    <!-- <div> com ID "header" serve como cabeçalho da página, contendo o logotipo e a barra de navegação. -->
+    <div id="header">
+        <img src="images/logo.png" alt="Website Logo" width="100" height="100">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
-	<div id="content">
-		<div class="products">
-			Product 1
-		</div>
+    <!-- <div> com ID "content" serve como o conteúdo principal, exibindo produtos ou outras informações. -->
+    <div id="content">
+        <div class="product">
+            <h2>Product 1</h2>
+            <p>Description of Product 1.</p>
+            <span class="price">$29.99</span>
+            <!-- <span> é usado para destacar o preço dentro do parágrafo de produto. -->
+        </div>
 
-		<div class="products">
-			Product 2
-		</div>
+        <div class="product">
+            <h2>Product 2</h2>
+            <p>Description of Product 2.</p>
+            <span class="price">$39.99</span>
+        </div>
 
-		<div>
-			Product 3
-		</div>
-	</div>
+        <div class="product">
+            <h2>Product 3</h2>
+            <p>Description of Product 3.</p>
+            <span class="price">$49.99</span>
+        </div>
+    </div>
 
-	<div id="footer">
-		All rights reserved
-	</div>
+    <!-- <div> com ID "footer" serve como rodapé da página, contendo informações legais ou de copyright. -->
+    <div id="footer">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </div>
 
-	<span id="signature">
-		Hyago
-	</span>
+    <!-- <span> com ID "signature" para assinatura ou informações de autor. -->
+    <span id="signature">
+        Designed by Hyago
+    </span>
 </body>
 
 </html>

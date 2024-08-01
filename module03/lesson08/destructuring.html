@@ -3,84 +3,88 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Destructuring</title>
+    <title>Destructuring in JavaScript</title>
 
     <script>
-        // let filmes = ['The Godfather', 'The Lord of the Rings', 'Harry Potter']
+        // Exemplo de destructuring com arrays
+        let filmes = ['The Godfather', 'The Lord of the Rings', 'Harry Potter'];
 
-        // // let var1 = filmes[0]
-        // // let var2 = filmes[1]
-        // // let var3 = filmes[2]
+        // Destructuring para extrair elementos do array
+        let [filme1, filme2, , filme4, filme5 = 'Fight Club'] = filmes;
 
-        // let [a, b, , c, d = 'Fight Club'] = filmes 
+        // Exibe os filmes extraídos
+        console.log("Filmes:", filme1, filme2, filme4, filme5);
 
-        // console.log(filmes)
+        // Exemplo de destructuring com arrays multidimensionais
+        let coisas = [['Pineapple', 'Apple', 'Mint'], ['Computer', 'Mouse', 'Chair']];
 
-        // console.log(a, b, c, d)
+        // Extrai o segundo item do segundo array
+        let [, [, item2]] = coisas;
 
-        // let coisas = [['Pineapple', 'Apple', 'Mint'], ['Computer', 'Mouse', 'Chair']]
+        // Exibe o item extraído
+        console.log("Item extraído:", item2);
 
-        // let [ , [, x]] = coisas 
+        // Exemplo de destructuring com objetos
+        let produto = {
+            nome: 'Bicycle',
+            preco: 1000,
+            detalhes: {
+                fabricante: 'Caloi',
+                modelo: 10
+            }
+        };
 
-        // console.log(coisas)
-        // console.log(x)
+        // Destructuring para extrair propriedades do objeto
+        let { nome, preco } = produto;
 
+        // Exibe as propriedades extraídas
+        console.log("Nome e Preço:", nome, preco);
 
-        // let produto = {
-        //     nome: 'Bicycle',
-        //     preco: 1000,
-        //     detalhes: {
-        //         fabricante: 'Caloi',
-        //         modelo: 10
-        //     }
-        // }
+        // Renomeando as variáveis ao extrair
+        let { preco: precoProduto, nome: nomeProduto } = produto;
+        console.log("Nome e Preço (renomeados):", nomeProduto, precoProduto);
 
-        // let {nome, preco} = produto
-        // console.log(nome, preco)
+        // Extrai propriedades com valor padrão
+        let { nome: nomeProd, preco: precoProd, desconto = 5 } = produto;
+        console.log("Nome, Preço e Desconto:", nomeProd, precoProd, desconto);
 
-        // let {preco: p, nome: a} = produto
-        // console.log(a, p)
+        // Destructuring aninhado para acessar propriedades de objetos dentro de objetos
+        let { detalhes: { fabricante, modelo } } = produto;
+        console.log("Fabricante e Modelo:", fabricante, modelo);
 
-        // let {nome: c, preco: d, desconto = 5} = produto 
-        // console.log(c, d, desconto)
+        // Destructuring em parâmetros de função com arrays
+        let arr = [10, 20, 30, 40, 50];
 
-        // let {detalhes: {fabricante, modelo}} = produto
-        // console.log(fabricante, modelo)
+        function exibirValores([valor1, valor2, , valor4, valor5]) {
+            console.log("Valores:", valor1, valor2, valor4, valor5);
+        }
 
-        // let arr = [10, 20, 30, 40, 50]
+        // Chama a função passando o array
+        exibirValores(arr);
 
+        // Destructuring em parâmetros de função com objetos
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30,
+            d: 40,
+            e: 50
+        };
 
-        // function teste([a, b, ,c, d]){
-        //     console.log(a, b, c, d)
-        // }
+        function exibirPropriedades({ a, b, c, d, e }) {
+            console.log("Propriedade e:", e);
+        }
 
-        // teste(arr)
+        // Chama a função passando o objeto
+        exibirPropriedades(obj);
 
-        // let obj = {
-        //     a: 10,
-        //     b: 20,
-        //     c: 30,
-        //     d: 40,
-        //     e: 50
-        // }
-
-        // function teste1 ({a, b, c, d, e}) {
-        //     console.log(e)
-        // }
-
-        // teste1(obj)
-
-        let arr = [10, 20, 30, 40, 50]
-
-        let [a, ...rest] = arr
-
-        console.log(a, rest)
-
+        // Usando rest operator para capturar o restante dos elementos
+        let [primeiro, ...restante] = arr;
+        console.log("Primeiro e Restante:", primeiro, restante);
     </script>
 </head>
 
 <body>
-
 </body>
 
 </html>

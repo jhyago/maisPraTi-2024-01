@@ -1,200 +1,176 @@
 /**
  * Objetos em JavaScript são coleções de pares de chave e valor. Cada chave funciona como um identificador para um valor associado,
- * e esses valores podem ser de qualquer tipo, como números, strings, funções ou até mesmo outros objetos. Isso permite que dados e funcionalidades 
- * sejam organizados de uma maneira estruturada e acessível.
+ * e esses valores podem ser de qualquer tipo, como números, strings, funções ou até mesmo outros objetos. 
+ * Isso permite que dados e funcionalidades sejam organizados de uma maneira estruturada e acessível.
  */
 
+// Exemplo 1: Criando um objeto de livro
 let book = {
-    title: "1984",
-    author: "George Orwell",
-    year: 1949
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    year: 1925,
+    getSummary: function () {
+        return `${this.title} was written by ${this.author} in ${this.year}.`;
+    }
 };
 
-console.log(book.title);  // Exibe: 1984
-console.log(book.author);   // Exibe: George Orwell
-console.log(book.year);     // Exibe: 1949
+console.log(book.title);          // Exibe: The Great Gatsby
+console.log(book.author);         // Exibe: F. Scott Fitzgerald
+console.log(book.year);           // Exibe: 1925
+console.log(book.getSummary());   // Exibe: The Great Gatsby was written by F. Scott Fitzgerald in 1925.
 
 
-// Objeto literal (ES5)
-let carES5 = {
-    brand: 'Toyota',
-    model: 'Corolla',
-    displayInfo: function () {
-        console.log(`Brand: ${this.brand}, Model: ${this.model}`)
+// Exemplo 2: Objeto com método em ES6
+let car = {
+    brand: 'Honda',
+    model: 'Civic',
+    year: 2022,
+    displayInfo() {
+        console.log(`Brand: ${this.brand}, Model: ${this.model}, Year: ${this.year}`);
     }
-}
+};
 
-carES5.displayInfo()
+car.displayInfo();  // Exibe: Brand: Honda, Model: Civic, Year: 2022
 
-// Forma ES5 de escrever o objeto literal
-/*
-let manufacturer = 'Ford'
-let year = 2020
-let color = 'Blue'
-let type = 'Sedan'
+
+// Exemplo 3: Criando objetos com variáveis ES6
+let manufacturer = 'Ford';
+let year = 2023;
+let color = 'Red';
+let type = 'SUV';
 
 let vehicle = {
-    manufacturer: manufacturer,
-    year: year,
-    color: color,
-    type: type,
-
-    displayDetails: function(){
-        console.log(`${this.manufacturer}, year ${this.year}, color ${this.color}, type ${this.type}`)
-    }
-}
-
-console.log(vehicle)
-vehicle.displayDetails()
-*/
-
-// Forma ES6 - Em situações que a variável tem o mesmo nome do nome/valor
-let manufacturer = 'Ford'
-let year = 2020
-let color = 'Blue'
-let type = 'Sedan'
-
-let vehicleES6 = {
     manufacturer,
     year,
     color,
     type,
 
     displayDetails() {
-        console.log(`${this.manufacturer}, year ${this.year}, color ${this.color}, type ${this.type}`)
+        console.log(`${this.manufacturer}, Year: ${this.year}, Color: ${this.color}, Type: ${this.type}`);
     }
-}
+};
 
-vehicleES6.manufacturer = 'Chevrolet'
+vehicle.displayDetails(); // Exibe: Ford, Year: 2023, Color: Red, Type: SUV
 
-console.log(vehicleES6)
-vehicleES6.displayDetails()
 
-// Inclusão de atributos e métodos posteriormente
+// Exemplo 4: Adicionando propriedades e métodos dinamicamente
+let athlete = {
+    name: 'Serena Williams',
+    sport: 'Tennis'
+};
 
-let player = {
-    name: 'John',
-    age: 30
-}
+console.log(athlete); // Exibe: { name: 'Serena Williams', sport: 'Tennis' }
 
-console.log(player)
+athlete.country = 'USA';
+athlete.celebrateVictory = () => console.log('Victory!');
 
-player.position = 'Forward'
+console.log(athlete); // Exibe: { name: 'Serena Williams', sport: 'Tennis', country: 'USA', celebrateVictory: [Function] }
+athlete.celebrateVictory(); // Exibe: Victory!
 
-console.log(player)
 
-player.celebrate = () => console.log('Goal!')
+// Exemplo 5: Comparando objetos
+let config = {
+    userId: 101,
+    setting: 'Dark Mode'
+};
 
-player.celebrate()
+let anotherConfig = config;
 
-// Exemplificação de como o objeto literal é único
+console.log(config.setting);        // Exibe: Dark Mode
+console.log(anotherConfig.setting); // Exibe: Dark Mode
 
-let configuration = {
-    userId: 102,
-    setting: 'Dark mode',
-    status() {
-        console.log('Active')
-    }
-}
+anotherConfig.setting = 'Light Mode';
 
-console.log(configuration.setting)
-
-let z = configuration
-console.log(z.setting)
-
-z.setting = 'Light mode'
-
-console.log(configuration.setting)
-console.log(z.setting)
+console.log(config.setting);        // Exibe: Light Mode
+console.log(anotherConfig.setting); // Exibe: Light Mode
 
 /*
-    Outro meio de criação de objetos. Trata de uma função que possui um escopo e que vai ser recuperada dentro do código a partir do operador new.
+    Objetos são referências em JavaScript, o que significa que atribuir um objeto a uma nova variável cria uma referência ao mesmo objeto original, não uma cópia.
 */
 
-let Computer = function () {
-    this.processor = 'Intel i7'
-    this.ram = '16GB'
-    this.diskSpace = '1TB'
-    this.on = false
+
+// Exemplo 6: Função construtora de objetos
+function Laptop(brand, processor, ram) {
+    this.brand = brand;
+    this.processor = processor;
+    this.ram = ram;
+    this.on = false;
 
     this.turnOn = function () {
-        this.on = true
-        console.log('Computer turned on')
-    }
+        this.on = true;
+        console.log(`${this.brand} laptop is now on.`);
+    };
 
-    this.getProcessor = function () {
-        return this.processor
-    }
-
-    this.setProcessor = function (processor) {
-        this.processor = processor
-    }
+    this.getSpecs = function () {
+        return `Processor: ${this.processor}, RAM: ${this.ram}`;
+    };
 }
 
-let pc = new Computer()
+let myLaptop = new Laptop('Apple', 'M1', '16GB');
+console.log(myLaptop.getSpecs());  // Exibe: Processor: M1, RAM: 16GB
+myLaptop.turnOn();                 // Exibe: Apple laptop is now on.
 
-// Factory e atribuição dinâmica de valores
-let CellPhoneFactory = function (brand, memory, battery) {
+
+// Exemplo 7: Factory Function para criar objetos
+function createSmartphone(brand, storage, batteryLife) {
     return {
         brand,
-        memory,
-        battery,
-        turnOn() { console.log('Cell phone turned on') }
-    }
+        storage,
+        batteryLife,
+        powerOn() {
+            console.log(`${this.brand} smartphone is powered on.`);
+        }
+    };
 }
 
-let CellPhone2 = CellPhoneFactory('Samsung', '128GB', '4500mAh')
-console.log(CellPhone2)
+let myPhone = createSmartphone('Google', '256GB', '4000mAh');
+console.log(myPhone); // Exibe: { brand: 'Google', storage: '256GB', batteryLife: '4000mAh', powerOn: [Function] }
+myPhone.powerOn();    // Exibe: Google smartphone is powered on.
 
-console.log(`Brand: ${CellPhone2.brand}`)
-CellPhone2.turnOn()
 
 /*
     Em JavaScript, os loops for in, for of e .forEach() são estruturas usadas para iterar sobre coleções de dados como objetos e arrays. 
 */
 
 /* 
-    for in -> O loop for in é utilizado para iterar sobre as propriedades enumeráveis de um objeto. Ele percorre as chaves do objeto, 
-    permitindo que você acesse os valores correspondentes a cada chave.
+    for...in -> O loop for...in é utilizado para iterar sobre as propriedades enumeráveis de um objeto. 
+    Ele percorre as chaves do objeto, permitindo que você acesse os valores correspondentes a cada chave.
 */
 
-const car = {
-    brand: "Toyota",
-    model: "Corolla",
-    year: 2021
+const person = {
+    name: "Alice",
+    age: 28,
+    occupation: "Engineer"
 };
 
-for (let key in car) {
-    console.log(key + ": " + car[key]);
+for (let key in person) {
+    console.log(`${key}: ${person[key]}`);
 }
 
-// Este código irá imprimir o nome da chave e o valor associado para cada propriedade do objeto carro.
+// Este código irá imprimir o nome da chave e o valor associado para cada propriedade do objeto person.
 
 /*
-    for of -> O loop for of é usado para iterar sobre estruturas de dados iteráveis, como arrays, strings, e outros objetos iteráveis. 
+    for...of -> O loop for...of é usado para iterar sobre estruturas de dados iteráveis, como arrays, strings, e outros objetos iteráveis. 
     Ele percorre os valores da coleção, facilitando a manipulação de cada item diretamente.
 */
 
-const colors = ["Red", "Blue", "Green"];
+const fruits = ["Apple", "Banana", "Cherry"];
 
-for (let color of colors) {
-    console.log(color);
+for (let fruit of fruits) {
+    console.log(fruit);
 }
 
-// Este código irá imprimir cada cor no array cores.
+// Este código irá imprimir cada fruta no array fruits.
 
 /*
     forEach() -> O método .forEach() é específico de arrays em JavaScript. Ele executa uma função em cada elemento de um array. 
     É uma maneira elegante e funcional de iterar sobre arrays, especialmente quando você não precisa de um loop de controle específico ou de parar/break o loop.
 */
 
+const numbers = [10, 20, 30, 40, 50];
 
-const numbers = [1, 2, 3, 4, 5];
-
-numbers.forEach(function(number) {
-    console.log(number);
+numbers.forEach(function (number, index) {
+    console.log(`Index ${index}: ${number}`);
 });
 
-// Este código irá imprimir cada número no array numeros.
-
-// Cada uma dessas abordagens tem seu uso ideal dependendo do tipo de dado que você está manipulando e do que precisa fazer com esses dados.
+// Este código irá imprimir cada número no array numbers juntamente com seu índice.

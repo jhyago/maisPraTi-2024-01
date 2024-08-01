@@ -32,20 +32,3 @@ p {
     /*espaçamento entre as palavras*/
     text-transform: uppercase;
 }
-
-span#identificado {
-    background-color: yellow;
-    color: black;
-}
-
-.familia_unida {
-    /* "ponto ." faz referência a uma classe*/
-    color: black;
-    background-color: grey;
-}
-
-#thewitcher {
-    /*Hashtag faz referência a um ID*/
-    font-size: 20px;
-    color: greenyellow;
-}

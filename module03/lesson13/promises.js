@@ -5,22 +5,22 @@ let promise = new Promise((resolve, reject) => {
     let resposta = {};
 
     // Simulando uma condição para resolver ou rejeitar a Promise
-    if (true) {
-      // Troque para false para testar a resolução da Promise
+    if (false) { // Altere para true para simular um erro
       resposta = {
         codigo: 404,
-        erro: "Objeto não encontrado",
+        erro: "Objeto não encontrado", // Mensagem de erro simulada
       };
 
       // Rejeitando a Promise com uma resposta de erro
       reject(resposta);
+      return; // Retorna para evitar a execução do bloco de sucesso
     }
 
-    // Resposta de sucesso
+    // Resposta de sucesso simulada
     resposta = {
       1: { id: 1, nome: "Caio" },
-      2: { id: 1, nome: "Leonan" },
-      3: { id: 1, nome: "Rogério" },
+      2: { id: 2, nome: "Leonan" },
+      3: { id: 3, nome: "Rogério" },
     };
 
     // Resolvendo a Promise com a resposta
@@ -29,25 +29,25 @@ let promise = new Promise((resolve, reject) => {
 })
   // Tratando a resolução da Promise
   .then((dados) => {
-    console.log(dados); // Exibe os dados no console
+    console.log("Dados recebidos na primeira promise:", dados);
 
     // Criação de outra Promise para encadeamento
-    let promise2 = new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       setTimeout(() => {
         let resposta = {};
 
-        if (false) {
-          // Troque para true para testar a rejeição da Promise
+        if (false) { // Altere para true para testar a rejeição da Promise
           resposta = {
             codigo: 1000,
-            erro: "Assistir One Piece",
+            erro: "Assistir One Piece", // Mensagem de erro personalizada
           };
 
           // Rejeitando a Promise com uma resposta de erro
           reject(resposta);
+          return; // Retorna para evitar a execução do bloco de sucesso
         }
 
-        // Resposta de sucesso
+        // Resposta de sucesso simulada
         resposta = {
           1: { id: 1, nome: "Vanessa" },
           2: { id: 2, nome: "Fernanda" },
@@ -57,15 +57,15 @@ let promise = new Promise((resolve, reject) => {
         // Resolvendo a Promise com a resposta
         resolve(resposta);
       }, 4000); // A operação demora 4 segundos para ser concluída
-    })
-      // Tratando a resolução da segunda Promise
-      .then((dados) => {
-        console.log(dados); // Exibe os dados no console
-      })
-      // Tratando a rejeição da segunda Promise
-      .catch((erro) => {
-        console.log(erro); // Exibe o erro no console
-      });
+    });
+  })
+  // Tratando a resolução da segunda Promise
+  .then((dados) => {
+    console.log("Dados recebidos na segunda promise:", dados);
+  })
+  // Tratando a rejeição da segunda Promise
+  .catch((erro) => {
+    console.error("Erro na segunda promise:", erro);
   })
   // Encadeando mais operações após a primeira Promise
   .then(() => {
@@ -74,9 +74,9 @@ let promise = new Promise((resolve, reject) => {
   })
   // Recebendo o valor retornado pelo then anterior
   .then((param) => {
-    console.log(param); // Exibe "then 3" no console
+    console.log("Resultado do segundo then:", param); // Exibe "then 3" no console
   })
   // Tratando a rejeição da primeira Promise
   .catch((erro) => {
-    console.log(erro); // Exibe o erro no console
+    console.error("Erro na primeira promise:", erro);
   });

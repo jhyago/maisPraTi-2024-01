@@ -1,24 +1,24 @@
 /*
-  SWITCH CASE - O comando switch é um comando de seleção que permite selecionar um comando entre vários outros comandos. 
-  Isto é feito através da comparação de uma variável a um conjunto de constantes. Cada um dos comandos está ligado a uma constante.
+    SWITCH CASE - O comando switch é um comando de seleção que permite selecionar um comando entre vários outros comandos.
+    Isto é feito através da comparação de uma variável a um conjunto de constantes. Cada um dos comandos está ligado a uma constante.
 */
 
 /*
-switch (option) {
-    case 1:
-        // indica para o switch que o case chegou ao final, caso n for escrita, todo o conteúdo do case 1 e dos próximos seriam executados, até um break ser encontrado.
-        break 
+    Estrutura básica do switch:
+    switch (option) {
+        case 1:
+            // Indica para o switch que o case chegou ao final. Caso não for escrita, todo o conteúdo do case 1 e dos próximos seriam executados, até um break ser encontrado.
+            break;
         
-    // Funciona como um else, e pode não ser definido, caso seja definido e nenhum case entre em loop, ele será ativado.
-    default: 
-        break;
-}
+        // Funciona como um else, e pode não ser definido. Caso seja definido e nenhum case entre em loop, ele será ativado.
+        default: 
+            break;
+    }
 */
 
 const prompt = require('prompt-sync')();
 
 // Exercício 1: Par ou Ímpar
-
 let number = parseInt(prompt("Insira um número:"));
 
 if (number % 2 === 0) {
@@ -43,6 +43,7 @@ if (number1 > number2) {
 let side1 = parseInt(prompt("Insira o comprimento do primeiro lado:"));
 let side2 = parseInt(prompt("Insira o comprimento do segundo lado:"));
 let side3 = parseInt(prompt("Insira o comprimento do terceiro lado:"));
+
 if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
     console.log("É possível formar um triângulo com esses comprimentos de lado.");
 } else {
@@ -114,10 +115,19 @@ let month = parseInt(prompt("Insira o número do mês (1 a 12):"));
 
 let daysInMonth;
 switch (month) {
-    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
         daysInMonth = 31;
         break;
-    case 4: case 6: case 9: case 11:
+    case 4:
+    case 6:
+    case 9:
+    case 11:
         daysInMonth = 30;
         break;
     case 2:
@@ -175,12 +185,12 @@ switch (keyCode) {
 console.log("O código", keyCode, "corresponde à tecla:", keyName);
 
 /*
-    Estruturas de controle: repetição, são estruturas que nos permitem executar mais de uma vez um mesmo trecho de código. 
+    Estruturas de controle: repetição são estruturas que nos permitem executar mais de uma vez um mesmo trecho de código. 
     Trata-se de uma forma de executar blocos de comandos somente sob determinadas condições, mas com a opção de 
     repetir o mesmo bloco quantas vezes for necessário.
 */
 
-// For
+// Exemplo: Impressão de multiplicação de 5
 console.log(5 * 0);
 console.log(5 * 1);
 console.log(5 * 2);
@@ -193,16 +203,16 @@ console.log(5 * 8);
 console.log(5 * 9);
 console.log(5 * 10);
 
-let counter = 0
-let multiplier = 5
+let counter = 0;
+let multiplier = 5;
 
+// Estrutura do for
 //   <variável>;   <condição>;     <incremento>
 for (counter = 0; counter <= 10; counter++) {
     console.log(`${multiplier} * ${counter} =`, multiplier * counter);
 }
 
 // Imprimir os números pares de 1 a 20.
-
 for (let i = 2; i <= 20; i += 2) {
     console.log(i);
 }
@@ -214,13 +224,12 @@ for (let i = 1; i <= 100; i++) {
 }
 console.log(sum);
 
-// While 
-
-let control = 0
+// While - Estrutura de repetição enquanto a condição for verdadeira.
+let control = 0;
 
 while (control <= 10) {
-    console.log(control)
-    control++
+    console.log(control);
+    control++;
 }
 
 // Imprimir os números de 10 a 1 em ordem decrescente.
@@ -243,10 +252,9 @@ do {
     value = parseInt(prompt("Digite um valor:"));
 } while (value >= 0);
 
-// Do-While
+// Do-While - Estrutura de repetição que garante a execução do bloco pelo menos uma vez.
 
 // Solicitar uma senha ao usuário.
-
 let password;
 do {
     password = prompt("Digite a senha:");

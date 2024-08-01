@@ -1,171 +1,98 @@
-// Exercitando Arrays e funções
+// Exercitando Arrays e Funções
 
 // Exercício 1: Somar todos os elementos de um array
 function sumElements(array) {
-    let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        sum += array[i];
-    }
-    return sum;
+    return array.reduce((sum, value) => sum + value, 0);
 }
 
 console.log("Teste Soma Elementos:", sumElements([1, 2, 3, 4]));  // Deve retornar 10
 
 // Exercício 2: Encontrar o maior número em um array
 function largestNumber(array) {
-    let largest = array[0];
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] > largest) {
-            largest = array[i];
-        }
-    }
-    return largest;
+    return Math.max(...array);
 }
 
-console.log("Teste Maior Número:", largestNumber([1, 22, 3, 4]));    // Deve retornar 22
+console.log("Teste Maior Número:", largestNumber([1, 22, 3, 4]));  // Deve retornar 22
 
 // Exercício 3: Reverter um array
 function reverseArray(array) {
-    let result = [];
-    for (let i = array.length - 1; i >= 0; i--) {
-        result.push(array[i]);
-    }
-    return result;
+    return array.reverse();
 }
 
 console.log("Teste Inverte Array:", reverseArray([1, 2, 3, 4]));  // Deve retornar [4, 3, 2, 1]
 
 // Exercício 4: Contar a frequência de elementos
 function elementFrequency(array) {
-    let frequency = {};
-    for (let i = 0; i < array.length; i++) {
-        if (frequency[array[i]]) {
-            frequency[array[i]] += 1;
-        } else {
-            frequency[array[i]] = 1;
-        }
-    }
-    return frequency;
+    return array.reduce((frequency, item) => {
+        frequency[item] = (frequency[item] || 0) + 1;
+        return frequency;
+    }, {});
 }
 
 console.log("Teste Frequência Elementos:", elementFrequency([1, 2, 2, 3, 3, 3])); // Deve retornar {1: 1, 2: 2, 3: 3}
 
 // Exercício 5: Remover duplicatas de um array
 function removeDuplicates(array) {
-    let unique = [];
-    let itemsFound = {};
-    for (let i = 0; i < array.length; i++) {
-        if (!itemsFound[array[i]]) {
-            unique.push(array[i]);
-            itemsFound[array[i]] = true;
-        }
-    }
-    return unique;
+    return [...new Set(array)];
 }
 
 console.log("Teste Remove Duplicatas:", removeDuplicates([1, 2, 2, 3, 3, 3, 4])); // Deve retornar [1, 2, 3, 4]
 
-// Exercício 6: Calcular a média de notas de uma turma - Esta função recebe um array de notas e retorna a média dessas notas.
+// Exercício 6: Calcular a média de notas de uma turma
 function calculateAverageGrades(grades) {
-    let sum = 0;
-    for (let i = 0; i < grades.length; i++) {
-        sum += grades[i];
-    }
+    const sum = grades.reduce((total, grade) => total + grade, 0);
     return sum / grades.length;
 }
 
 console.log("Média das notas:", calculateAverageGrades([10, 20, 30, 40, 50])); // Deve retornar 30
 
-// Exercício 7: Verificar se todos os números de um array são positivos - Esta função verifica se todos os números em um array são positivos e retorna true ou false.
+// Exercício 7: Verificar se todos os números de um array são positivos
 function allPositive(numbers) {
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] <= 0) {
-            return false;
-        }
-    }
-    return true;
+    return numbers.every(num => num > 0);
 }
 
 console.log("Todos são positivos?", allPositive([1, 2, 3, -4, 5])); // Deve retornar false
 
-// Exercício 8: Encontrar o número de vezes que um dado nome aparece em uma lista - Esta função conta quantas vezes um nome específico aparece em um array de nomes.
+// Exercício 8: Encontrar o número de vezes que um dado nome aparece em uma lista
 function countOccurrences(names, targetName) {
-    let count = 0;
-    for (let i = 0; i < names.length; i++) {
-        if (names[i] === targetName) {
-            count++;
-        }
-    }
-    return count;
+    return names.filter(name => name === targetName).length;
 }
 
 console.log("Ocorrências do nome 'Ana':", countOccurrences(["Ana", "Pedro", "Ana", "Maria"], "Ana")); // Deve retornar 2
 
-// Exercício 9: Filtrar números menores que 10 de um array - Esta função cria um novo array contendo apenas os números menores que 10.
+// Exercício 9: Filtrar números menores que 10 de um array
 function filterLessThanTen(numbers) {
-    let result = [];
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] < 10) {
-            result.push(numbers[i]);
-        }
-    }
-    return result;
+    return numbers.filter(num => num < 10);
 }
 
 console.log("Números menores que 10:", filterLessThanTen([5, 15, 8, 10, 3])); // Deve retornar [5, 8, 3]
 
-// Exercício 10: Concatenar dois arrays - Esta função recebe dois arrays e retorna um novo array que é a concatenação dos dois.
+// Exercício 10: Concatenar dois arrays
 function concatenateArrays(array1, array2) {
-    let result = array1.slice(); // Cria uma cópia do primeiro array
-    for (let i = 0; i < array2.length; i++) {
-        result.push(array2[i]);
-    }
-    return result;
+    return array1.concat(array2);
 }
 
 console.log("Arrays concatenados:", concatenateArrays([1, 2, 3], [4, 5, 6])); // Deve retornar [1, 2, 3, 4, 5, 6]
 
-// Exercitando matrizes e funções
+// Exercitando Matrizes e Funções
 
 // Exercício 1: Somar todos os elementos de uma matriz
 function sumMatrixElements(matrix) {
-    let sum = 0;
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-            sum += matrix[i][j];
-        }
-    }
-    return sum;
+    return matrix.flat().reduce((sum, num) => sum + num, 0);
 }
 
-console.log("Soma dos elementos:", sumMatrixElements([[1, 2], [3, 4]]));
+console.log("Soma dos elementos:", sumMatrixElements([[1, 2], [3, 4]])); // Deve retornar 10
 
 // Exercício 2: Encontrar o maior número em uma matriz
 function largestMatrixNumber(matrix) {
-    let largest = matrix[0][0];
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-            if (matrix[i][j] > largest) {
-                largest = matrix[i][j];
-            }
-        }
-    }
-    return largest;
+    return Math.max(...matrix.flat());
 }
 
-console.log("Maior número:", largestMatrixNumber([[1, 2], [3, 4]]));
+console.log("Maior número:", largestMatrixNumber([[1, 2], [3, 4]])); // Deve retornar 4
 
 // Exercício 3: Reservas de Sala
 function countReservations(week) {
-    let totalReservations = 0;
-    for (let i = 0; i < week.length; i++) {
-        for (let j = 0; j < week[i].length; j++) {
-            if (week[i][j] === 1) { // 1 indica uma reserva
-                totalReservations++;
-            }
-        }
-    }
-    return totalReservations;
+    return week.flat().reduce((count, reservation) => reservation === 1 ? count + 1 : count, 0);
 }
 
 console.log("Total de reservas:", countReservations([
@@ -174,23 +101,11 @@ console.log("Total de reservas:", countReservations([
     [1, 1, 0, 0],
     [0, 0, 0, 1],
     [1, 0, 1, 0]
-]));
+])); // Deve retornar 8
 
 // Exercício 4: Disponibilidade de Assentos
 function checkRowAvailable(cinema) {
-    for (let i = 0; i < cinema.length; i++) {
-        let allAvailable = true;
-        for (let j = 0; j < cinema[i].length; j++) {
-            if (cinema[i][j] === 0) { // 0 indica assento ocupado
-                allAvailable = false;
-                break;
-            }
-        }
-        if (allAvailable) {
-            return true;
-        }
-    }
-    return false;
+    return cinema.some(row => row.every(seat => seat === 1));
 }
 
 console.log("Fileira completamente disponível:", checkRowAvailable([
@@ -198,110 +113,98 @@ console.log("Fileira completamente disponível:", checkRowAvailable([
     [1, 0, 1, 1],
     [0, 0, 0, 0],
     [1, 1, 1, 1]
-]));
+])); // Deve retornar true
 
 // Funções Avançadas: STRING
 
 /*
-    String é considerado um valor primitivo, porém, ao ser interpretado o JS os converte em objetos, possuindo propriedades e métodos;
+    String é considerado um valor primitivo, porém, ao ser interpretado, o JS os converte em objetos, possuindo propriedades e métodos.
 */
 
-// Length é um atributo que retorna a quantidade de caracteres de uma string
-console.log('Jaques Hyago'.length)
+// Retorna a quantidade de caracteres de uma string
+console.log('Jaques Hyago'.length); // 12
 
-// É um método que retorna o número do índice que um caractere ocupa 
-console.log('Jaques Hyago'.charAt(7))
+// Retorna o caractere na posição específica
+console.log('Jaques Hyago'.charAt(7)); // H
 
-// É um método que retorna a posição do caractere na sua primeira ocorrência na string, sendo case sensitive
-let name = 'Jaques Hyago'
-console.log(name.indexOf('H'))
+// Retorna a posição do caractere na sua primeira ocorrência
+let name = 'Jaques Hyago';
+console.log(name.indexOf('H')); // 7
 
-// É um método que permite substituir textos dentro de uma string, se o método encontrar a primeira cadeia de caracteres, ele substituirá pelo outro parâmetro 
-console.log(name.replace('Jaques Hyago', 'Hyago Jaques'))
+// Substitui textos dentro de uma string
+console.log(name.replace('Jaques Hyago', 'Hyago Jaques')); // Hyago Jaques
 
-// É um método que permite extrair parte de uma string, com base numa posição inicial, e o segundo parâmetro indica quantos caracteres devem ser exibidos na sequência
-console.log(name.substr('7', '5'))
+// Extrai parte de uma string com base na posição inicial e a quantidade de caracteres
+console.log(name.substr(7, 5)); // Hyago
 
-// Métodos como toLocaleLowerCase, toLocaleUpperCase, toLowerCase e toUpperCase são autoexplicativos
-console.log(name.toLocaleUpperCase())
+// Converte a string para maiúsculas e minúsculas
+console.log(name.toUpperCase()); // JAQUES HYAGO
+console.log(name.toLowerCase()); // jaques hyago
 
-// Método que remove as extremidades em branco de uma string 
-console.log('-' + name.trim() + '-')
+// Remove as extremidades em branco de uma string 
+console.log('-' + name.trim() + '-'); // -Jaques Hyago-
 
 // Funções Avançadas: MATEMÁTICAS
 
-// Faz arredondamentos para cima
-let x = Math.ceil(10.380)
-console.log(x)
+// Arredondamentos para cima
+console.log(Math.ceil(10.380)); // 11
 
 // Arredondamento para baixo
-let y = Math.floor(10.380)
-console.log(y)
+console.log(Math.floor(10.380)); // 10
 
-// Arredondamento com base em média, exemplo em passar de 0.5, valor até 4: arredonda pra baixo, maior ou igual a 5 arredonda pra cima
-let z = Math.round(10.380)
-console.log(z)
+// Arredondamento com base em média
+console.log(Math.round(10.380)); // 10
 
-// Fornece um número aleatório entre 0 e 1
-let v = Math.random()
-console.log(v)
+// Número aleatório entre 0 e 1
+console.log(Math.random());
 
 // Funções Avançadas: DATAS
 
-// Date precisa ser instanciado, e todas as datas são baseadas com base no SO, possuindo getters e setters normalmente.
-let date = new Date()
+// Date precisa ser instanciado, e todas as datas são baseadas no SO, possuindo getters e setters.
+let date = new Date();
 
 // Recupera a data do dia atual
-console.log(date.getDate())
+console.log(date.getDate()); // Ex: 1
 
-// Como é de 0 a 11, soma-se 1 para os 12 da vida real
-console.log(date.getMonth() + 1)
+// Recupera o mês atual (0 a 11, soma-se 1 para representar corretamente)
+console.log(date.getMonth() + 1); // Ex: 8
 
-console.log(date.getFullYear())
+// Recupera o ano atual
+console.log(date.getFullYear()); // Ex: 2024
 
 // Adicionar / remover dias
-console.log(date.toString())
-date.setDate(date.getDate() + 720)
-console.log(date.toString())
+date.setDate(date.getDate() + 720); // Adiciona 720 dias
+console.log(date.toString());
 
 // Adicionar / remover meses
-console.log(date.toString())
-date.setMonth(date.getMonth() + 1)
-
-console.log(date.toString())
+date.setMonth(date.getMonth() + 1); // Adiciona 1 mês
+console.log(date.toString());
 
 // Adicionar / remover anos
-console.log(date.toString())
-date.setFullYear(date.getFullYear() + 1)
+date.setFullYear(date.getFullYear() + 1); // Adiciona 1 ano
+console.log(date.toString());
 
-console.log(date.toString())
+// Manipulação de Datas
 
-// 15/01/2017
-let date1 = new Date(2017, 0, 15)
+// Data específica: 15/01/2017
+let date1 = new Date(2017, 0, 15);
 
-// 23/02/2017
-let date2 = new Date(2017, 1, 23)
+// Data específica: 23/02/2017
+let date2 = new Date(2017, 1, 23);
 
-console.log(date1.toString())
+console.log(date1.toString());
+console.log(date2.toString());
 
-console.log(date2.toString())
+// Converter datas para milissegundos
+console.log(date1.getTime());
+console.log(date2.getTime());
 
-// Converter datas para algo que possamos calcular
-console.log(date1.getTime())
+// Calcular diferença entre datas em milissegundos
+let milliseconds_between_dates = Math.abs(date1.getTime() - date2.getTime());
+console.log(milliseconds_between_dates);
 
-console.log(date2.getTime())
+// Calcular milissegundos em um dia
+let milliseconds_per_day = (1 * 24 * 60 * 60 * 1000);
+console.log('1 dia tem: ' + milliseconds_per_day + ' milissegundos');
 
-// 1 de janeiro de 1970
-
-// Encontrar a quantidade de milissegundos entre data1 e data2
-let milliseconds_between_dates = Math.abs(date1.getTime() - date2.getTime())
-console.log(milliseconds_between_dates)
-
-// 1 dia tem 24, cada hora tem 60 minutos, 
-// cada minuto tem 60 segundos e 
-// cada segundo tem 1000 milissegundos
-// então quantos milissegundos existem em um dia?
-let milliseconds_per_day = (1 * 24 * 60 * 60 * 1000)
-console.log('1 dia tem: ' + milliseconds_per_day + ' milissegundos')
-
-console.log('A diferença entre data1 e data2 é de ' + Math.ceil(milliseconds_between_dates / milliseconds_per_day) + ' dia(s)')
+console.log('A diferença entre data1 e data2 é de ' + Math.ceil(milliseconds_between_dates / milliseconds_per_day) + ' dia(s)');
