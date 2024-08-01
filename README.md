@@ -1,7 +1,7 @@
 # Fullstack Junior +praTi - Turma 01
 
 ![Fullstack Junior +praTi](https://img.shields.io/badge/Fullstack-Development-blueviolet)
-![Java](https://img.shields.io/badge/Java-11-007396)
+![Java](https://img.shields.io/badge/Java-17-007396)
 ![React](https://img.shields.io/badge/React-17-61DAFB)
 ![MySQL](https://img.shields.io/badge/MySQL-5.7-4479A1)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13-336791)
