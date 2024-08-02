@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AuthProvider } from './context/AuthContext'
 import QuizApp from './pages/QuizApp'
 import ToDoList from './pages/ToDoList'
+import GlobalCss from './global_css'
+import RegisterUser from './pages/RegisterUser'
 
 function App() {
 
@@ -16,6 +18,7 @@ function App() {
     <>
     <Router>
       <AuthProvider>
+      <GlobalCss>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="IpAddressFinder" element={<IpAddressFinder />} />
@@ -25,8 +28,10 @@ function App() {
         <Route path="QuizApp" element={<QuizApp />} />
         <Route path="ToDoList" element={<ToDoList />} />
         <Route path="Login" element={<Login />} />
+        <Route path="Register" element={<RegisterUser />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      </GlobalCss>
       </AuthProvider>
     </Router>
     

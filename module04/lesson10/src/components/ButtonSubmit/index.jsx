@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const Button = styled.button`
   padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-background);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -12,11 +12,11 @@ const Button = styled.button`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: var(--color-hover-button);
   }
 
   &:disabled{
-    background-color: gray
+    background-color: var(--color-disabled-button);
   }
 `
 

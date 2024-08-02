@@ -107,7 +107,7 @@ const MovieSearchEngine = () => {
 
   return (
     <>
-     <ButtonSubmitElement onClick={() => navigate("/")} text="Home" estilo={{ marginLeft: '30px'}} />
+     <ButtonSubmitElement onClick={() => navigate("/")} text="Home" estilo={{ marginLeft: '30px', border: '2px solid #ffff' }} />
     <ContainerElement>
       <TitleElement text="Movie Search Engine" />
       <InputElement

@@ -7,9 +7,10 @@ const InputContainer = styled.div`
 
   label {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
     margin-bottom: 8px;
+    color: var(--color-primary);
   }
 `
 

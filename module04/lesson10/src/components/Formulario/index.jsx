@@ -8,12 +8,17 @@ const Formulario = styled.form`
 
     a {
      font-weight: 400;
-     font-size: 16px;
+     font-size: 12px;
      line-height: 19px;
      padding-bottom: 16px;
-     color: #5C73DB;
+     color: var(--color-primary);
      position: relative;
      top: -19px;
+     left: 10%;
+    }
+
+    a:hover{
+        color: var(--color-secundary);
     }
 `
 

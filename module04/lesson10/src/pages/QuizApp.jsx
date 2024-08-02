@@ -19,7 +19,7 @@ const Opcoes = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 200px;
+    width: fit-content;
 
     label{
         padding: 5px
@@ -45,7 +45,6 @@ const QuizApp = () => {
         try {
             const response = await axios.get(`https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple&encode=base64`);
 
-            console.log(response.data);
             if(response.data.response_code == 0){
                 setQuiz(response.data.results[0])
                 setError('');
@@ -53,6 +52,9 @@ const QuizApp = () => {
 
         } catch (err) {
             console.error("Error fetching quiz data:", err);
+            if(err.message == 'Request failed with status code 429'){
+                setError('Aguarde 5 segundos antes de ir a próxima pergunta');
+            }
             setError(err.message);
         }
     }
@@ -79,7 +81,7 @@ const QuizApp = () => {
     } else {
         return (
             <>
-            <ButtonSubmitElement onClick={() => navigate("/")} text="Home" estilo={{ marginLeft: '30px'}} />
+            <ButtonSubmitElement onClick={() => navigate("/")} text="Home" estilo={{ marginLeft: '30px', border: '2px solid #ffff' }} />
             <ContainerElement>
                 <Score>Score: {pontos}</Score>
                 <TitleElement text="Quiz App"/>
@@ -107,7 +109,7 @@ const QuizApp = () => {
                         <label htmlFor="opt4">{quiz ? atob(quiz.correct_answer) : "Loading..."}</label>
                     </div>
                 </Opcoes>
-                <ButtonSubmitElement onClick={validate} text="Submit"/>
+                <ButtonSubmitElement onClick={validate} text="Submit" estilo={{ marginTop: '16px', position: 'sticky', left: '100%' }}/>
                 {error && <ErrorElement text={error}/>}
             </ContainerElement>
             </>

@@ -23,14 +23,14 @@ const Item = styled.li`
 
 const ButtonDone = styled.button`
     color: #fff;
-    background-color: #04AA6D;
-    border: 1px solid #04AA6D;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
     border-radius: 12px;
     font-size: 16px;
     cursor: pointer;
 
     &:hover{
-        background-color: #026742;
+        background-color: var(--color-hover-button);
     }
 `
 
@@ -71,7 +71,7 @@ const ToDoList = () => {
 
         return (
             <>
-                <ButtonSubmitElement onClick={() => navigate("/")} text="Home" estilo={{ marginLeft: '30px'}} />
+                <ButtonSubmitElement onClick={() => navigate("/")} text="Home" estilo={{ marginLeft: '30px', border: '2px solid #ffff' }} />
                 <ContainerElement>
                     <TitleElement text="To-Do List" />
                     <InputElement

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 const Sucess = styled.p`
-  color: #04AA6D;
+  color: var(--color-secundary);
   font-size: 16px;
   text-align: center;
 `
