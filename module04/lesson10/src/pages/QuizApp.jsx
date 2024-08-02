@@ -1,28 +1,13 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import ContainerElement from "../components/Container";
+import TitleElement from "../components/Title";
+import ButtonSubmitElement from "../components/ButtonSubmit";
+import ErrorElement from "../components/ErrorMessage";
 
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  margin: 100px auto;
-`
-
-const Title = styled.h2`
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 24px;
-  text-align: center;
-`
 
 const Pergunta = styled.p`
   margin: 16px;
@@ -42,34 +27,14 @@ const Opcoes = styled.div`
 
 `
 
-const Button = styled.button`
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-  position: sticky;
-  left: 100%;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`
-
 const Score = styled.p`
     position: sticky;
     right: 100%;
 `
 
-const CustomError = styled.p`
-    color: red;
-`
-
 const QuizApp = () => {
     const { isAuthenticated } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const [quiz, setQuiz] = useState(null);
     const [marcado, setMarcado] = useState('');
@@ -97,8 +62,7 @@ const QuizApp = () => {
     }, []);
 
     const validate = () =>{
-        console.log(marcado);
-        console.log(atob(quiz.correct_answer));
+       
         if(marcado == atob(quiz.correct_answer)){
             setPontos(pontos+1);
             alert("Correct Answer :D");
@@ -114,11 +78,11 @@ const QuizApp = () => {
         return <Navigate replace to="/Login" />;
     } else {
         return (
-                <Container>
+            <>
+            <ButtonSubmitElement onClick={() => navigate("/")} text="Home" estilo={{ marginLeft: '30px'}} />
+            <ContainerElement>
                 <Score>Score: {pontos}</Score>
-                <Title>
-                    Quiz App
-                </Title>
+                <TitleElement text="Quiz App"/>
                 <Pergunta>
                     {quiz ? atob(quiz.question) : "Loading..."}
                 </Pergunta>
@@ -143,9 +107,10 @@ const QuizApp = () => {
                         <label htmlFor="opt4">{quiz ? atob(quiz.correct_answer) : "Loading..."}</label>
                     </div>
                 </Opcoes>
-                <Button onClick={validate}>Submit</Button>
-                {error && <CustomError>{error}</CustomError>}
-            </Container>
+                <ButtonSubmitElement onClick={validate} text="Submit"/>
+                {error && <ErrorElement text={error}/>}
+            </ContainerElement>
+            </>
             
         )
 

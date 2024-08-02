@@ -2,61 +2,13 @@ import { useContext, useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 import { AuthContext } from '../context/AuthContext';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
+import ContainerElement from '../components/Container';
+import TitleElement from '../components/Title';
+import InputElement from '../components/Input';
+import ButtonSubmitElement from '../components/ButtonSubmit';
+import ErrorElement from '../components/ErrorMessage';
 const movie_token = import.meta.env.VITE_MOVIE_TOKEN;
-
-// Define o estilo do container principal
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
-  margin: 50px auto;
-`
-
-// Define o estilo do título
-const Title = styled.h2`
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 24px;
-  text-align: center;
-`
-
-// Define o estilo do campo de entrada
-const Input = styled.input`
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  transition: border-color 0.3s;
-
-  &:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-`
-
-const Button = styled.button`
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`
 
 const MoviesContainer = styled.div`
   display: flex;
@@ -102,17 +54,16 @@ const MovieCard = styled.div`
   }
 `
 
-const CustomError = styled.p`
-    color: red;
-`
-
 const MovieSearchEngine = () => {
   const { isAuthenticated } = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const [query, setQuery] = useState('')
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
   const [isEmpty, setIsEmpty] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const validate = (e) => {
     e.preventDefault();
@@ -128,6 +79,10 @@ const MovieSearchEngine = () => {
 
   const searchMovies = async () => {
     try {
+      setLoading(true);
+      setIsEmpty(false);
+      setError('');
+
       const response = await axios.get(`https://api.themoviedb.org/3/search/movie?query=${query}&language=pt-BR`,{
         headers: {
           'Authorization': `Bearer ${movie_token}`,
@@ -136,12 +91,13 @@ const MovieSearchEngine = () => {
       })
       
       setMovies(response.data.results);
-      setError('');
       response.data.results.length > 0 ? setIsEmpty(false) : setIsEmpty(true);
+      setLoading(false);
 
     } catch (err) {
       console.error("Error fetching movie data:", err)
       setError(err.message);
+      setLoading(false);
     }
   }
 
@@ -150,16 +106,19 @@ const MovieSearchEngine = () => {
 }else{
 
   return (
-    <Container>
-      <Title>Movie Search Engine</Title>
-      <Input
+    <>
+     <ButtonSubmitElement onClick={() => navigate("/")} text="Home" estilo={{ marginLeft: '30px'}} />
+    <ContainerElement>
+      <TitleElement text="Movie Search Engine" />
+      <InputElement
+        name="movie"
         type="text"
         value={query} 
         onChange={(e) => setQuery(e.target.value)} 
         placeholder="Search for a movie" 
       />
-      <Button onClick={validate}>Search</Button>
-      {error && <CustomError>{error}</CustomError>}
+      <ButtonSubmitElement onClick={validate} text="Search" />
+      {error && <ErrorElement text={error}/>}
       <MoviesContainer>
         {movies && movies.map((movie) => ( 
           <MovieCard key={movie.id}>
@@ -169,9 +128,11 @@ const MovieSearchEngine = () => {
             <p>{movie.overview.slice(0,100)+"..."}</p>
           </MovieCard>
         ))}
+         {loading && <p>...</p>}
         {isEmpty && <span>Movie not found</span>}
       </MoviesContainer>
-    </Container>
+    </ContainerElement>
+    </>
   )
 
 }

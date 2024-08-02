@@ -1,13 +1,14 @@
-import Home from './components/Home'
-import IpAddressFinder from './components/IpAddressFinder'
-import LanguageTranslator from './components/LanguageTranslator'
-import Login from './components/Login'
-import MovieSearchEngine from './components/MovieSearchEngine'
-import PageNotFound from './components/PageNotFound'
-import QRCodeGenerator from './components/QRCodeGeneretor'
+import Home from './pages/Home'
+import IpAddressFinder from './pages/IpAddressFinder'
+import LanguageTranslator from './pages/LanguageTranslator'
+import Login from './pages/Login'
+import MovieSearchEngine from './pages/MovieSearchEngine'
+import PageNotFound from './pages/PageNotFound'
+import QRCodeGenerator from './pages/QRCodeGeneretor'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AuthProvider } from './context/AuthContext'
-import QuizApp from './components/QuizApp'
+import QuizApp from './pages/QuizApp'
+import ToDoList from './pages/ToDoList'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="MovieSearchEngine" element={<MovieSearchEngine />} />
         <Route path="QRCodeGenerator" element={<QRCodeGenerator />} />
         <Route path="QuizApp" element={<QuizApp />} />
+        <Route path="ToDoList" element={<ToDoList />} />
         <Route path="Login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

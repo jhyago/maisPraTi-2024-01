@@ -2,19 +2,13 @@ import { useContext, useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 import { AuthContext } from '../context/AuthContext'
-import { Navigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
+import ButtonSubmitElement from '../components/ButtonSubmit'
+import ContainerElement from '../components/Container'
+import TitleElement from '../components/Title'
+import InputElement from '../components/Input'
+import ErrorElement from '../components/ErrorMessage'
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`
-
-const Title = styled.h2`
-    color: #333;
-    text-align: center;
-`
 
 const Label = styled.label`
     color: #555;
@@ -30,13 +24,19 @@ const LanguageTranslator = () => {
 
     const { isAuthenticated } = useContext(AuthContext);
 
+    const navigate = useNavigate();
+
     const [text, setText] = useState('')
     const [translatedText, setTranslatedText] = useState('')
     const [sourceLang, setSourceLang] = useState('en')
     const [targetLang, setTargetLang] = useState('pt')
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const translateText = async () => {
         try {
+            setLoading(true);
+            setTranslatedText('');
             const response = await axios.get('https://api.mymemory.translated.net/get', {
                 params: {
                     q: text,
@@ -44,9 +44,14 @@ const LanguageTranslator = () => {
                 },
             })
 
-            setTranslatedText(response.data.responseData.translatedText)
+            setTranslatedText(response.data.responseData.translatedText);
+            setError('');
+            setLoading(false);
         } catch(error) {
-            console.error("Erro ao traduzir o texto: ", error)
+            console.error("Erro ao traduzir o texto: ", error);
+            setTranslatedText('');
+            setError(error.message);
+            setLoading(false);
         }
     }
 
@@ -54,8 +59,10 @@ const LanguageTranslator = () => {
         return <Navigate replace to="/Login" />; 
     }else{
         return(
-            <Container>
-                <Title>Language Translator</Title>
+            <>
+            <ButtonSubmitElement onClick={() => navigate("/")} text="Home" estilo={{ marginLeft: '30px'}} />
+            <ContainerElement>
+                <TitleElement text="Language Translator"/>
                 <div>
                     <Label>Source Language:</Label>
                     <select value={sourceLang} onChange={(event) => setSourceLang(event.target.value)}>
@@ -80,17 +87,21 @@ const LanguageTranslator = () => {
                     </select>
                 </div>
     
-                <input
+                <InputElement
+                    name="frase"
                     type="text"
                     value={text}
                     onChange={(event) => setText(event.target.value)}
                     placeholder='Informe o texto que quer traduzir'
                 />
     
-                <button onClick={translateText}>Translate</button>
+                <ButtonSubmitElement onClick={translateText} text="Translate"/>
     
                 {translatedText && <TranslatedText>{translatedText}</TranslatedText>}
-            </Container>
+                {loading && <p>...</p>}
+                {error && <ErrorElement text={error}/>}
+            </ContainerElement>
+            </>
         )
 
     }
