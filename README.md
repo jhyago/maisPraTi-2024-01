@@ -1,11 +1,11 @@
 # Fullstack Junior +praTi - Turma 01
 
 ![Fullstack Junior +praTi](https://img.shields.io/badge/Fullstack-Development-blueviolet)
-![Java](https://img.shields.io/badge/Java-11-007396)
-![React](https://img.shields.io/badge/React-17-61DAFB)
-![MySQL](https://img.shields.io/badge/MySQL-5.7-4479A1)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13-336791)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.5.0-6DB33F)
+![Java](https://img.shields.io/badge/Java-007396)
+![React](https://img.shields.io/badge/React-61DAFB)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F)
 
 ## Visão Geral
 
