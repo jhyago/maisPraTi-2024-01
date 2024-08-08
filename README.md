@@ -46,16 +46,15 @@ O curso está dividido em módulos que abrangem diversos aspectos do desenvolvim
    - Sintaxe e Estruturas de Controle
    - Orientação a Objetos
    - Collections e Estruturas de Dados
+  
+4. **Integração de Banco de Dados:**
+   - Modelagem de Banco de Dados
+   - Operações CRUD com MySQL e PostgreSQL
 
-4. **Desenvolvimento Backend com Spring Boot:**
+5. **Desenvolvimento Backend com Spring Boot:**
    - Configuração de Projetos Spring
    - RESTful APIs
    - Segurança e Autenticação
-
-5. **Integração de Banco de Dados:**
-   - Modelagem de Banco de Dados
-   - Operações CRUD com MySQL e PostgreSQL
-   - Hibernate e JPA
 
 6. **Práticas de DevOps:**
    - Controle de Versão com Git
