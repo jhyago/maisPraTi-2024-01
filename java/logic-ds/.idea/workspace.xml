@@ -4,301 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df420b4a-9565-4305-a3b4-022af35db31e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../module01/lesson05.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module01/lesson06.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module01/lesson07.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module01/lesson08.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module01/lesson09.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module01/lesson10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module01/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module01/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson01-02/lesson01.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/1-classes-ids/1-classes-ids.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/1-classes-ids/2-div-span.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/1-classes-ids/3-index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/1-classes-ids/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/2-links/link.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/3-lists/lists.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/3-lists/lists.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/4-tables/tables.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/4-tables/tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/5-fonts-colors/fonts-colors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/6-images/images.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/6-images/images.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/images/amazon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson03/images/yoshi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/1-floating-elements/1-floating-elements.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/1-floating-elements/boxmodel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/2-inline-block.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/3-positioning.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/4-overlapping-elements.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/images/image1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/images/image2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/images/image3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/images/image4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson04/images/image5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/1-selectors/selectors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/1-selectors/seletores-esquema.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/1-selectors/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/2-inheritance-specificity/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/2-inheritance-specificity/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/3-vertical-navigation/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/3-vertical-navigation/images/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/3-vertical-navigation/images/seta.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/3-vertical-navigation/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/3-vertical-navigation/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/4-horizontal-navigation/images/divisor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/4-horizontal-navigation/images/fundo-horizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/4-horizontal-navigation/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/4-horizontal-navigation/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/5-parallax/images/image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/5-parallax/images/image2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/5-parallax/images/image3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/5-parallax/images/image4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/5-parallax/images/image5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/5-parallax/images/image6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/5-parallax/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/6-fonts/fonts/Ancient-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/6-fonts/fonts/BringHeart.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/6-fonts/fonts/MadelinaScript.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/6-fonts/fonts/RoadRage.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson05/6-fonts/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/css/estilo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/css/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/depoimento.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/fundo-foto.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/fundo-rodape.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/fundo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/imagem1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/imagem2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/imagem3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/imagem4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/imagem5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/imagem6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/img/museu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson06/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson07/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson07/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson08/BOM.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson08/DOM.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson08/destructuring.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson08/tratamento_erros.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson09/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson09/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson09/listTask.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/animacoes/animacoes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/animacoes/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/boxSizing-BorderRadius/Pica-Pau-post.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/boxSizing-BorderRadius/border-radius-box-sizing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/boxSizing-BorderRadius/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/degrades-transparencia/Pica-Pau-post.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/degrades-transparencia/degrades.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/degrades-transparencia/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/flexbox/flexbox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/flexbox/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/sombras/sombra.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson10/sombras/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/ajax/page1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/ajax/page1_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/ajax/page2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/ajax/page2_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/ajax/page3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/ajax/page3_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/ajax/requisicoes_assincronas.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/grid/grid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/grid/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson11/media-queries/media-queries.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson12/ajax-II/json/filmes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson12/ajax-II/json/filmes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson12/ajax-II/xml/filmes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson12/ajax-II/xml/filmes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson12/ajax-II/xml/xmlToJson.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson12/searchAddress/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson13/generators.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson13/generators.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson13/jokes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson13/promises.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson13/viacep/consultaCEP.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module03/lesson13/viacep/lib.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/components/IPAddressFinder.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/components/LanguageTranslator.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/components/Login.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/components/MovieSearchEngine.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/components/QRCodeGenarator.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/components/QuizApp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/components/TodoApp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/atv5/multi-app/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactApp/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactApp/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactApp/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactApp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactApp/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactApp/src/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactApp/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/reactAppVite/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/vanillaTabs/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/vanillaTabs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/vanillaTabs/js-logo-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson01/vanillaTabs/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/src/components/HelloWorld.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/src/components/HelloWorld.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/firstComponent/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/src/components/BookDetails.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson02/props/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/src/components/Counter.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/src/components/MirrorText.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/src/components/ToDoList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson03/stateHooks/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/src/components/ClassComponent.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/src/components/NavegacaoAbas.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/src/components/TimerComponent.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson04/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/src/components/LifeCycle.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/src/components/LifeCycle2.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/src/components/NewsUpdater.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/src/components/User.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson05/hooks/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/src/components/Form.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/src/components/Form2.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/src/components/Form3.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/src/components/UserCard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/src/components/UserProfile.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson06/Forms/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/src/components/Contexto.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/src/components/Filho.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson07/Context/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/src/components/Home.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/src/components/Login.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/src/components/ProtectedRoute.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/RedirectRoute/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/src/components/About.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/src/components/Contact.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/src/components/Home.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/src/components/Navigation.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson08/Routing/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/axiosReturn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/src/components/DeleteUser.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/src/components/GetUser.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/src/components/PutUser.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/src/components/UserForm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module04/lesson09/HttpRequest/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/java-logic-ED.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/src/ContaBancaria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/src/Geometria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/src/util/DataHora.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module05/java-logic-ED/src/util/Utilitarios.java" beforeDir="false" />
-    </list>
+    <list default="true" id="df420b4a-9565-4305-a3b4-022af35db31e" name="Changes" comment="Update lessons" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -349,6 +55,30 @@
       <option name="presentableId" value="Default" />
       <updated>1722470632139</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update lessons">
+      <option name="closed" value="true" />
+      <created>1723125215629</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723125215629</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update lessons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update lessons" />
   </component>
 </project>

@@ -369,6 +369,5 @@ public class Main {
 
         // Chama o método estático print da classe Utilitarios, passando a string "Olá, mundo!" como parâmetro
         Utilitarios.print("Olá, mundo!");
-
     }
 }
