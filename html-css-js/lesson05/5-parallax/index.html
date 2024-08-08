@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    <style type="text/css">
+        /* Estilização geral para toda a página */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            color: #555; /* Cor do texto mais suave para melhor legibilidade */
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Rolagem suave para melhor experiência do usuário */
+        }
+
+        /* Estilo para seções de conteúdo com fundo branco */
+        .content {
+            background-color: #ffffff;
+            text-align: justify;
+            padding: 60px 80px; /* Ajuste de padding para um visual mais limpo */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+        }
+
+        /* Título centralizado em cada seção de conteúdo */
+        .content-title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* Centraliza o título */
+            width: 100%;
+            text-align: center;
+            z-index: 1; /* Garante que o título fique acima da imagem */
+        }
+
+        /* Estilização para o texto do título */
+        .content-title span.title {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+            padding: 15px 30px;
+            font-size: 24px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-radius: 5px; /* Cantos arredondados para visual moderno */
+            display: inline-block;
+        }
+
+        /* Estilização para cabeçalhos */
+        h3 {
+            text-transform: uppercase;
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* Efeito parallax para seções de imagem */
+        .parallax-section {
+            position: relative;
+            min-height: 100vh; /* Altura total da viewport */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* Imagens de fundo específicas para cada seção parallax */
+        .box1 {
+            background-image: url('images/image1.jpg');
+        }
+
+        .box2 {
+            background-image: url('images/image2.jpg');
+        }
+
+        .box3 {
+            background-image: url('images/image3.jpg');
+        }
+
+        .box4 {
+            background-image: url('images/image4.jpg');
+        }
+
+        /* Media query para responsividade */
+        @media (max-width: 768px) {
+            .content {
+                padding: 40px 20px; /* Redução de padding para telas menores */
+            }
+
+            .content-title span.title {
+                font-size: 18px; /* Texto menor em dispositivos móveis */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Seção parallax com Imagem 1 -->
+    <div class="parallax-section box1">
+        <div class="content-title">
+            <span class="title">Balloons</span>
+        </div>
+    </div>
+
+    <!-- Conteúdo textual relacionado à primeira imagem -->
+    <div class="content">
+        <h3>Descubra o Efeito Parallax</h3>
+        <p>Experimente a beleza e a sutileza do efeito parallax enquanto você rola por nosso conteúdo imersivo. Cada seção é projetada para cativar e envolver, com visuais impressionantes e informações intrigantes.</p>
+        <p>Nosso objetivo é proporcionar uma combinação elegante de design e funcionalidade, permitindo que sua criatividade flua sem interrupções com a tecnologia que a impulsiona. Acreditamos em criar experiências que deixam uma impressão duradoura, e nosso design parallax é um testemunho dessa visão.</p>
+    </div>
+
+    <!-- Seção parallax com Imagem 2 -->
+    <div class="parallax-section box2">
+        <div class="content-title">
+            <span class="title">Serenity</span>
+        </div>
+    </div>
+
+    <!-- Conteúdo textual relacionado à segunda imagem -->
+    <div class="content">
+        <h3>Explore a Tranquilidade</h3>
+        <p>Descubra a serenidade em cada rolagem. Nossas imagens cuidadosamente selecionadas e textos informativos visam proporcionar um momento de paz e reflexão, transportando você para lugares tranquilos e relaxantes.</p>
+    </div>
+
+    <!-- Seção parallax com Imagem 3 -->
+    <div class="parallax-section box3">
+        <div class="content-title">
+            <span class="title">Adventure</span>
+        </div>
+    </div>
+
+    <!-- Conteúdo textual relacionado à terceira imagem -->
+    <div class="content">
+        <h3>Vivencie a Aventura</h3>
+        <p>Para os amantes de aventuras, nossas seções de parallax trazem a emoção e a energia de locais exóticos e atividades empolgantes. Cada imagem é escolhida para inspirar sua próxima jornada.</p>
+    </div>
+
+    <!-- Seção parallax com Imagem 4 -->
+    <div class="parallax-section box4">
+        <div class="content-title">
+            <span class="title">Nature</span>
+        </div>
+    </div>
+
+    <!-- Conteúdo textual relacionado à quarta imagem -->
+    <div class="content">
+        <h3>Conecte-se com a Natureza</h3>
+        <p>A natureza está ao seu alcance com nosso design parallax. Mergulhe na beleza dos ambientes naturais e sinta-se mais próximo do mundo ao seu redor, enquanto aprecia cada detalhe em alta definição.</p>
+    </div>
+</body>
+
+</html>

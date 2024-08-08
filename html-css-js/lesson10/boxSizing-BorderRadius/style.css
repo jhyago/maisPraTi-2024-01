@@ -1,0 +1,40 @@
+/* Estilo global para aplicar box-sizing em todos os elementos */
+* {
+    box-sizing: border-box; /* Inclui padding e border na largura e altura totais dos elementos */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    flex-direction: column; /* Disposição dos elementos em coluna */
+    gap: 20px; /* Espaçamento entre elementos */
+    padding: 20px;
+}
+
+/* Estilos para a caixa principal */
+#box {
+    background-color: #fff; /* Cor de fundo da caixa */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    max-width: 600px; /* Largura máxima */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para a imagem com bordas arredondadas */
+img.border {
+    border-radius: 50%; /* Bordas arredondadas em forma de círculo */
+    border: 3px solid #ccc; /* Borda cinza ao redor da imagem */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+/* Efeito de zoom na imagem ao passar o mouse */
+img.border:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+}

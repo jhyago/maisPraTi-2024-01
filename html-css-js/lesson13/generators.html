@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geradores de Conversa</title>
+    <style>
+        /* Estilos básicos para melhorar a aparência do chat */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        #chat-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #message {
+            margin-bottom: 15px;
+        }
+
+        #answer {
+            width: calc(100% - 100px);
+            padding: 8px;
+            margin-right: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // Função geradora para simular uma conversa de chat
+        function* chat() {
+            // Inicia a conversa
+            let option = yield 'Olá, como você está? Responda com "Sim" ou "Não"'
+
+            if(option === 'Sim') {
+                yield 'Ótimo!'
+
+                option = yield 'Como posso ajudar você? Quer uma piada? Responda com "Sim" ou "Não"'
+
+                if(option === 'Sim') {
+                    // Busca uma piada aleatória do arquivo JSON
+                    let joke;
+                    fetch('./jokes.json').then(response => response.json()).then(jokes => {
+                        joke = jokes[Math.floor((Math.random() * jokes.length))]; // Escolhe uma piada aleatória
+                        document.getElementById('message').textContent = joke.joke; // Exibe a piada
+                    });
+
+                    // Exibe a resposta da piada após 2 segundos
+                    setTimeout(() => {
+                        document.getElementById('message').textContent = joke.answer; // Exibe a resposta da piada
+                        console.log('Ótima piada! Ri muito, acredite em mim.');
+                    }, 2000);
+                } else {
+                    yield 'Tudo bem, se precisar de algo é só perguntar!'
+                }
+            } else {
+                yield 'Espero que você melhore! Se precisar de algo, estarei por aqui.'
+            }
+        }
+
+        let chat1 = chat() // Inicia a instância do gerador de conversa
+
+        // Função para avançar no chat com base na resposta do usuário
+        function startChat() {
+            let answer = document.getElementById('answer').value; // Obtém a resposta do usuário
+            let iteration = chat1.next(answer); // Avança para a próxima iteração do gerador
+            document.getElementById('message').textContent = iteration.value; // Exibe a próxima mensagem no chat
+            document.getElementById('answer').value = ''; // Limpa a caixa de entrada
+        }
+    </script>
+</head>
+<body>
+    <div id="chat-box">
+        <!-- Caixa de diálogo onde as mensagens serão exibidas -->
+        <p id="message">Clique no botão para iniciar a conversa.</p>
+        <!-- Entrada para a resposta do usuário -->
+        <input type="text" id="answer" placeholder="Digite sua resposta aqui...">
+        <!-- Botão para avançar no chat -->
+        <button type="button" onclick="startChat()">Próximo</button>
+    </div>
+</body>
+</html>

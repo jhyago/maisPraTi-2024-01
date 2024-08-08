@@ -1,0 +1,43 @@
+/* Estilo global */
+* {
+  box-sizing: border-box; /* Inclui padding e border na largura e altura totais dos elementos */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte padrão */
+  background-color: #f0f0f0; /* Cor de fundo suave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa a altura total da tela */
+  padding: 20px;
+}
+
+/* Caixa principal com gradiente e transparência */
+#box {
+  background: linear-gradient(to right, rgba(29, 78, 216, 0.8), rgba(239, 68, 68, 0.8)); /* Gradiente de azul para vermelho com transparência */
+  padding: 30px;
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  color: white; /* Texto branco para contraste */
+  max-width: 600px; /* Largura máxima da caixa */
+  text-align: center; /* Centraliza o texto */
+  backdrop-filter: blur(5px); /* Filtro de desfoque para fundo */
+}
+
+/* Estilo para o título */
+#box h1 {
+  font-size: 2.5em; /* Tamanho do título */
+  margin-bottom: 15px; /* Espaço abaixo do título */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para o texto */
+}
+
+/* Estilo para o parágrafo */
+#box p {
+  font-size: 1.2em; /* Tamanho do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  color: rgba(255, 255, 255, 0.9); /* Transparência no texto */
+}

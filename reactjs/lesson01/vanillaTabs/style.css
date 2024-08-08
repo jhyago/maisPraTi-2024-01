@@ -1,0 +1,99 @@
+/* Aplica box-sizing a todos os elementos para garantir que padding e border sejam incluídos nas dimensões totais do elemento */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão */
+    background-color: #181c1f; /* Cor de fundo escura */
+    color: #bdd1d4; /* Cor do texto */
+    margin: 2rem; /* Margem em torno do corpo */
+}
+
+/* Estilo do cabeçalho */
+header {
+    margin: 2rem 0; /* Margem superior e inferior */
+    display: flex; /* Layout flexível para alinhar itens horizontalmente */
+    gap: 1.5rem; /* Espaçamento entre os elementos dentro do header */
+    align-items: center; /* Alinhamento vertical dos itens ao centro */
+}
+
+/* Estilo da imagem no cabeçalho */
+header img {
+    width: 3rem; /* Define a largura da imagem */
+}
+
+/* Estilo do título principal no cabeçalho */
+header h1 {
+    margin: 0; /* Remove margens */
+    color: #f3e248; /* Cor do texto amarela */
+}
+
+/* Estilo do parágrafo no cabeçalho */
+header p {
+    margin: 0; /* Remove margens */
+    color: #dbd7b1; /* Cor do texto */
+}
+
+/* Contêiner de abas */
+#tabs {
+    max-width: 30rem; /* Largura máxima do contêiner */
+    margin: 2rem 0; /* Margem superior e inferior */
+    overflow: hidden; /* Esconde qualquer conteúdo que transborde o contêiner */
+}
+
+/* Estilo do menu dentro do contêiner de abas */
+#tabs menu {
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove padding */
+    display: flex; /* Layout flexível para botões de abas */
+    gap: 0.200rem; /* Espaçamento entre botões */
+}
+
+/* Estilo padrão dos botões de abas */
+#tabs button {
+    font-size: 0.80rem; /* Tamanho da fonte */
+    background-color: #282f33; /* Cor de fundo */
+    border: none; /* Remove bordas padrão */
+    border-bottom-color: #f3e248; /* Cor da borda inferior */
+    color: #e0eff1; /* Cor do texto */
+    border-radius: 4px 4px 0 0; /* Bordas arredondadas na parte superior */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    transition: all 0.5s ease-out; /* Animação suave para transições */
+}
+
+/* Estilo dos botões ao passar o mouse ou quando ativos */
+#tabs button:hover,
+#tabs button.active {
+    background-color: #2d3949; /* Cor de fundo ao passar o mouse */
+    border-radius: 0 4px 4px 4px; /* Bordas arredondadas ao ativar */
+    padding: 0.5rem; /* Reduz espaçamento interno para efeito visual */
+}
+
+/* Estilo do contêiner de conteúdo, adicionando espaçamento */
+#content {
+    background-color: #282f33; /* Cor de fundo para o contêiner de conteúdo */
+    padding: 1rem; /* Espaçamento interno para o contêiner de conteúdo */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    margin-top: -1px; /* Remove pequena margem entre botões e conteúdo */
+}
+
+/* Estilo dos itens da lista dentro do conteúdo */
+#content ul {
+    list-style-type: none; /* Remove marcadores padrão da lista */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margens */
+}
+
+/* Estilo individual para itens da lista */
+#content li {
+    padding: 0.5rem 0; /* Espaçamento entre itens */
+    border-bottom: 1px solid #3a3f47; /* Linha divisória entre itens */
+}
+
+/* Remove a borda do último item da lista */
+#content li:last-child {
+    border-bottom: none;
+}

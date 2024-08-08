@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Altura total da tela */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilo para o wrapper da grade */
+.wrapper {
+    display: grid; /* Ativa o layout de grade */
+    grid-template-columns: repeat(3, 1fr); /* Define três colunas de tamanho igual */
+    gap: 10px; /* Espaçamento entre as células da grade */
+    width: 80%; /* Largura da grade */
+    max-width: 800px; /* Largura máxima da grade */
+    background-color: #fff; /* Cor de fundo do wrapper */
+    padding: 20px; /* Espaçamento interno do wrapper */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo para cada caixa na grade */
+.box {
+    background-color: #eaeaea; /* Cor de fundo das caixas */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno das caixas */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.5em; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    display: flex; /* Ativa o Flexbox dentro das caixas */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* Estilo para a caixa aninhada */
+.box1 {
+    grid-column: span 2; /* Ocupa duas colunas no layout de grade */
+    background-color: #d4edda; /* Cor de fundo específica para box1 */
+}
+
+/* Estilo para elementos aninhados */
+.nested {
+    background-color: #c3e6cb; /* Cor de fundo das caixas aninhadas */
+    margin: 5px; /* Espaçamento entre caixas aninhadas */
+    padding: 10px; /* Espaçamento interno das caixas aninhadas */
+    border-radius: 3px; /* Bordas arredondadas */
+    width: 30px; /* Largura das caixas aninhadas */
+    height: 30px; /* Altura das caixas aninhadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #155724; /* Cor do texto das caixas aninhadas */
+}
+
+/* Estilos específicos para outras caixas */
+.box2 {
+    background-color: #f8d7da; /* Cor de fundo específica para box2 */
+    color: #721c24; /* Cor do texto específica para box2 */
+}
+
+.box3 {
+    background-color: #fff3cd; /* Cor de fundo específica para box3 */
+    color: #856404; /* Cor do texto específica para box3 */
+}
+
+.box4 {
+    background-color: #d1ecf1; /* Cor de fundo específica para box4 */
+    color: #0c5460; /* Cor do texto específica para box4 */
+}
+
+.box5 {
+    background-color: #f5f5f5; /* Cor de fundo específica para box5 */
+    color: #343a40; /* Cor do texto específica para box5 */
+}

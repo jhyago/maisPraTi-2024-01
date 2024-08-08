@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Static, Relative, Absolute, and Fixed</title>
+    <style type="text/css">
+        /* Estilo para o elemento h1 */
+        h1 {
+            /* Position: static é o posicionamento padrão. 
+               Elementos estáticos são posicionados conforme o fluxo normal da página. */
+            position: static;
+            text-align: center;
+        }
+
+        /* Estilo para todos os parágrafos */
+        p {
+            width: 400px; /* Define uma largura fixa para o texto */
+            line-height: 1.5; /* Melhora a legibilidade com maior espaço entre linhas */
+            margin-bottom: 20px; /* Adiciona espaço abaixo de cada parágrafo */
+        }
+
+        /* Estilo para o contêiner principal */
+        #container {
+            background-color: #fff; /* Cor de fundo branca */
+            width: 800px; /* Largura fixa do contêiner */
+            margin: 20px auto; /* Centraliza horizontalmente com margem automática */
+            padding: 20px; /* Adiciona espaçamento interno */
+            position: relative; /* Define o contêiner como relativo para posicionamento interno */
+            border: 3px solid black; /* Borda preta */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+        }
+
+        /* Estilo para parágrafos com posicionamento relativo */
+        .relative {
+            border: 3px solid red; /* Borda vermelha */
+            position: relative; /* Posiciona o elemento relativo ao seu estado normal */
+            left: 100px; /* Move 100px para a direita em relação ao seu ponto inicial */
+            padding: 10px;
+            background-color: #f9f9f9; /* Fundo cinza claro */
+        }
+
+        /* Estilo para parágrafos com posicionamento absoluto */
+        .absolute {
+            border: 3px solid green; /* Borda verde */
+            background-color: #f2f2f2; /* Fundo cinza claro */
+            position: absolute; /* Posiciona o elemento em relação ao contêiner pai posicionado */
+            left: 100px; /* Move 100px para a direita da borda esquerda do contêiner pai */
+            top: 200px; /* Move 200px para baixo da borda superior do contêiner pai */
+            padding: 10px;
+        }
+
+        /* Estilo para parágrafos com posicionamento fixo */
+        .fixed {
+            border: 3px solid brown; /* Borda marrom */
+            background-color: #f2f2f2; /* Fundo cinza claro */
+            position: fixed; /* Posiciona o elemento em relação à janela do navegador */
+            top: 10px; /* Fixa 10px do topo da janela */
+            right: 10px; /* Fixa 10px da direita da janela */
+            padding: 10px;
+            width: 300px;
+            z-index: 10; /* Garante que o elemento fique acima de outros elementos */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contêiner principal que agrupa todos os elementos de texto -->
+    <div id="container">
+        <!-- Cabeçalho da seção de posicionamento -->
+        <h1>Positioning Examples</h1>
+
+        <!-- Elemento posicionado relativamente -->
+        <!-- Posicionamento relativo: Movido em relação à sua posição padrão no fluxo do documento -->
+        <p class="relative">
+            This paragraph uses <strong>relative positioning</strong>. It is shifted 100px to the right from its natural position.
+        </p>
+
+        <!-- Elemento posicionado absolutamente -->
+        <!-- Posicionamento absoluto: Movido em relação ao contêiner pai posicionado ou ao documento se nenhum for encontrado -->
+        <p class="absolute">
+            This paragraph uses <strong>absolute positioning</strong>. It is positioned 100px from the left and 200px from the top of the container.
+        </p>
+
+        <!-- Elemento posicionado fixamente -->
+        <!-- Posicionamento fixo: Fixa o elemento na janela de visualização do navegador, não se move ao rolar -->
+        <p class="fixed">
+            This paragraph uses <strong>fixed positioning</strong>. It remains in the same position regardless of scrolling.
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambúrguer de Siri</title>
+
+    <style>
+        /* Estilos gerais para o corpo da página */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte padrão da página */
+            background-color: #f5f5f5; /* Cor de fundo clara */
+            margin: 0; /* Remove margens padrão */
+            padding: 0; /* Remove espaçamento padrão */
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            background-color: #333; /* Cor de fundo escura */
+            color: #fff; /* Texto em branco para contraste */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px 0; /* Adiciona espaçamento vertical */
+            position: relative; /* Permite posicionamento absoluto dos filhos */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+        }
+
+        /* Estilos para o botão de menu */
+        .menu-toggle {
+            background: none; /* Remove fundo padrão */
+            border: none; /* Remove borda padrão */
+            color: #fff; /* Cor do texto em branco */
+            font-size: 24px; /* Tamanho da fonte maior para visibilidade */
+            cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+            position: absolute; /* Posicionamento absoluto */
+            right: 15px; /* Distância da borda direita */
+            top: 15px; /* Distância do topo */
+            display: none; /* Inicialmente escondido, mostrado em telas menores */
+        }
+
+        /* Estilos para o menu de navegação */
+        nav {
+            display: none; /* Escondido por padrão */
+            background-color: #444; /* Cor de fundo um pouco mais clara que o cabeçalho */
+            color: #fff; /* Texto em branco para visibilidade */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px; /* Adiciona espaçamento */
+            transition: max-height 0.3s ease; /* Transição suave para altura máxima */
+            overflow: hidden; /* Impede que conteúdo ultrapasse os limites */
+        }
+
+        /* Estilos para a lista de navegação */
+        nav ul {
+            list-style: none; /* Remove pontos de lista */
+            padding: 0; /* Remove espaçamento interno */
+            margin: 0; /* Remove margens */
+        }
+
+        /* Estilos para cada item de navegação */
+        nav ul li {
+            padding: 10px; /* Adiciona espaçamento para clique */
+        }
+
+        /* Estilos para os links de navegação */
+        nav ul li a {
+            color: #fff; /* Texto em branco */
+            text-decoration: none; /* Remove sublinhado */
+            display: block; /* Exibe links como bloco para fácil clique */
+            padding: 10px; /* Adiciona espaçamento interno */
+            transition: background-color 0.3s; /* Transição suave para cor de fundo */
+        }
+
+        /* Efeito de hover para links de navegação */
+        nav ul li a:hover {
+            background-color: #555; /* Fundo mais escuro ao passar o mouse */
+        }
+
+        /* Estilos para tablets e telas maiores */
+        @media only screen and (min-width: 600px) {
+            .menu-toggle {
+                display: none; /* Esconde o botão de menu em telas maiores */
+            }
+
+            nav {
+                display: block; /* Exibe o menu sempre em telas maiores */
+            }
+        }
+
+        /* Estilos para desktops grandes */
+        @media only screen and (min-width: 1024px) {
+            body {
+                background-color: #e0e0e0; /* Altera a cor de fundo para cinza claro */
+            }
+
+            header {
+                text-align: left; /* Alinha texto à esquerda */
+                padding: 20px; /* Aumenta o espaçamento do cabeçalho */
+            }
+
+            nav {
+                text-align: left; /* Alinha texto à esquerda */
+                padding: 20px; /* Adiciona espaçamento */
+                display: block; /* Garante que o menu seja exibido */
+            }
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media only screen and (max-width: 599px) {
+            .menu-toggle {
+                display: block; /* Exibe o botão de menu em dispositivos móveis */
+            }
+
+            nav {
+                max-height: 0; /* Inicialmente colapsado */
+                display: none; /* Escondido por padrão */
+            }
+
+            nav.active {
+                display: block; /* Exibe o menu quando ativo */
+                max-height: 300px; /* Expande para altura máxima */
+            }
+        }
+
+        /* Estilos para a seção principal do conteúdo */
+        main {
+            padding: 20px; /* Adiciona espaçamento em torno do conteúdo principal */
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            background-color: #333; /* Cor de fundo igual ao cabeçalho */
+            color: #fff; /* Texto em branco */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px 0; /* Adiciona espaçamento vertical */
+            position: fixed; /* Fixa o rodapé na parte inferior */
+            width: 100%; /* Largura total */
+            bottom: 0; /* Posiciona o rodapé na parte inferior */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil na parte superior */
+        }
+    </style>
+
+    <script>
+        // Espera o carregamento completo do DOM
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle') // Seleciona o botão de alternância de menu
+            const nav = document.querySelector('nav') // Seleciona o elemento de navegação
+
+            // Adiciona um ouvinte de evento de clique no botão de alternância de menu
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active') // Alterna a classe 'active' no elemento de navegação
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Cabeçalho da página com título e botão de menu -->
+    <header>
+        Meu menu Hambúrguer
+        <button class="menu-toggle">&#9776;</button> <!-- Ícone do menu -->
+    </header>
+
+    <!-- Menu de navegação com links -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <section>
+            <h2>Bob Esponja Calça Quadrada</h2>
+            <p>Estão prontos, capitão?</p> <!-- Texto exemplo -->
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; Todos os direitos reservados ao Senhor Sirigueijo</p>
+    </footer>
+</body>
+
+</html>

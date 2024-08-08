@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Define o conjunto de caracteres do documento -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para tornar o site responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo CSS externo que estiliza a página -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para o arquivo JavaScript que controla a interação na página. O atributo defer garante que o script será executado após o carregamento do HTML -->
+    <script src="app.js" defer></script>
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Vanilla JS</title>
+</head>
+
+<body>
+    <!-- Cabeçalho da página, que geralmente contém o título e informações de branding -->
+    <header>
+        <!-- Imagem do logotipo do JavaScript, com um texto alternativo descritivo para acessibilidade -->
+        <img src="js-logo-xs.png" alt="Javascript">
+        <!-- Contêiner para o título e subtítulo -->
+        <div>
+            <h1>Vanilla JS</h1>
+            <p>Javascript puro</p>
+        </div>
+    </header>
+
+    <!-- Contêiner principal para as abas e conteúdo -->
+    <div id="tabs">
+        <!-- Menu de navegação contendo botões que alternam entre os conteúdos -->
+        <menu>
+            <!-- Botões de navegação que, quando clicados, ativam diferentes conteúdos -->
+            <button id="btn-tab1" class="active">Javascript</button>
+            <button id="btn-tab2">React</button>
+            <button id="btn-tab3">Node</button>
+        </menu>
+        <!-- Contêiner onde o conteúdo correspondente a cada botão será exibido -->
+        <div id="content"></div>
+    </div>
+</body>
+
+</html>

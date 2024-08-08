@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Applying CSS</title>
+
+    <style>
+        /* Classe CSS que será aplicada dinamicamente ao elemento */
+        .style {
+            background-color: #000; /* Cor de fundo preta */
+            text-align: center;     /* Alinhamento central do texto */
+            color: #fff;            /* Cor do texto branca */
+        }
+    </style>
+
+    <script>
+        // Função JavaScript para alterar o estilo do elemento
+        function changeStyle() {
+            // Obtém o elemento com o ID 'square' e altera sua classe para 'style'
+            document.getElementById('square').className = 'style';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Botão que, ao ser clicado, executa a função changeStyle -->
+    <button type="button" onclick="changeStyle()">Change Style</button>
+
+    <hr>
+
+    <!-- Div que será estilizada dinamicamente -->
+    <div style="border: solid 1px #000; width: 100px; height: 100px;" id="square">
+        <h1>Test</h1> <!-- Conteúdo dentro da div -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!-- O documento chamado "index" geralmente é a página principal do site, e é assim que os servidores costumam interpretá-lo. -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- O atributo lang indica o idioma em que o documento está escrito, ajudando os mecanismos de busca e navegadores a interpretar o conteúdo corretamente. -->
+
+<head>
+    <!--
+        A área de cabeçalho contém informações sobre o documento, como título e metadados, e define como o site será configurado.
+        Normalmente, essas informações não aparecem para o usuário diretamente.
+    -->
+
+    <title>Home Page</title>
+    <!--
+        Título da página, que aparece na aba do navegador.
+    -->
+
+    <meta charset="UTF-8">
+    <!--
+        A tag meta define metadados. O atributo charset especifica o conjunto de caracteres que será usado no documento.
+        UTF-8 é uma codificação que suporta uma ampla gama de caracteres, incluindo os latino-americanos.
+    -->
+
+    <link rel="stylesheet" href="style.css">
+    <!--
+        A tag <link> é usada para conectar o HTML a recursos externos, como folhas de estilo CSS.
+        O atributo rel="stylesheet" indica que este link é para uma folha de estilo. O href especifica o caminho para o arquivo CSS.
+    -->
+
+    <meta name="keywords" content="Web Development, HTML, CSS, JavaScript">
+    <!-- As palavras-chave ajudam na indexação de documentos nos mecanismos de busca, relacionadas ao conteúdo da página. -->
+
+    <meta name="author" content="Bruce Wayne">
+    <!-- Nome do autor da página.-->
+
+    <meta name="description" content="Introduction to web development with HTML and CSS.">
+    <!-- Uma breve descrição sobre o conteúdo da página, utilizada por motores de busca e compartilhamentos em redes sociais. -->
+</head>
+
+<body>
+    <!-- O corpo do documento contém o conteúdo visível para o usuário, incluindo textos, links, imagens e formulários. -->
+
+    <nav>
+        <!-- A tag <nav> é usada para definir uma seção de navegação, contendo links para outras partes do site. -->
+        <a href="about.html">About Us</a><br>
+        <a href="https://example.com/">External Link</a>
+        <!-- Links são criados com a tag <a>. O atributo href especifica o destino do link, que pode ser uma página interna ou um URL externo. -->
+    </nav>
+
+    <hr>
+
+    <header>
+        <!-- A tag <header> é usada para definir um cabeçalho para um documento ou uma seção, podendo conter títulos, logotipos e informações de introdução. -->
+        <h1>Welcome to Our Website</h1>
+    </header>
+
+    <section>
+        <!-- A tag <section> é usada para definir uma seção de um documento, contendo conteúdo relacionado. -->
+        <p>
+            Web development is a dynamic field that combines creativity and technology. With HTML, CSS, and JavaScript, you can build interactive and responsive websites. Join us to explore the basics of web development!
+        </p>
+        <!-- A tag <p> define um parágrafo. É usada para agrupar blocos de texto. -->
+
+        <p>Inline styling can be applied using the <span id="highlight">TAG span</span> to style a word or phrase within the paragraph.</p>
+        <!-- A tag <span> é usada para aplicar estilos ou manipular partes de um texto inline, sem criar um novo bloco. -->
+
+        <p>Chemical formula: H<sub>2</sub>O</p>
+        <!-- A tag <sub> define texto subscrito, comum em fórmulas químicas ou referências. -->
+
+        <p>Exponent example: x<sup>2</sup></p>
+        <!-- A tag <sup> define texto sobrescrito, usado em expoentes ou notas de rodapé. -->
+    </section>
+
+    <hr>
+
+    <section>
+        <p>An <abbr title="Application Programming Interface">API</abbr> allows different software programs to communicate.</p>
+        <!-- A tag <abbr> é usada para definir abreviações ou acrônimos, com um título que explica seu significado completo. -->
+
+        <blockquote cite="https://www.technologyreview.com/">
+            Technology is the campfire around which we tell our stories.
+        </blockquote>
+        <!-- A tag <blockquote> é usada para longas citações em bloco, com o atributo cite opcional para fornecer a fonte da citação. -->
+
+        <p><cite>The Starry Night</cite> by Vincent van Gogh. Painted in 1889.</p>
+        <!-- A tag <cite> é usada para referenciar o título de uma obra criativa, como livros, filmes ou pinturas. -->
+
+        <p>The famous quote, <q>To be or not to be</q>, is from Shakespeare's Hamlet.</p>
+        <!-- A tag <q> é usada para citações curtas dentro de um parágrafo, normalmente representadas com aspas. -->
+
+        <p>This text is <strong>bold</strong> for emphasis.</p>
+        <!-- A tag <strong> é usada para indicar texto com forte ênfase, geralmente exibido em negrito. -->
+
+        <p>This text is <em>italicized</em> for emphasis.</p>
+        <!-- A tag <em> é usada para enfatizar texto, geralmente exibido em itálico. -->
+
+        <p>This text is <u>underlined</u>.</p>
+        <!-- A tag <u> é usada para sublinhar texto, mas seu uso é geralmente desencorajado em favor de estilos CSS. -->
+
+        <p>This text has a <s>strikethrough</s> effect.</p>
+        <!-- A tag <s> é usada para indicar texto que foi removido ou considerado incorreto, geralmente exibido com uma linha passando por ele. -->
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>Site Navigation</h3>
+        <!-- Cabeçalhos subsequentes <h2> a <h6> podem ser usados para organizar o conteúdo hierarquicamente. -->
+        <ul>
+            <!-- A tag <ul> define uma lista não ordenada, e <li> é usado para itens da lista. O estilo do marcador pode ser personalizado com CSS. -->
+            <li>Home</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+        </ul>
+
+        <h2>FAQ</h2>
+
+        <ol>
+            <!-- A tag <ol> define uma lista ordenada. Os itens da lista são automaticamente numerados. -->
+            <li>What is HTML?</li>
+            <li>How does CSS work?</li>
+            <li>What is JavaScript used for?</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Gallery</h2>
+        <img src="images/beach.jpg" alt="Beach view" width="300" height="200">
+        <!-- A tag <img> é usada para inserir imagens. Os atributos src e alt são essenciais para especificar a fonte e descrever a imagem. -->
+        <img src="images/mountain.jpg" alt="Mountain view" width="300" height="200">
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Product Catalog</h2>
+        <table border="1" width="100%">
+            <!-- A tag <table> é usada para criar tabelas. Tags internas como <tr>, <td>, e <th> definem linhas e células da tabela. -->
+            <tr>
+                <th>Product ID</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Wireless Earbuds</td>
+                <td>$99.99</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td><img src="images/laptop.jpg" alt="Laptop" width="100"></td>
+                <td>$1,299.99</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Special Offer</td>
+                <td colspan="2">Use code SAVE10 for $10 off</td>
+            </tr>
+            <tr>
+                <td colspan="2">Use code SAVE20 for $20 off</td>
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td colspan="2">$1,409.98</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Login</h2>
+        <form>
+            <!-- A tag <form> define um formulário para entrada de dados. Inputs dentro do formulário podem ser de vários tipos, como texto, senha, etc. -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Log In">
+        </form>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Registration</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" value="M"> Male<br>
+            <input type="radio" name="gender" value="F"> Female<br><br>
+            <!-- Botões de rádio permitem que o usuário selecione uma única opção em um conjunto. O atributo name deve ser o mesmo para que sejam considerados como um grupo. -->
+
+            <label>Interests:</label><br>
+            <input type="checkbox" name="interests" value="Sports"> Sports<br>
+            <input type="checkbox" name="interests" value="Movies"> Movies<br>
+            <input type="checkbox" name="interests" value="Music"> Music<br><br>
+            <!-- Checkboxes permitem que o usuário selecione múltiplas opções. -->
+
+            <label for="state">State:</label><br>
+            <select id="state" name="state">
+                <!-- A tag <select> cria um menu suspenso para selecionar uma opção. Cada <option> representa uma escolha disponível. -->
+                <option value="ca">California</option>
+                <option value="ny">New York</option>
+                <option value="tx">Texas</option>
+            </select><br><br>
+
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+            <!-- A tag <textarea> é usada para criar uma área de texto de múltiplas linhas, permitindo entradas mais longas. -->
+
+            <input type="submit" value="Register">
+        </form>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Special Characters</h2>
+        <!-- Entidades HTML são usadas para representar caracteres especiais que não podem ser digitados diretamente. -->
+        &lt;-&gt; <!-- Exibe: <-> -->
+        <p>Home &nbsp; - &nbsp; About Us &nbsp; - &nbsp; Contact</p>
+        <!-- &nbsp; é uma entidade que representa um espaço em branco, utilizado para criar espaçamentos visíveis no texto. -->
+    </section>
+
+</body>
+
+</html>

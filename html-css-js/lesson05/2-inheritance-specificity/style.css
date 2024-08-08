@@ -1,0 +1,43 @@
+/* CSS: Herança e Especificidade */
+
+/* Seletor de corpo (body): Estilos aplicados ao elemento raiz da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para a página */
+    color: #333; /* Cor padrão do texto, herdada por elementos filhos */
+    background-color: #f9f9f9; /* Cor de fundo padrão para a página */
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 20px; /* Adiciona espaçamento interno ao corpo da página */
+}
+
+/* Seletor de ID para div com um ID específico: mais específico que classes */
+#div01 {
+    padding: 20px; /* Adiciona espaçamento interno à div */
+    border: 2px solid #0B96CC; /* Borda azul clara ao redor da div */
+    background-color: #ffffff; /* Cor de fundo branca */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Seletor de classe: Estilo aplicado a elementos com a classe 'classeDiv01' */
+.classeDiv01 {
+    color: #555; /* Cor do texto específica para esta classe, substitui a cor herdada do body */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+}
+
+/* Seletor de ID para h1 com um ID específico: estilo mais específico */
+#textoPrincipal {
+    color: #0B96CC; /* Cor do texto azul para maior ênfase */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+    font-size: 28px; /* Tamanho da fonte aumentado */
+    margin-top: 0; /* Remove margem superior padrão */
+}
+
+/* Seletor de elemento para parágrafos: herança com ajuste */
+p {
+    font-size: 16px; /* Tamanho da fonte para parágrafos */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+    margin-top: 10px; /* Espaçamento superior */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    text-indent: 20px; /* Recuo na primeira linha do parágrafo */
+    color: inherit; /* Usa a cor herdada da classe pai, se houver */
+}

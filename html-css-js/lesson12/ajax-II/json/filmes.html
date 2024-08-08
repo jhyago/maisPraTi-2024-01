@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes JSON</title>
+    <!-- Inclui o Bootstrap para estilização -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <style>
+        /* Estilo adicional para a página */
+        body {
+            background-color: #f8f9fa; /* Cor de fundo suave */
+        }
+        .movie-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        // Função para buscar e exibir filmes a partir de um arquivo JSON
+        function getMovies() {
+            // Cria uma nova instância de XMLHttpRequest para fazer a requisição HTTP
+            const xmlHttp = new XMLHttpRequest()
+
+            // Configura a requisição para o método GET e especifica o arquivo JSON de onde os dados serão buscados
+            xmlHttp.open('GET', './filmes.json')
+
+            // Define o que deve ser feito quando o estado da requisição muda
+            xmlHttp.onreadystatechange = () => {
+                // Verifica se a requisição foi concluída (readyState == 4) e bem-sucedida (status == 200)
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                    // Obtém o texto da resposta e o converte de texto JSON para um objeto JavaScript
+                    const JSONMovies = xmlHttp.responseText
+                    const objJSONMovies = JSON.parse(JSONMovies)
+
+                    // Limpa a lista atual para evitar duplicação ao recarregar
+                    const movieList = document.getElementById('list')
+                    movieList.innerHTML = ''
+
+                    // Itera sobre cada filme no objeto JSON
+                    for (let i in objJSONMovies.filmes) {
+                        let item = objJSONMovies.filmes[i]
+
+                        // Cria elementos HTML para exibir os detalhes do filme
+                        let divRow = document.createElement('div')
+                        divRow.className = 'row my-3'
+
+                        let divCol = document.createElement('div')
+                        divCol.className = 'col bg-white p-3 border rounded shadow-sm'
+
+                        let p1 = document.createElement('p')
+                        p1.className = 'movie-title'
+                        p1.innerHTML = '<strong>Título: </strong>' + item.titulo
+
+                        // Verifica se há uma descrição do filme e cria um elemento para exibi-la
+                        if (item.descricao) {
+                            let p2 = document.createElement('p')
+                            p2.innerHTML = '<strong>Descrição: </strong>' + item.descricao
+                            divCol.appendChild(p2)
+                        }
+
+                        // Adiciona os elementos criados ao documento
+                        divCol.appendChild(p1)
+                        divRow.appendChild(divCol)
+                        movieList.appendChild(divRow)
+                    }
+                }
+
+                // Tratamento de erro para o caso do arquivo JSON não ser encontrado
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 404) {
+                    console.error('Erro 404: Arquivo JSON não encontrado.')
+                    document.getElementById('list').innerHTML = '<p class="text-danger">Erro: Arquivo JSON não encontrado.</p>'
+                }
+            }
+
+            // Envia a requisição HTTP
+            xmlHttp.send()
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Barra de navegação com Bootstrap -->
+    <nav class="navbar navbar-light bg-light mb-5">
+        <div class="container">
+            <a class="navbar-brand mb-0 h1" href="#">Catálogo de Filmes JSON</a>
+        </div>
+    </nav>
+
+    <!-- Container principal para a listagem de filmes -->
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col text-center">
+                <!-- Botão para acionar a função de listagem de filmes -->
+                <button type="button" class="btn btn-primary" onclick="getMovies()">Listar Filmes</button>
+            </div>
+        </div>
+
+        <!-- Área onde os filmes listados serão exibidos -->
+        <div id="list"></div>
+    </div>
+</body>
+
+</html>

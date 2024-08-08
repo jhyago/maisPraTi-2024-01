@@ -1,0 +1,11 @@
+/* 
+    Um módulo CSS é um arquivo CSS que é processado para ser usado apenas no componente específico onde é importado.
+    Isso ajuda a evitar conflitos de estilos globais, tornando os estilos do componente encapsulados e únicos.
+*/
+
+.HelloWorld {
+    margin: 1rem 0; 
+    padding: 1rem; 
+    background-color: blueviolet; 
+    color: blue; 
+}

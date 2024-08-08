@@ -1,0 +1,65 @@
+/* CSS para o menu vertical */
+
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o texto */
+    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura da viewport */
+}
+
+/* Estilo para o título principal */
+h2 {
+    text-align: center; /* Centraliza o texto do título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    color: #333; /* Cor do texto do título */
+}
+
+/* Estilo para o menu de navegação */
+#navigation {
+    list-style-type: none; /* Remove marcadores de lista padrão */
+    padding: 0; /* Remove padding interno */
+    margin: 0; /* Remove margens */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse as bordas */
+    width: 200px; /* Define uma largura fixa para o menu */
+}
+
+/* Estilo para cada item de lista */
+#navigation li {
+    border-bottom: 1px solid #ddd; /* Linha divisória inferior */
+}
+
+/* Remove a linha de borda no último item */
+#navigation li:last-child {
+    border-bottom: none; /* Remove a linha de borda do último item */
+}
+
+/* Estilo para os links dentro do menu */
+#navigation li a {
+    display: block; /* Faz o link ocupar todo o espaço do item de lista */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto do link */
+    padding: 12px 16px; /* Adiciona espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição das cores */
+}
+
+/* Estilo de interação para o link quando o mouse passa por cima */
+#navigation li a:hover {
+    background-color: #007bff; /* Fundo azul ao passar o mouse */
+    color: #fff; /* Texto branco ao passar o mouse */
+}
+
+/* Estilo especial para o item ativo ou atual */
+#navigation li.home a {
+    background-color: #0056b3; /* Fundo azul escuro para a página ativa */
+    color: #fff; /* Texto branco para o item ativo */
+    font-weight: bold; /* Negrito para destacar o item ativo */
+}

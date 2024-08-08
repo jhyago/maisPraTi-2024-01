@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inline, Block, and Inline-Block Elements</title>
+    <style type="text/css">
+        /* Estilo para elementos com borda */
+        .border {
+            border: 3px solid red; /* Adiciona uma borda vermelha de 3px */
+            display: inline-block; /* Define o elemento como inline-block */
+            margin: 10px; /* Adiciona margem ao redor do elemento */
+            padding: 5px; /* Espaçamento interno */
+            background-color: #f0f0f0; /* Fundo cinza claro */
+        }
+
+        /* Estilo para elementos inline */
+        .inline {
+            border: 3px solid blue; /* Borda azul para destaque */
+            display: inline; /* Define o elemento como inline */
+            padding: 5px; /* Espaçamento interno */
+        }
+
+        /* Estilo para o título */
+        h1 {
+            margin-top: 20px; /* Espaçamento acima do título */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        /* Estilo para parágrafos */
+        p {
+            margin: 10px 0; /* Margens verticais */
+            padding: 10px; /* Espaçamento interno */
+            background-color: #e5e5e5; /* Fundo cinza claro */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Elemento inline-block -->
+    <!-- Inline-block: Elemento que se comporta como inline mas permite definir largura, altura, padding e margens -->
+    <span class="border">
+        inline-block Example: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </span>
+
+    <!-- Elemento inline -->
+    <!-- Inline: Elementos que ocupam apenas o espaço necessário e permitem outros elementos na mesma linha -->
+    <span class="inline">
+        inline Example: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </span>
+
+    <!-- Elemento block -->
+    <!-- Block: Elementos que ocupam a largura total disponível e iniciam em uma nova linha -->
+    <h1 class="border">Block Element Example</h1>
+
+    <p>This is a paragraph (block element). Block elements take up the full width available, resulting in a new line for the next element.</p>
+
+    <p>Another block element example. Each paragraph appears on a new line, demonstrating the behavior of block elements.</p>
+</body>
+
+</html>

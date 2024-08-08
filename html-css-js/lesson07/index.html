@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Estilos gerais para a página */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        /* Estilo da tabela que contém a calculadora */
+        table {
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        /* Estilo dos botões da calculadora */
+        .botao {
+            width: 50px;
+            height: 50px;
+            font-size: 1.2em;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease;
+        }
+
+        .botao:hover {
+            background-color: #eaeaea;
+        }
+
+        /* Estilo do campo de entrada da tela */
+        .resultado {
+            width: 100%;
+            height: 50px;
+            font-size: 1.5em;
+            text-align: right;
+            border: none;
+            padding: 0 10px;
+            box-sizing: border-box;
+            background-color: #eaeaea;
+        }
+
+        /* Ajusta o layout para dispositivos móveis */
+        @media (max-width: 600px) {
+            .botao {
+                width: 40px;
+                height: 40px;
+                font-size: 1em;
+            }
+
+            .resultado {
+                height: 40px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Formulário para a calculadora -->
+    <form name="formulario">
+        <!-- Tabela que contém os botões da calculadora -->
+        <table>
+            <!-- Linha da tela de resultado -->
+            <tr>
+                <!-- Campo de texto onde o resultado será exibido -->
+                <td colspan="4"><input type="text" maxlength="15" class="resultado" name="tela" readonly></td>
+            </tr>
+            <!-- Linha com botões de operação e controle -->
+            <tr>
+                <td><input type="button" value="C" class="botao" onclick="limparTela()"></td>
+                <td><input type="button" value="del" class="botao" onclick="deletar()"></td>
+                <td><input type="button" value="-" class="botao" onclick="inserir('-')"></td>
+                <td><input type="button" value="+" class="botao" onclick="inserir('+')"></td>
+            </tr>
+            <!-- Linhas de botões numéricos e de operações -->
+            <tr>
+                <td><input type="button" value="1" class="botao" onclick="inserir(1)"></td>
+                <td><input type="button" value="2" class="botao" onclick="inserir(2)"></td>
+                <td><input type="button" value="3" class="botao" onclick="inserir(3)"></td>
+                <td><input type="button" value="/" class="botao" onclick="inserir('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="botao" onclick="inserir(4)"></td>
+                <td><input type="button" value="5" class="botao" onclick="inserir(5)"></td>
+                <td><input type="button" value="6" class="botao" onclick="inserir(6)"></td>
+                <td><input type="button" value="*" class="botao" onclick="inserir('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="botao" onclick="inserir(7)"></td>
+                <td><input type="button" value="8" class="botao" onclick="inserir(8)"></td>
+                <td><input type="button" value="9" class="botao" onclick="inserir(9)"></td>
+                <td><input type="button" value="=" class="botao" onclick="calcularTotal()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." class="botao" onclick="inserir('.')"></td>
+                <td><input type="button" value="0" class="botao" onclick="inserir(0)"></td>
+                <!-- Colspan usado para ocupar espaço em branco -->
+                <td colspan="2"></td>
+            </tr>
+        </table>
+    </form>
+
+    <!-- Script para funcionalidade da calculadora -->
+    <script src="script.js"></script>
+</body>
+
+</html>

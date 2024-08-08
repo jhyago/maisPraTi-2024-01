@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Floating Elements</title>
+    <style type="text/css">
+        /* Define a cor de fundo do corpo do documento para um cinza claro */
+        body {
+            background-color: #f4f4f4; /* Cor de fundo do corpo */
+            font-family: Arial, sans-serif; /* Define a fonte padrão */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container principal com largura fixa e borda */
+        #main {
+            width: 920px; /* Largura fixa para o conteúdo principal */
+            border: 3px solid red; /* Borda vermelha para destaque */
+            background-color: green; /* Fundo verde */
+            margin: 20px auto; /* Centraliza o contêiner na página */
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+        }
+
+        /* Galeria de imagens, mais larga que o main */
+        #gallery {
+            width: 1600px; /* Largura maior para a galeria */
+            border: 3px solid red; /* Borda vermelha para consistência */
+            margin-top: 20px; /* Espaçamento acima do contêiner */
+            background-color: yellow; /* Fundo amarelo */
+            padding: 10px;
+        }
+
+        /* Blocos de notícias com float */
+        .news {
+            background-color: #e5e5e5; /* Fundo cinza claro */
+            padding: 10px; /* Espaçamento interno */
+            width: 280px; /* Largura fixa para consistência */
+            margin: 7px; /* Margem ao redor para espaçamento */
+            float: left; /* Alinha os elementos à esquerda */
+            border-radius: 5px; /* Bordas arredondadas */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+        }
+
+        /* Estilo para cada bloco de imagem na galeria */
+        .gallery-images {
+            background-color: #fff; /* Fundo branco para contraste */
+            width: 265px; /* Largura fixa para consistência */
+            padding: 5px; /* Espaçamento interno */
+            margin: 15px; /* Margem ao redor para espaçamento */
+            float: left; /* Alinha os elementos à esquerda */
+            border-radius: 5px; /* Bordas arredondadas */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        /* Classe para limpar floats após uso */
+        .clear {
+            clear: both; /* Limpa flutuadores para evitar problemas de layout */
+            height: 0; /* Corrige problemas de layout sem adicionar altura */
+            line-height: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Container principal que agrupa as notícias -->
+    <div id="main">
+        <!-- Cada bloco de notícias é um elemento com flutuação à esquerda -->
+        <div class="news">
+            <h2>Tricolor News</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto hic corrupti est consequatur
+                veritatis delectus eveniet? Sint molestiae aperiam alias pariatur dolores aspernatur, nostrum repellat
+                voluptas dicta saepe, tempore optio.
+            </p>
+            <a href="#">see more</a>
+        </div>
+
+        <div class="news">
+            <h2>Tricolor News</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto hic corrupti est consequatur
+                veritatis delectus eveniet? Sint molestiae aperiam alias pariatur dolores aspernatur, nostrum repellat
+                voluptas dicta saepe, tempore optio.
+            </p>
+            <a href="#">see more</a>
+        </div>
+
+        <div class="news">
+            <h2>Tricolor News</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto hic corrupti est consequatur
+                veritatis delectus eveniet? Sint molestiae aperiam alias pariatur dolores aspernatur, nostrum repellat
+                voluptas dicta saepe, tempore optio.
+            </p>
+            <a href="#">see more</a>
+        </div>
+
+        <!-- Limpeza de float para evitar que elementos subsequentes flutuem -->
+        <div class="clear"></div>
+    </div>
+
+    <!-- Galeria de imagens -->
+    <div id="gallery">
+        <div class="gallery-images">
+            <img src="/module03/lesson04/images/image1.png" alt="Image 1">
+        </div>
+
+        <div class="gallery-images">
+            <img src="/module03/lesson04/images/image2.png" alt="Image 2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit odit natus exercitationem earum aliquam
+                fuga cumque praesentium quam nulla accusantium. Aperiam, necessitatibus? Placeat veritatis quis in cum
+                commodi, quisquam corrupti!</p>
+        </div>
+
+        <div class="gallery-images">
+            <img src="/module03/lesson04/images/image3.png" alt="Image 3">
+            <p>Important text</p>
+        </div>
+
+        <div class="gallery-images">
+            <img src="/module03/lesson04/images/image4.png" alt="Image 4">
+        </div>
+
+        <div class="gallery-images">
+            <img src="/module03/lesson04/images/image5.png" alt="Image 5">
+        </div>
+
+        <!-- Limpeza de float para evitar que elementos subsequentes flutuem -->
+        <div class="clear"></div>
+    </div>
+
+</body>
+
+</html>

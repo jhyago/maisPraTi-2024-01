@@ -1,0 +1,80 @@
+/* Estilo global para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão para o documento */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px; /* Espaçamento interno para o corpo */
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    color: #333; /* Cor padrão do texto */
+}
+
+/* Estilo para todas as tabelas */
+table {
+    width: 100%; /* Largura completa */
+    border-collapse: collapse; /* Remove espaços entre as células */
+    margin-bottom: 20px; /* Espaçamento inferior entre tabelas */
+    background-color: #fff; /* Fundo branco para tabelas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para células e cabeçalhos */
+th, td {
+    border: 1px solid #ddd; /* Borda leve e cinza */
+    padding: 10px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento à esquerda do texto */
+}
+
+/* Estilo para cabeçalhos de tabela */
+th {
+    background-color: #0059b3; /* Cor de fundo azul escuro */
+    color: white; /* Texto branco */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilo para o cabeçalho da tabela */
+thead th {
+    background-color: #007bff; /* Cor de fundo azul mais claro */
+}
+
+/* Estilo para o rodapé da tabela */
+tfoot td {
+    font-style: italic; /* Texto em itálico */
+    text-align: center; /* Centraliza o texto */
+    background-color: #f1f1f1; /* Fundo cinza claro */
+}
+
+/* Estilo para a legenda da tabela */
+caption {
+    caption-side: top; /* Legenda acima da tabela */
+    font-weight: bold; /* Texto em negrito */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    color: #00509e; /* Cor azul escura */
+}
+
+/* Estilo para linhas alternadas no corpo da tabela */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fundo cinza claro */
+}
+
+/* Estilo específico para colunas */
+.ColunaEsquerda {
+    font-weight: bold; /* Negrito para a coluna esquerda */
+    background-color: #e9ecef; /* Fundo cinza muito claro */
+}
+
+.ColunaDireita {
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para a primeira linha da tabela */
+.primeiro {
+    background-color: #d4edda; /* Fundo verde claro para destaque */
+}
+
+/* Estilo para as legendas e espaçamento de tabelas */
+#legenda {
+    font-size: 1.4em; /* Aumenta o tamanho da legenda */
+    color: #333; /* Cor de texto padrão */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}

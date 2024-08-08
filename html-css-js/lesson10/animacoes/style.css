@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define altura da viewport para centralizar os elementos verticalmente */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    gap: 15px; /* Espaçamento entre elementos */
+    margin: 0; /* Remove margens padrão do navegador */
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50; /* Cor inicial do box */
+    transition: all 0.5s ease; /* Transição suave para mudanças */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Adiciona uma animação de hover ao box */
+#box:hover {
+    background-color: #FF5733; /* Muda a cor ao passar o mouse */
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+/* Estilo para todos os inputs */
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 250px; /* Largura consistente */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Muda o fundo dos inputs ao foco */
+input:focus {
+    border-color: #4CAF50; /* Cor da borda ao focar */
+    outline: none; /* Remove o outline padrão */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Adiciona sombra ao focar */
+}

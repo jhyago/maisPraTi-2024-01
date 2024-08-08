@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Technology Devices and Navigation</title>
+    <link rel="stylesheet" href="lists.css" />
+    <!-- 
+        A tag <link> é usada para vincular arquivos CSS externos.
+        Aqui, "lists.css" conterá estilos específicos para os elementos de lista nesta página.
+    -->
+</head>
+
+<body>
+    <!-- Parágrafo inicial que explica a lista de dispositivos abaixo -->
+    <p>The following is a list of essential devices commonly used in modern business environments:</p>
+
+    <!--
+        Listas de Definição:
+        - <dl> define o início da lista de definições.
+        - <dt> define o termo que está sendo descrito.
+        - <dd> fornece a descrição ou definição do termo.
+    -->
+    <dl>
+        <dt>Laptop</dt>
+        <dd>A portable computer that integrates all the components of a desktop computer, including a display, keyboard, touchpad, and battery, into a single unit.</dd>
+
+        <dt>Firewall</dt>
+        <dd>A network security device that monitors and filters incoming and outgoing network traffic based on predefined security rules.</dd>
+
+        <dt>Access Point</dt>
+        <dd>A device that allows wireless devices to connect to a wired network using Wi-Fi, Bluetooth, or related standards.</dd>
+    </dl>
+
+    <!--
+        Listas Não Ordenadas:
+        - <ul> define o início da lista não ordenada.
+        - <li> define cada item dentro da lista.
+        O CSS pode ser usado para alterar o marcador que representa cada elemento <li>.
+    -->
+    <ul class="unordered">
+        <li>Install antivirus software</li>
+        <li>Set up cloud backup</li>
+        <li>Update operating systems</li>
+    </ul>
+
+    <!--
+        Listas Ordenadas:
+        - <ol> define o início da lista ordenada.
+        - <li> define cada item dentro da lista.
+        O atributo type especifica o estilo de numeração, e start especifica o número inicial.
+    -->
+    <ol type="I" start="1">
+        <li>Connect all devices to the network</li>
+        <ul>
+            <!-- Lista não ordenada dentro de uma lista ordenada -->
+            <li>Ensure wireless access is secure</li>
+        </ul>
+        <li>Configure firewall settings</li>
+        <li>Test the network for performance</li>
+    </ol>
+
+    <!--
+        Tag Semântica <nav>:
+        - Usada para definir uma seção de navegação em um documento.
+        - O menu de navegação geralmente contém links para outras partes do site.
+    -->
+    <nav id="menu">
+        <h1>Technology Hub</h1>
+
+        <!--
+            Outra lista não ordenada para os itens do menu.
+            O atributo type="disc" especifica o tipo de marcador, mas geralmente isso é estilizado via CSS.
+        -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!--
+        Adicionando âncoras de seção (hash links) para navegar para diferentes seções da página.
+    -->
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to Technology Hub, your source for the latest tech devices and solutions.</p>
+    </section>
+
+    <section id="products">
+        <h2>Products</h2>
+        <p>Explore our range of state-of-the-art technology products designed to meet your business needs.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>Our services include setup, maintenance, and support for all your tech devices.</p>
+    </section>
+
+    <section id="support">
+        <h2>Support</h2>
+        <p>Need help? Our expert support team is here to assist you with any issues you may encounter.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us via our contact page for inquiries and support.</p>
+    </section>
+
+</body>
+
+</html>

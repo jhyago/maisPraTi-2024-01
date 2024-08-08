@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring in JavaScript</title>
+
+    <script>
+        // Exemplo de destructuring com arrays
+        let filmes = ['The Godfather', 'The Lord of the Rings', 'Harry Potter'];
+
+        // Destructuring para extrair elementos do array
+        let [filme1, filme2, , filme4, filme5 = 'Fight Club'] = filmes;
+
+        // Exibe os filmes extraídos
+        console.log("Filmes:", filme1, filme2, filme4, filme5);
+
+        // Exemplo de destructuring com arrays multidimensionais
+        let coisas = [['Pineapple', 'Apple', 'Mint'], ['Computer', 'Mouse', 'Chair']];
+
+        // Extrai o segundo item do segundo array
+        let [, [, item2]] = coisas;
+
+        // Exibe o item extraído
+        console.log("Item extraído:", item2);
+
+        // Exemplo de destructuring com objetos
+        let produto = {
+            nome: 'Bicycle',
+            preco: 1000,
+            detalhes: {
+                fabricante: 'Caloi',
+                modelo: 10
+            }
+        };
+
+        // Destructuring para extrair propriedades do objeto
+        let { nome, preco } = produto;
+
+        // Exibe as propriedades extraídas
+        console.log("Nome e Preço:", nome, preco);
+
+        // Renomeando as variáveis ao extrair
+        let { preco: precoProduto, nome: nomeProduto } = produto;
+        console.log("Nome e Preço (renomeados):", nomeProduto, precoProduto);
+
+        // Extrai propriedades com valor padrão
+        let { nome: nomeProd, preco: precoProd, desconto = 5 } = produto;
+        console.log("Nome, Preço e Desconto:", nomeProd, precoProd, desconto);
+
+        // Destructuring aninhado para acessar propriedades de objetos dentro de objetos
+        let { detalhes: { fabricante, modelo } } = produto;
+        console.log("Fabricante e Modelo:", fabricante, modelo);
+
+        // Destructuring em parâmetros de função com arrays
+        let arr = [10, 20, 30, 40, 50];
+
+        function exibirValores([valor1, valor2, , valor4, valor5]) {
+            console.log("Valores:", valor1, valor2, valor4, valor5);
+        }
+
+        // Chama a função passando o array
+        exibirValores(arr);
+
+        // Destructuring em parâmetros de função com objetos
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30,
+            d: 40,
+            e: 50
+        };
+
+        function exibirPropriedades({ a, b, c, d, e }) {
+            console.log("Propriedade e:", e);
+        }
+
+        // Chama a função passando o objeto
+        exibirPropriedades(obj);
+
+        // Usando rest operator para capturar o restante dos elementos
+        let [primeiro, ...restante] = arr;
+        console.log("Primeiro e Restante:", primeiro, restante);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

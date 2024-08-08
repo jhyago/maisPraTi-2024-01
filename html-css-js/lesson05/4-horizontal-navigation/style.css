@@ -1,0 +1,60 @@
+/* CSS para o menu de navegação horizontal */
+
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o texto */
+    background-color: #f9f9f9; /* Cor de fundo cinza claro */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o título principal */
+h1 {
+    color: #333; /* Cor do texto do título */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilo para o menu de navegação */
+#navigation {
+    list-style-type: none; /* Remove marcadores de lista padrão */
+    padding: 0; /* Remove padding interno */
+    margin: 20px 0; /* Adiciona margem superior e inferior */
+    display: flex; /* Define a lista como flexbox para layout horizontal */
+    justify-content: center; /* Centraliza os itens do menu horizontalmente */
+    background-color: #007bff; /* Fundo azul para o menu */
+    border-radius: 8px; /* Bordas arredondadas para o menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse as bordas */
+}
+
+/* Estilo para cada item de lista */
+#navigation li {
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilo para os links dentro do menu */
+#navigation li a {
+    display: block; /* Faz o link ocupar todo o espaço do item de lista */
+    color: #fff; /* Cor do texto branco */
+    text-align: center; /* Centraliza o texto do link */
+    padding: 15px 20px; /* Adiciona espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição das cores */
+}
+
+/* Estilo de interação para o link quando o mouse passa por cima */
+#navigation li a:hover {
+    background-color: #0056b3; /* Fundo azul escuro ao passar o mouse */
+    color: #ffeb3b; /* Texto amarelo ao passar o mouse */
+}
+
+/* Estilo especial para o primeiro link */
+#navigation li.firstLink a {
+    font-weight: bold; /* Negrito para destacar o primeiro item */
+}
+
+/* Estilo para a página ativa */
+#navigation li:first-child a {
+    background-color: #0056b3; /* Fundo azul escuro para a página ativa */
+}

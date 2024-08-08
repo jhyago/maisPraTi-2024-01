@@ -1,0 +1,135 @@
+/* Estilos globais para todo o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Cor de fundo suave */
+    color: #333; /* Cor do texto principal */
+}
+
+/* Estilos para a lista de definição */
+dl {
+    margin: 20px;
+    padding: 10px;
+    background-color: #e6f7ff; /* Fundo azul claro */
+    border-left: 5px solid #0059b3; /* Borda esquerda azul escura */
+}
+
+/* Estilos para os termos das definições */
+dt {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #004080; /* Cor azul escura */
+    margin-top: 10px;
+}
+
+/* Estilos para as descrições das definições */
+dd {
+    margin: 0 0 10px 20px;
+    font-style: italic;
+    color: #00509e; /* Cor azul médio */
+}
+
+/* Estilos para listas não ordenadas */
+ul.unordered {
+    list-style-type: disc; /* Tipo de marcador */
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Fundo cinza claro */
+    border: 1px solid #ddd; /* Borda cinza clara */
+}
+
+/* Estilos para itens de lista */
+ul.unordered li {
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+/* Estilos para listas ordenadas */
+ol {
+    list-style-type: upper-roman; /* Números romanos em maiúsculas */
+    margin: 20px;
+    padding: 10px;
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #ddd;
+}
+
+/* Estilos para listas aninhadas */
+ol > ul {
+    list-style-type: circle; /* Tipo de marcador */
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #f0f0f0; /* Fundo cinza muito claro */
+}
+
+/* Estilos para navegação */
+nav#menu {
+    background-color: #0059b3; /* Fundo azul escuro */
+    color: white;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Espaçamento entre itens */
+    align-items: center;
+}
+
+/* Estilos para o título principal do menu */
+nav#menu h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Estilos para a lista de navegação */
+nav#menu ul {
+    list-style: none; /* Remove marcadores de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinha horizontalmente os itens */
+}
+
+/* Estilos para os itens de navegação */
+nav#menu ul li {
+    margin: 0 10px;
+}
+
+/* Estilos para links de navegação */
+nav#menu ul li a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Animação suave para hover */
+}
+
+/* Estilos para hover em links de navegação */
+nav#menu ul li a:hover {
+    background-color: #004080; /* Fundo mais escuro no hover */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilos para as seções */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para cabeçalhos das seções */
+section h2 {
+    margin-top: 0;
+    color: #00509e; /* Azul médio */
+}
+
+/* Estilos para parágrafos das seções */
+section p {
+    margin-bottom: 0;
+}
+
+/* Estilos para listas dentro das seções */
+section ul, section ol {
+    margin: 10px 0;
+    padding: 0 20px;
+}

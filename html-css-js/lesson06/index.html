@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Museu Nacional</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="logo">
+                <h1><a href="#">Museu Nacional</a></h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Exposições</a></li>
+                    <li><a href="#">Pesquisas</a></li>
+                    <li><a href="#">Acervo</a></li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Fotos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="principal">
+            <div id="conteudo">
+                <section id="capa">
+                    <img src="img/museu.png" alt="Imagem central do museu">
+                </section>
+
+                <section id="postagens">
+                    <article id="video">
+                        <h3>Vídeo: Conheça o museu</h3>
+                        <iframe width="310" height="170" src="https://www.youtube.com/embed/RGUYb-hivrc" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+                    </article>
+
+                    <article id="mapa">
+                        <h3>Mapa: Encontre o museu</h3>
+
+                        <iframe width="310" height="170" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.206311665318!2d-43.22871758447552!3d-22.905759985012413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e58a085b7af%3A0x4d11e9a933d38ce3!2sMuseu%20Nacional%20-%20UFRJ!5e0!3m2!1spt-BR!2sbr!4v1618167559993!5m2!1spt-BR!2sbr" frameborder="0"></iframe>
+                    </article>
+
+                    <article id="exposicoes">
+                        <h3>Exposições</h3>
+                        <ul>
+                            <li><a href="#">Os assustadores insetos</a></li>
+                            <li><a href="#">O crânio de Luzia, a mulher mais antiga do Brasil</a></li>
+                            <li><a href="#">Preguiça gigante e tigre-dentes-de-sabre</a></li>
+                            <li><a href="#">Plantas do Brasil Central</a></li>
+                            <li><a href="#">Teresa Cristina: A Imperatriz Arqueóloga</a></li>
+                            <li><a href="#">Arte com Dinossauros - Paleoarte</a></li>
+                            <li><a href="#"><strong>Vejo todos(65)</strong></a></li>
+                        </ul>
+                    </article>
+
+                    <article id="historia">
+                        <h3>200 anos de História</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni pariatur dolores nulla enim voluptatem sint quia eveniet inventore dolor temporibus. Laudantium nesciunt voluptate vero perferendis, eveniet mollitia? Natus, placeat consectetur?
+                        </p>
+
+                        <a href="#"><strong>Leia mais</strong></a>
+                    </article>
+                </section>
+            </div>
+
+            <aside>
+                <section id="depoimento">
+                    <img src="img/depoimento.png" alt="Depoimento">
+                </section>
+
+                <section id="visita">
+                    <h4>Faça uma visita</h4>
+
+                    <form>
+                        <fieldset>
+                            <legend>Selecione uma data</legend>
+                            <label for="data">Data</label>
+                            <input class="campo" type="text" id="data" value="dd/mm/aaaa">
+
+                            <label for="qtd">Qtd de pessoas</label>
+                            <input class="campo" style="width: 30px;" type="text" id="qtd" value="1">
+                        </fieldset>
+
+                        <input class="botao" type="submit" value="Verificar disponibilidade">
+                    </form>
+                </section>
+
+                <section id="galeria">
+                    <h4>Galeria de fotos</h4>
+                    <a href="#"><img src="img/imagem1.jpg" height="93" width="93"></a>
+                    <a href="#"><img src="img/imagem2.jpg" height="93" width="93"></a>
+                    <a href="#"><img src="img/imagem3.jpg" height="93" width="93"></a>
+                    <a href="#"><img src="img/imagem4.jpg" height="93" width="93"></a>
+                </section>
+            </aside>
+        </main>
+        <footer id="rodape">
+            <p>
+                <a href="#">Home</a>
+                <a href="#">Exposições</a>
+                <a href="#">Pesquisas</a>
+                <a href="#">Acervo</a>
+                <a href="#">Vídeos</a>
+                <a href="#">Fotos</a>
+                <a href="#">Contato</a>
+            </p>
+
+            <p>2024 <a href="#">Museu Nacional</a> - Todos os direitos reservados &copy;</p>
+        </footer>
+    </div>
+</body>
+</html>

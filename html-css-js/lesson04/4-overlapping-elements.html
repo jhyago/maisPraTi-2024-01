@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Overlapping Elements</title>
+    <style type="text/css">
+        /* Estilo para o primeiro elemento de conteúdo */
+        .content1 {
+            border: 3px solid black; /* Adiciona uma borda preta ao redor do elemento */
+            width: 200px; /* Define a largura do elemento */
+            height: 200px; /* Define a altura do elemento */
+            position: absolute; /* Posiciona o elemento de forma absoluta */
+            background-color: brown; /* Define a cor de fundo como marrom */
+            z-index: 1; /* Define a prioridade de sobreposição */
+            top: 50px; /* Posição a partir do topo da janela */
+            left: 50px; /* Posição a partir da esquerda da janela */
+        }
+
+        /* Estilo para o segundo elemento de conteúdo */
+        .content2 {
+            border: 3px solid black; /* Adiciona uma borda preta ao redor do elemento */
+            width: 200px; /* Define a largura do elemento */
+            height: 200px; /* Define a altura do elemento */
+            background-color: #0B96CC; /* Define a cor de fundo como azul */
+            position: absolute; /* Posiciona o elemento de forma absoluta */
+            top: 100px; /* Posição a partir do topo da janela, sobrepondo parcialmente o primeiro elemento */
+            left: 100px; /* Posição a partir da esquerda da janela, sobrepondo parcialmente o primeiro elemento */
+            z-index: 2; /* Maior valor de z-index garante que este elemento fique acima do primeiro */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Primeiro elemento de conteúdo com posicionamento absoluto -->
+    <div class="content1">
+        Content 1
+    </div>
+
+    <!-- Segundo elemento de conteúdo com posicionamento absoluto -->
+    <div class="content2">
+        Content 2
+    </div>
+</body>
+
+</html>

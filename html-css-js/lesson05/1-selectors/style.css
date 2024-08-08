@@ -1,0 +1,63 @@
+/* Seletores CSS */
+
+/* Seletor de elemento para todos os parágrafos */
+p {
+    font-size: 16px; /* Define o tamanho da fonte para todos os parágrafos */
+    line-height: 1.6; /* Define o espaçamento entre linhas */
+    color: #333; /* Cor do texto cinza escuro */
+}
+
+/* Seletor de classe aplicado a elementos com a classe 'class01' */
+.class01 {
+    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+    padding: 10px; /* Espaçamento interno de 10px */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaçamento inferior de 10px */
+}
+
+/* Seletor de ID aplicado ao elemento com o ID 'content' */
+#content {
+    background-color: #e0f7fa; /* Fundo azul claro */
+    padding: 20px; /* Espaçamento interno de 20px */
+    border: 2px solid #00acc1; /* Borda azul */
+    margin-top: 20px; /* Espaçamento superior de 20px */
+}
+
+/* Seletor de elemento para todos os links */
+a {
+    color: #007bff; /* Cor azul para links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Seletor de link quando o usuário passa o mouse */
+a:hover {
+    color: #0056b3; /* Cor azul escuro ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Seletor de filho direto: aplica estilo a links dentro de '.class01' */
+.class01 > a {
+    color: #c62828; /* Vermelho escuro para links diretos */
+}
+
+/* Seletor de descendente: aplica estilo a links dentro de '.class01' */
+.class01 a {
+    color: #d32f2f; /* Vermelho para todos os links dentro de '.class01' */
+}
+
+/* Seletor de lista não ordenada */
+ul {
+    list-style-type: square; /* Tipo de marcador quadrado */
+    padding-left: 20px; /* Espaçamento à esquerda */
+}
+
+/* Seletor de li (itens de lista) */
+ul li {
+    margin-bottom: 5px; /* Espaçamento inferior entre itens */
+}
+
+/* Seletor universal: aplica a todos os elementos */
+* {
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura/altura */
+}

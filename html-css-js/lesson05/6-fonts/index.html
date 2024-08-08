@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Customizadas</title>
+
+    <style>
+        /* Definição de fonte customizada com @font-face */
+        @font-face {
+            font-family: "Madelina"; /* Nome da fonte que será utilizado no CSS */
+            src: url('fonts/MadelinaScript.woff') format('woff'), /* Caminho para o arquivo da fonte em formato WOFF */
+                 url('fonts/MadelinaScript.woff2') format('woff2'); /* Formato adicional para maior compatibilidade */
+            font-weight: normal; /* Peso padrão da fonte */
+            font-style: normal; /* Estilo padrão da fonte */
+        }
+
+        /* Estilização para o elemento h1 */
+        h1 {
+            font-size: 6em; /* Tamanho da fonte em ems, que é relativo ao tamanho padrão do texto */
+            font-family: "Madelina", serif; /* Nome da fonte customizada seguido de uma fonte padrão como fallback */
+            color: #333; /* Cor do texto para melhor contraste e legibilidade */
+            text-align: center; /* Centraliza o texto horizontalmente na página */
+            margin-top: 20vh; /* Espaçamento superior para centralizar verticalmente na viewport */
+        }
+
+        /* Estilo para o corpo da página */
+        body {
+            background-color: #f4f4f4; /* Cor de fundo suave para contraste com o texto */
+            margin: 0; /* Remove margens padrão do navegador */
+            display: flex; /* Utiliza Flexbox para alinhamento */
+            justify-content: center; /* Centraliza conteúdo horizontalmente */
+            align-items: center; /* Centraliza conteúdo verticalmente */
+            height: 100vh; /* Altura da tela cheia */
+        }
+    </style>
+</head>
+<body>
+    <!-- Texto com fonte customizada -->
+    <h1>Geromel</h1>
+</body>
+</html>

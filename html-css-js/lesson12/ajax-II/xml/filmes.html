@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Filmes XML</title>
+
+    <!-- Inclui o script para converter XML em JSON -->
+    <script src="xmlToJson.js"></script>
+    <script>
+        // Função para buscar e exibir filmes do arquivo XML
+        function getMovies() {
+            // Cria uma nova instância de XMLHttpRequest para fazer uma requisição HTTP
+            const xmlHttp = new XMLHttpRequest()
+
+            // Configura a requisição para usar o método GET e buscar o arquivo 'filmes.xml'
+            xmlHttp.open('GET', 'filmes.xml')
+
+            // Define o que deve ser feito quando o estado da requisição muda
+            xmlHttp.onreadystatechange = () => {
+                // Verifica se a requisição está completa (readyState 4) e bem-sucedida (status 200)
+                if(xmlHttp.readyState === 4 && xmlHttp.status === 200){
+                    // Obtém o texto da resposta XML
+                    const XMLMovies = xmlHttp.responseText
+
+                    // Cria um parser DOM para converter o texto XML em um documento XML
+                    const parser = new DOMParser()
+
+                    // Converte o texto XML em um documento DOM
+                    const DOMMovies = parser.parseFromString(XMLMovies, 'text/xml')
+
+                    // Converte o documento DOM para JSON usando a função xmlToJson
+                    const JSONMovies = xmlToJson(DOMMovies)
+
+                    // Itera sobre cada filme no JSON convertido
+                    for(let i in JSONMovies['filmes']['filme']){
+                        let item = JSONMovies['filmes']['filme'][i]
+
+                        // Cria uma nova linha e coluna para exibir o filme
+                        let divRow = document.createElement('div')
+                        divRow.className = 'row my-3' // Adiciona uma margem para espaçamento
+                        
+                        let divCol = document.createElement('div')
+                        divCol.className = 'col bg-light p-3 border rounded' // Adiciona classes Bootstrap para estilo
+
+                        // Cria um parágrafo para exibir o título do filme
+                        let p1 = document.createElement('p')
+                        p1.innerHTML = '<strong>Título: </strong>' + item['titulo']['#text']
+
+                        // Adiciona o parágrafo à coluna e a coluna à linha
+                        divCol.appendChild(p1)
+                        divRow.appendChild(divCol)
+
+                        // Adiciona a linha ao container principal na página
+                        document.getElementById('list').appendChild(divRow)
+                    }
+                }
+
+                // Caso a requisição tenha falhado (por exemplo, se o arquivo não for encontrado)
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 404){
+                    // Exibe uma mensagem de erro no console
+                    console.error('Erro: Recurso não encontrado. Verifique se o arquivo XML existe no caminho especificado.')
+                }
+            }
+
+            // Envia a requisição ao servidor
+            xmlHttp.send()
+        }
+    </script>
+</head>
+<body>
+    <!-- Barra de navegação com Bootstrap -->
+    <nav class="navbar navbar-light bg-light mb-5">
+        <div class="container">
+            <div class="navbar-brand mb-0">
+                <h1>Catálogo de Filmes XML</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container principal -->
+    <div class="container" id="list">
+        <div class="row mb-4">
+            <div class="col">
+                <!-- Botão que inicia a função de listagem de filmes -->
+                <button type="button" class="btn btn-primary" onclick="getMovies()">Listar Filmes</button>
+            </div>
+        </div>
+
+        <!-- Área onde os filmes serão listados -->
+        <!-- Esta área será preenchida dinamicamente com o conteúdo do XML -->
+    </div>
+
+    <!-- Scripts do Bootstrap para funcionalidades adicionais -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkZzKkbu1Xt/WhmSUQN64QbsZxBsmCTBIhi6XH/eZoKLVtQw8rBJ" crossorigin="anonymous"></script>
+</body>
+
+</html>

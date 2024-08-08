@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #f7f7f7; /* Cor de fundo suave */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Altura da viewport */
+}
+
+h1 {
+    color: #333; /* Cor do texto do título */
+    margin-bottom: 20px;
+}
+
+/* Estilos para o container flexível */
+#content {
+    display: flex; /* Ativa o modo Flexbox */
+    justify-content: space-around; /* Espaçamento igual entre os itens */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    width: 80%; /* Largura do container */
+    max-width: 800px; /* Largura máxima do container */
+    border: 2px solid #ccc; /* Borda ao redor do container */
+    padding: 20px; /* Espaçamento interno do container */
+    background: linear-gradient(to right, #ffafbd, #ffc3a0); /* Degradê de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilos gerais para cada item flexível */
+.item {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+    color: #333; /* Cor do texto */
+    width: 100px; /* Largura de cada item */
+    height: 100px; /* Altura de cada item */
+    display: flex; /* Ativa o modo Flexbox para os itens */
+    justify-content: center; /* Centraliza o conteúdo dos itens horizontalmente */
+    align-items: center; /* Centraliza o conteúdo dos itens verticalmente */
+    border-radius: 8px; /* Bordas arredondadas dos itens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    font-size: 24px; /* Tamanho da fonte dos itens */
+    font-weight: bold; /* Fonte em negrito */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave para transformações */
+}
+
+/* Efeito hover nos itens flexíveis */
+.item:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+    background-color: rgba(255, 255, 255, 1); /* Remove a transparência ao passar o mouse */
+}
+
+/* Estilos específicos para o item 03 */
+.item1 {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo um pouco mais opaco */
+    border: 2px solid #ffafbd; /* Borda personalizada */
+}
+
+/* Estilos específicos para o item 04 */
+.item2 {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo um pouco mais opaco */
+    border: 2px solid #ffc3a0; /* Borda personalizada */
+}

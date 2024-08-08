@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Object Model</title>
+    <script>
+        // Variável para armazenar uma referência à janela aberta
+        let myWindow;
+
+        // Função para abrir uma nova janela do navegador
+        function openWin() {
+            // Abre uma nova janela com largura de 200px e altura de 100px
+            myWindow = window.open("", "myWindow", "width=200,height=100");
+            myWindow.document.write("<p>Nova janela aberta!</p>"); // Escreve na nova janela
+        }
+
+        // Função para fechar a janela aberta
+        function closeWin() {
+            if (myWindow) {
+                myWindow.close(); // Fecha a janela referenciada
+            }
+        }
+
+        // Obtem a altura e largura disponíveis da tela do usuário
+        const height = window.screen.availHeight;
+        const width = window.screen.availWidth;
+
+        // Escreve as dimensões da tela no documento atual
+        document.write('Altura do navegador: ' + height + 'px<br>');
+        document.write('Largura do navegador: ' + width + 'px<br>');
+
+        // Usando setTimeout para executar código após um atraso
+        window.setTimeout(() => {
+            document.write('Olá, Mundo!<br>'); // Escreve "Olá, Mundo!" após 1 segundo
+        }, 1000);
+
+        // Usando setInterval para executar código repetidamente a cada intervalo
+        let i = 10; // Inicializa o contador
+
+        // Executa a cada segundo
+        const x = window.setInterval(() => {
+            document.write(i + '<br>'); // Escreve o valor atual do contador
+            i--; // Decrementa o contador
+            if (i === 0) {
+                clearInterval(x); // Limpa o intervalo quando i chega a 0
+                document.write('Contagem finalizada!<br>');
+            }
+        }, 1000);
+
+        // Função para redirecionar para uma nova URL
+        function redirectTo(url) {
+            window.location.href = url; // Redireciona para a URL especificada
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Botão para abrir uma nova janela -->
+    <button onclick="openWin()">Abrir Janela</button>
+
+    <!-- Botão para fechar a janela aberta -->
+    <button onclick="closeWin()">Fechar Janela</button>
+
+    <!-- Botão para imprimir a janela atual -->
+    <button onclick="window.print()">Imprimir Janela</button>
+
+    <!-- Botão para redirecionar para o Google -->
+    <button onclick="redirectTo('http://www.google.com')">Acessar Google</button>
+</body>
+
+</html>

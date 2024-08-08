@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Error Handling</title>
+
+    <script>
+        // Criando uma matriz para armazenar informações de vídeo
+        let video = Array();
+
+        // Criando um array multidimensional para armazenar detalhes do vídeo
+        video[1] = Array();
+        video[1]['Name'] = 'Fullmetal Alchemist';
+        video[1]['Category'] = 'Anime';
+
+        // Exibindo o array de vídeo no console
+        console.log(video);
+
+        // Função para obter detalhes do vídeo
+        function getVideo(video) {
+            try {
+                // Tentando acessar o nome do vídeo na posição 0, que não existe
+                console.log(video[0]['Name']); // Isso vai causar um erro
+
+                // Esta linha não será executada se ocorrer um erro
+                console.log('The application did not crash');
+            } catch (error) {
+                // Captura o erro e chama a função para lidar com ele
+                handleError(error);
+                console.log('There was an external problem.');
+            } finally {
+                // Este bloco sempre será executado, independente de um erro ocorrer
+                console.log('This always runs');
+            }
+        }
+
+        // Função para lidar com erros
+        function handleError(error) {
+            // Exibe a mensagem de erro no console
+            console.log('The error is: ' + error);
+        }
+
+        // Chama a função getVideo e passa o array de vídeos como argumento
+        getVideo(video);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
