@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df420b4a-9565-4305-a3b4-022af35db31e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/moduloTeste/moduloTeste.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduloTeste/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/moduloTeste/src/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,7 +34,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DataHora.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.teste.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -50,6 +49,16 @@
     "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="teste" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="util.DataHora" />
+      <module name="java-logic-ED" />
+      <option name="PROGRAM_PARAMETERS" value="50 20 " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
