@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "login": "admin",
+      "password": "password"
+    },
+    {
+      "login": "root",
+      "password": "root"
+    },
+    {
+      "login": "eu",
+      "password": "senha"
+    }
+  ]
+}

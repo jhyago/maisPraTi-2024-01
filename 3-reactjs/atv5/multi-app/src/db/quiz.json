@@ -1,0 +1,29 @@
+{
+    "questions":[
+        {
+          "question": "What is 2+2?", 
+          "options": ["3", "4", "5", "6"], 
+          "answer": "4"
+        },
+        {
+          "question": "What is 3+3?",
+          "options": ["5", "6", "7", "8"],
+          "answer": "6"
+        },
+        {
+            "question": "What is 4+4?",
+            "options": ["5", "6", "7", "8"],
+            "answer": "8"
+        },
+        {
+            "question": "What is 5+5?",
+            "options": ["5", "6", "10", "8"],
+            "answer": "10"
+        },
+        {
+            "question": "What is 6-6?",
+            "options": ["0", "12", "9", "8"],
+            "answer": "0"
+        }
+      ]
+}
