@@ -2,25 +2,31 @@ package stack;
 import java.util.Stack;
 
 public class StringReverser {
+
+    // Método para inverter uma string usando uma pilha.
     public static String reverseString(String input){
         Stack<Character> stackInversed = new Stack<>();
-        Stack<Character> stackReversed = new Stack<>();
+
+        // Converte a string em um array de caracteres e empilha cada caractere.
         for(char ch: input.toCharArray()){
             stackInversed.push(ch);
         }
 
-        int length = stackInversed.size();
+        // Utilizando StringBuilder para construir a string final,
+        // que é mais eficiente do que concatenar strings diretamente.
+        StringBuilder myString = new StringBuilder();
 
-        String myString = "";
-
-        for(int i = 0; i < length; i++) {
-            myString += stackInversed.pop();
+        // Desempilha todos os caracteres e adiciona ao StringBuilder.
+        while(!stackInversed.isEmpty()) {
+            myString.append(stackInversed.pop());
         }
 
-        return myString;
+        // Converte o StringBuilder em uma string e a retorna.
+        return myString.toString();
     }
 
     public static void main(String[] args) {
+        // Testa o método com a palavra "Grêmio".
         System.out.println(reverseString("Grêmio"));
     }
 }
