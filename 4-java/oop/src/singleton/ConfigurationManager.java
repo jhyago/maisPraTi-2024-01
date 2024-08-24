@@ -34,7 +34,7 @@ public class ConfigurationManager {
         return instance;
     }
 
-    public String getProperties(String key){
+    public String getProperty(String key){
         return properties.getProperty(key);
     }
 }

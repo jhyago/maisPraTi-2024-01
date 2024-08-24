@@ -1,15 +1,10 @@
-import abstraction.ContaBancaria;
-import encapsulation.BankAccount;
-import encapsulation.BankTransaction;
+import singleton.ConfigurationManager;
 
 public class Main {
     public static void main(String[] args) {
-        BankAccount account = new BankAccount("12345", 1000);
+        ConfigurationManager configManager = ConfigurationManager.getInstance();
 
-        BankTransaction depositTransaction = new BankTransaction(account, 15000, BankTransaction.TransactionType.DEPOSIT);
-
-        depositTransaction.execute();
-
-        System.out.println(depositTransaction.getDetails());
+        String dbUser = configManager.getProperty("db.user");
+        System.out.println("Usuário do banco de dados " + dbUser);
     }
 }
