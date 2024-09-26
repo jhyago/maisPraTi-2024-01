@@ -1,5 +1,7 @@
 package com.example.api_user.service;
 
+import com.example.api_user.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.api_user.dto.UserDTO;
 import com.example.api_user.model.User;
@@ -10,6 +12,10 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService {
+
+    @Autowired
+    private UserRepository userRepository;
+
     public List<UserDTO> getAllUsers() {
         return userRepository
                 .findAll()
