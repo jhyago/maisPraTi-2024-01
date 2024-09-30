@@ -1,5 +1,6 @@
 package com.example.api_user.security;
 
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Value;
 
 public class JwtTokenProvider {
