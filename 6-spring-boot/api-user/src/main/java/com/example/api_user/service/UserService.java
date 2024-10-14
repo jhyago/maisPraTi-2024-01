@@ -1,7 +1,9 @@
 package com.example.api_user.service;
 
 import com.example.api_user.repository.UserRepository;
+import org.apache.catalina.authenticator.BasicAuthenticator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.example.api_user.dto.UserDTO;
 import com.example.api_user.model.User;
@@ -34,7 +36,7 @@ public class UserService {
         user.setUsername(userDTO.getUsername());
         user.setEmail(userDTO.getEmail());
         user.setRole(userDTO.getRole());
-        user.setPassword(userDTO.getPassword());
+        user.setPassword(new BCryptPasswordEncoder().encode(userDTO.getPassword()));
         userRepository.save(user);
         
         return convertToDTO(user);
