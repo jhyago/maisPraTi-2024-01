@@ -1,5 +1,7 @@
 package com.example.api_user.controller;
 
+import ch.qos.logback.core.net.SMTPAppenderBase;
+import com.example.api_user.dto.LoginDTO;
 import com.example.api_user.security.JwtTokenProvider;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -7,10 +9,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -26,8 +25,10 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String Login(@RequestParam String username, @RequestParam String password){
+    public String Login(@RequestBody LoginDTO loginDTO){
         try {
+            String username = loginDTO.getUsername();
+            String password = loginDTO.getPassword();
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(username, password)
             );
