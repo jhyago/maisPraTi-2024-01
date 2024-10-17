@@ -1,110 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
+		<!-- Projeto pai, herdando as configurações do Spring Boot -->
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.3.4</version> <!-- Versão do Spring Boot utilizada -->
+		<relativePath/> <!-- Busca o projeto pai no repositório Maven -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>api-user</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>api-user</name>
-	<description>Demo project for Spring Boot</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
+	<groupId>com.example</groupId> <!-- Identificador do grupo do projeto -->
+	<artifactId>api-user</artifactId> <!-- Nome do artefato do projeto -->
+	<version>0.0.1-SNAPSHOT</version> <!-- Versão do projeto (SNAPSHOT indica que é uma versão em desenvolvimento) -->
+	<name>api-user</name> <!-- Nome do projeto -->
+	<description>Demo project for Spring Boot</description> <!-- Descrição do projeto -->
+
 	<properties>
-		<java.version>17</java.version>
+		<java.version>17</java.version> <!-- Define a versão do Java usada (Java 17) -->
 	</properties>
+
 	<dependencies>
+		<!-- Spring Data JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<!-- Esta dependência inclui todas as bibliotecas necessárias para usar o Spring Data JPA.
+            - Spring Data JPA fornece uma maneira fácil de integrar JPA (Java Persistence API) ao Spring Framework.
+            - Ele facilita o acesso ao banco de dados através de repositórios, abstraindo consultas SQL e permitindo interagir com entidades como objetos Java.
+            - Inclui suporte para Hibernate (o provedor JPA mais usado) e funcionalidades como transações e operações CRUD automáticas. -->
 		</dependency>
+
+		<!-- Spring Boot OAuth2 Resource Server -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+			<!-- Esta dependência é usada para configurar o projeto como um **servidor de recursos** OAuth2.
+            - Um servidor de recursos OAuth2 é a parte do sistema que contém dados protegidos.
+            - Ele processa tokens de acesso para validar se o usuário tem permissão para acessar recursos específicos.
+            - Isso é útil para autenticação e autorização de APIs protegidas. -->
 		</dependency>
+
+		<!-- Spring Boot OAuth2 Authorization Server -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-authorization-server</artifactId>
+			<!-- Esta dependência transforma o projeto em um **servidor de autorização** OAuth2.
+            - O servidor de autorização emite tokens de acesso e tokens de atualização (refresh tokens) que os clientes utilizam para acessar os recursos protegidos.
+            - Implementa o fluxo completo de autorização do OAuth2, como o fluxo de autorização, fluxo de credenciais do cliente, entre outros.
+            - Permite a integração com servidores de identidade, como Google ou GitHub, para autenticação de usuários. -->
 		</dependency>
+
+		<!-- Spring Boot OAuth2 Client -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-client</artifactId>
+			<!-- Esta dependência permite configurar o projeto como um **cliente OAuth2**.
+            - Um cliente OAuth2 é uma aplicação que solicita tokens de acesso de um servidor de autorização para acessar recursos protegidos.
+            - Permite que a aplicação se conecte a provedores de identidade (como Google, GitHub) para autenticação e obtenção de tokens de acesso.
+            - É usado principalmente para integração de login social e obtenção de permissões do usuário. -->
 		</dependency>
+
+		<!-- JJWT (Java JWT - JSON Web Token) API -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-api</artifactId>
 			<version>0.11.5</version>
+			<!-- Esta dependência fornece uma API para manipulação de **JSON Web Tokens (JWT)**.
+            - JWTs são amplamente usados para autenticação em sistemas modernos.
+            - Esta biblioteca permite a criação, assinatura e validação de tokens JWT, que podem ser usados para gerenciar sessões de usuário ou autorização.
+            - Normalmente, os tokens JWT são transmitidos via cabeçalho Authorization e usados para acessar APIs protegidas. -->
 		</dependency>
+
+		<!-- Implementação do JJWT (parte interna da API JWT) -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-impl</artifactId>
 			<version>0.11.5</version>
+			<!-- Esta dependência contém a implementação interna da biblioteca JWT, necessária para o funcionamento do JJWT.
+            - Trabalha em conjunto com o `jjwt-api` para fornecer funcionalidades completas de criptografia e assinatura de tokens JWT. -->
 		</dependency>
+
+		<!-- Jackson para JJWT (processamento de tokens JWT com Jackson) -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-jackson</artifactId>
 			<version>0.11.5</version>
+			<!-- Esta dependência usa o Jackson (biblioteca de processamento JSON) para lidar com tokens JWT, convertendo tokens JSON em objetos Java e vice-versa.
+            - Isso permite a integração fácil do JWT com o Jackson, um dos mapeadores de JSON mais usados em Java. -->
 		</dependency>
+
+		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+			<!-- Esta dependência inclui o **Spring Security**, que fornece autenticação e autorização para aplicações Spring Boot.
+            - Spring Security oferece uma variedade de funcionalidades de segurança, como controle de acesso baseado em papéis, proteção contra ataques CSRF, autenticação via OAuth2 e muito mais.
+            - É a base de qualquer aplicação segura no Spring, controlando como as requisições são autenticadas e autorizadas. -->
 		</dependency>
+
+		<!-- Spring Boot Web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- Esta dependência inclui tudo o que é necessário para criar uma aplicação **web** com Spring Boot.
+            - Inclui suporte ao Spring MVC, que facilita a criação de APIs RESTful e aplicações web baseadas em controllers.
+            - Também oferece suporte à integração com bibliotecas de serialização/deserialização JSON (como Jackson). -->
 		</dependency>
 
+		<!-- Spring Boot DevTools -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
+			<scope>runtime</scope> <!-- Especifica que essa dependência será usada apenas em tempo de execução -->
+			<optional>true</optional> <!-- Definida como opcional para evitar sua inclusão em builds de produção -->
+			<!-- O Spring Boot DevTools acelera o desenvolvimento, fornecendo funcionalidades como reinicialização automática e recarga de contextos durante o desenvolvimento.
+            - Essa dependência melhora a experiência de desenvolvimento, permitindo que alterações no código sejam aplicadas rapidamente sem a necessidade de reiniciar manualmente o servidor. -->
 		</dependency>
+
+		<!-- MySQL Connector -->
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
+			<scope>runtime</scope> <!-- Utilizado em tempo de execução para conectar ao banco de dados MySQL -->
+			<!-- O **MySQL Connector/J** é o driver JDBC oficial para conexão com bancos de dados MySQL.
+            - Ele permite que a aplicação Spring Boot interaja com um banco de dados MySQL, executando consultas e transações.
+            - Essa dependência é usada em tempo de execução, permitindo que a aplicação interaja com o banco de dados para persistir e buscar dados. -->
 		</dependency>
+
+		<!-- Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<optional>true</optional> <!-- Definido como opcional para evitar que seja empacotado na build final -->
+			<!-- O Lombok é uma biblioteca que reduz a verbosidade do código Java, gerando automaticamente código comum como getters, setters, toString, equals, hashCode, construtores, etc.
+            - Usar o Lombok simplifica o código das classes, especialmente em modelos e DTOs, eliminando a necessidade de escrever manualmente métodos repetitivos. -->
 		</dependency>
+
+		<!-- Spring Boot Starter Test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<scope>test</scope> <!-- Esta dependência é usada apenas para testes -->
+			<!-- Inclui um conjunto completo de bibliotecas para **testes** em aplicações Spring Boot.
+            - Inclui bibliotecas como JUnit, Mockito, e Spring Test para realizar testes unitários e de integração.
+            - Usada para validar a lógica da aplicação e verificar se o comportamento esperado é obtido durante a execução dos testes automatizados. -->
 		</dependency>
+
+		<!-- Spring Security Test -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
+			<scope>test</scope> <!-- Utilizada apenas em cenários de teste -->
+			<!-- Esta dependência é usada para testar funcionalidades de autenticação e autorização fornecidas pelo Spring Security.
+            - Facilita a criação de cenários de teste para testar autenticação de usuários, permissões, e regras de acesso em uma aplicação Spring Boot.
+            - Oferece suporte para simular diferentes contextos de segurança durante os testes. -->
 		</dependency>
 	</dependencies>
 
+	<!-- Configuração de plugins e build -->
 	<build>
 		<plugins>
+			<!-- Plugin do Maven para empacotar e executar aplicações Spring Boot -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<excludes>
+						<!-- Exclui o Lombok da build final, pois ele é usado apenas em tempo de desenvolvimento -->
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
