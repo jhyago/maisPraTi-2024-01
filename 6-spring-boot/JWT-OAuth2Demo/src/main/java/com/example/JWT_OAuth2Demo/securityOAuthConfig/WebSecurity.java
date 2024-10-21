@@ -33,7 +33,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Slf4j
 public class WebSecurity {
     @Autowired
-    JWTtoUserConverter jwtToUserConverter;
+    JWTtoUserConvertor jwTtoUserConvertor;
 
     @Autowired
     KeyUtils keyUtils;
@@ -51,7 +51,7 @@ public class WebSecurity {
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.disable())
                 .httpBasic(basic -> basic.disable())
-                .oauth2ResourceServer((oauth2) -> oauth2.jwt((jwt) -> jwt.jwtAuthenticationConverter(jwtToUserConverter)))
+                .oauth2ResourceServer((oauth2) -> oauth2.jwt((jwt) -> jwt.jwtAuthenticationConverter(jwTtoUserConvertor)))
                 .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .exceptionHandling((exceptions) -> exceptions.authenticationEntryPoint(new BearerTokenAuthenticationEntryPoint())
                 .accessDeniedHandler(new BearerTokenAccessDeniedHandler()));
@@ -89,7 +89,7 @@ public class WebSecurity {
     @Qualifier("jwtRefreshTokenAuthProvider")
     JwtAuthenticationProvider jwtRefreshTokenAuthProvider() {
         JwtAuthenticationProvider provider = new JwtAuthenticationProvider(jwtRefreshTokenDecoder());
-        provider.setJwtAuthenticationConverter(jwtToUserConverter);
+        provider.setJwtAuthenticationConverter(jwTtoUserConvertor);
         return provider;
     }
 
