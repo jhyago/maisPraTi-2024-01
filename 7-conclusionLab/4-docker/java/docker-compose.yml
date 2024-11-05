@@ -1,0 +1,26 @@
+version: '3.8'  # Especifica a versão do Docker Compose para garantir compatibilidade com recursos modernos.
+
+services:
+  api:
+    build: src/test/java  # Define o diretório onde o Dockerfile está localizado para construir a aplicação.
+    ports:
+      - "8080:8080"  # Mapeia a porta 8080 do contêiner para a porta 8080 do host, permitindo o acesso à API.
+    depends_on:
+      - mysql  # Garante que o serviço MySQL será iniciado antes da API, facilitando a conexão entre os serviços.
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/test  # Define a URL do banco, usando o nome do serviço 'mysql' como host.
+      - SPRING_DATASOURCE_USERNAME=root  # Define o usuário padrão do banco de dados como "root".
+      - SPRING_DATASOURCE_PASSWORD=root  # Define a senha do banco de dados como "root".
+
+  mysql:
+    image: mysql:8.0  # Usa a imagem oficial do MySQL na versão 8.0.
+    environment:
+      MYSQL_ROOT_PASSWORD: root  # Define a senha do usuário root para o MySQL.
+      MYSQL_DATABASE: test  # Cria um banco de dados chamado "test" ao iniciar o contêiner.
+    ports:
+      - "3306:3306"  # Mapeia a porta 3306 do contêiner para a porta 3306 do host, permitindo acesso externo ao MySQL.
+    volumes:
+      - mysql-data:/var/lib/mysql  # Monta um volume para persistir os dados do banco de dados, garantindo que os dados permaneçam após reiniciar o contêiner.
+
+volumes:
+  mysql-data:  # Define um volume nomeado chamado "mysql-data" para armazenar dados do MySQL de forma persistente.

@@ -1,10 +1,17 @@
-version: '3.8'
+version: '3.8'  # Especifica a versão do Compose, garantindo compatibilidade e suporte a recursos modernos do Docker Compose.
 
 services:
-  api-teste:
-    build: .
+  api-teste:  # Define o serviço "api-teste", que é um contêiner que executará a API.
+    build: .  # Indica que a construção do contêiner será feita a partir do Dockerfile na raiz do diretório atual.
     ports:
-      - "3000:3000"
+      - "3000:3000"  # Mapeia a porta 3000 do contêiner para a porta 3000 do host, permitindo acesso à API na máquina local.
     environment:
-      - NODE_ENV=environment
-      
+      - NODE_ENV=development  # Define a variável de ambiente NODE_ENV como 'development' para especificar o ambiente de desenvolvimento.
+
+    restart: always  # Garante que o contêiner será reiniciado automaticamente em caso de falhas.
+    volumes:
+      - .:/app  # Monta o diretório atual na pasta '/app' dentro do contêiner
+      - /app/node_modules  # Evita a montagem de node_modules para não interferir com as dependências dentro do contêiner.
+
+    # Para instalar automaticamente todas as dependências e iniciar a aplicação, o `command` pode ser configurado:
+    command: npm start  # Inicia a aplicação usando o comando padrão 'npm start'.
